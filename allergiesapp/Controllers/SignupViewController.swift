@@ -15,11 +15,12 @@ import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.layer.cornerRadius = 6 //?
     }
+    @IBOutlet weak var nameTextField: UITextField!
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -30,13 +31,19 @@ class SignUpViewController: UIViewController {
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
             let name = nameTextField.text,
-            !username.isEmpty else {return} // checks if FirUser is logged in + username is provided
+            !username.isEmpty ||
+            !name.isEmpty
+            else {return} // checks if name + username is provided
         
         UserService.create(firUser, username: username, name: name ) {(user) in
             guard let user = user else {
                 return
             }
-            guard let email = self.emailTextField.text, let password = self.passwordTextField.text else {return}
+            User.setCurrent(user, writeToUserDefaults: true)
+            
+            guard let email = self.emailTextField.text,
+                let password = self.passwordTextField.text
+                else {return}
             Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
                 if let error = error {
                     
@@ -48,7 +55,6 @@ class SignUpViewController: UIViewController {
                 changeRequest.displayName = username
                 changeRequest.commitChanges(completion: nil) // going to its location and updating its value (string)
             }
-            User.setCurrent(user, writeToUserDefaults: true)
             
             let storyboard = UIStoryboard(name: "Main" , bundle: .main)
             if let initialViewController = storyboard.instantiateInitialViewController() {

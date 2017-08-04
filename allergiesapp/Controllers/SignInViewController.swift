@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SigninViewController.swift
 //  allergiesapp
 //
 //  Created by Genevieve Koffman on 8/2/17.

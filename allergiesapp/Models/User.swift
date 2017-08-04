@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
-class User: NSObject { // need to add email and name
+class User: NSObject {
     
     private static var _current: User?
     
