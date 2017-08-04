@@ -26,6 +26,10 @@ class User: NSObject {
     let email: String
     let name: String
     
+    var dictValue: [String: Any] {
+        return ["username" : username, "name" : name, "email" : email]
+    }
+    
     init(uid: String, username: String, email: String, name: String) {
         self.uid = uid
         self.username = username
@@ -67,12 +71,12 @@ class User: NSObject {
         super.init()
     } // ^^ retrieves the uid, username, email, and name for the user 
     
-    class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
+    class func setCurrent(_ User: User, writeToUserDefaults: Bool = false) {
         if writeToUserDefaults {
-            let data = NSKeyedArchiver.archivedData(withRootObject: user)
+            let data = NSKeyedArchiver.archivedData(withRootObject: User)
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
         }
-        _current = user
+        _current = User
     } // new parameter that takes a bool - whether user should be written to UserDefaults. if true, user object is written to UserDefaults. < NSKeyedArchive > turns user into data, store data with correct key
     
 } // whenever user signs up or logs in, user is stored in UserDefaults
@@ -81,6 +85,8 @@ extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
         aCoder.encode(username, forKey: Constants.UserDefaults.username)
+        aCoder.encode(username, forKey: Constants.UserDefaults.email)
+        aCoder.encode(username, forKey: Constants.UserDefaults.name)
     }
 }
 

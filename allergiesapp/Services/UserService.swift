@@ -11,10 +11,10 @@ import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
 struct UserService {
-    static func create(_ firUser: FIRUser, username: String, name: String, completion: @escaping (User?) -> Void){
+    static func create(_ firUser: FIRUser, username: String, name: String, email: String, completion: @escaping (User?) -> Void){
         // only when a users username is created can the code move on ^^
         
-        let userAttrs = ["username": username, "name": name] // creating dictionary with username and name of user
+        let userAttrs = ["username": username, "name": name, "email": email] // creating dictionary with username and name of user
         let ref = Database.database().reference().child("Users").child(firUser.uid) // reference to where it will store the usernames ( a path )
         ref.setValue(userAttrs) { (Error, ref) in // placing the username string in the database location (holds usernames)
             if let error = Error { // if an error does exist

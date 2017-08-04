@@ -69,7 +69,7 @@ class SignInViewController: UIViewController {
         case 0:
             containerview1.isHidden = false
             containerview2.isHidden = true
-        case 1:
+        case 1: // fix the tab bar for when it first opens 
             containerview1.isHidden = true
             containerview2.isHidden = false
         default:

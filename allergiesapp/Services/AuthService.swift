@@ -105,7 +105,7 @@ struct AuthService {
                 "There was an error logging you in. Please try again soon.", preferredStyle: UIAlertControllerStyle.alert)
             loginFailedAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
             controller.present(loginFailedAlert, animated: true, completion: nil)
-            break;
+            break; // happens with small errors ex: short passcode
         }
 }
     private static func signUpErrors(error: Error, controller: UIViewController) {

@@ -27,42 +27,34 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        
-        guard let firUser = Auth.auth().currentUser,
-            let username = usernameTextField.text,
+        guard let username = usernameTextField.text,
             let name = nameTextField.text,
-            !username.isEmpty ||
-            !name.isEmpty
-            else {return} // checks if name + username is provided
+            let email = emailTextField.text,
+            let password = passwordTextField.text
+        else { return }
         
-        UserService.create(firUser, username: username, name: name ) {(user) in
+        
+        AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
+            guard let firUser = authUser else {
+                return
+            }
+            
+            UserService.create(firUser, username: username, name: name, email: email) { (user) in
             guard let user = user else {
                 return
             }
-            User.setCurrent(user, writeToUserDefaults: true)
-            
-            guard let email = self.emailTextField.text,
-                let password = self.passwordTextField.text
-                else {return}
-            Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
-                if let error = error {
-                    
-                    self?.alert(message: error.localizedDescription)
-                    return
-                }
-                Database.database().reference().child("Users").child(user!.uid).updateChildValues(["email":email, "username":username, "name":name])
-                let changeRequest = user!.createProfileChangeRequest()
-                changeRequest.displayName = username
-                changeRequest.commitChanges(completion: nil) // going to its location and updating its value (string)
+                User.setCurrent(user, writeToUserDefaults: true)
+
+                
+                let storyboard = UIStoryboard(name: "Main" , bundle: .main)
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                } // Main storyboard opens
             }
-            
-            let storyboard = UIStoryboard(name: "Main" , bundle: .main)
-            if let initialViewController = storyboard.instantiateInitialViewController() {
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
-            } // Main storyboard opens
         }
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.usernameTextField.resignFirstResponder()
