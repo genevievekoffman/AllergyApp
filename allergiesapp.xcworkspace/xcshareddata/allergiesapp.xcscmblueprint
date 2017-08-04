@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "991E2726F3189B5468E1226F0DEB40F98208FC46",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4C37D726235158F97EB154770989EECB9158993E" : 9223372036854775807,
+    "991E2726F3189B5468E1226F0DEB40F98208FC46" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "477083DD-6B50-4DA2-A323-D386CE6A2270",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4C37D726235158F97EB154770989EECB9158993E" : "allergiesapp\/allergiesapp\/",
+    "991E2726F3189B5468E1226F0DEB40F98208FC46" : "allergiesapp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "allergiesapp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "allergiesapp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/genevievekoffman\/allergiesapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4C37D726235158F97EB154770989EECB9158993E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/genevievekoffman\/QAallergies.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "991E2726F3189B5468E1226F0DEB40F98208FC46"
+    }
+  ]
+}

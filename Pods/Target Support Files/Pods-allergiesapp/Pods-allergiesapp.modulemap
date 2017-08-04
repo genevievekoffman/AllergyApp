@@ -1,0 +1,6 @@
+framework module Pods_allergiesapp {
+  umbrella header "Pods-allergiesapp-umbrella.h"
+
+  export *
+  module * { export * }
+}

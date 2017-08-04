@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6241F3371AA00F16A66 /* AppDelegate.swift */; };
+		AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6251F3371AA00F16A66 /* Assets.xcassets */; };
+		AF35B62A1F33721100F16A66 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6291F33721100F16A66 /* UserService.swift */; };
+		AF35B62D1F33723000F16A66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62B1F33723000F16A66 /* LoginViewController.swift */; };
+		AF35B62E1F33723000F16A66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62C1F33723000F16A66 /* ViewController.swift */; };
+		AF35B6311F33724800F16A66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */; };
+		AF35B6361F33725100F16A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */; };
+		AF35B6371F33725100F16A66 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6341F33725100F16A66 /* Login.storyboard */; };
+		AF35B6381F33725100F16A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6351F33725100F16A66 /* Main.storyboard */; };
+		AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B63B1F33774000F16A66 /* AuthService.swift */; };
+		AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B63D1F33A9EC00F16A66 /* Constants.swift */; };
+		AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B63F1F33ABEF00F16A66 /* Helpers.swift */; };
+		AF35B6421F33ACB500F16A66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6411F33ACB500F16A66 /* User.swift */; };
+		AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6431F33B60300F16A66 /* SignupViewController.swift */; };
+		F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EA273F286C828D89B64B11C /* Pods-allergiesapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.release.xcconfig"; sourceTree = "<group>"; };
+		84F631A36E732F328F12580D /* Pods-allergiesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF35B6241F3371AA00F16A66 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = allergiesapp/AppDelegate.swift; sourceTree = "<group>"; };
+		AF35B6251F3371AA00F16A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = allergiesapp/Assets.xcassets; sourceTree = "<group>"; };
+		AF35B6291F33721100F16A66 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = allergiesapp/Services/UserService.swift; sourceTree = "<group>"; };
+		AF35B62B1F33723000F16A66 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = allergiesapp/Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		AF35B62C1F33723000F16A66 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = allergiesapp/Controllers/ViewController.swift; sourceTree = "<group>"; };
+		AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "allergiesapp/Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF35B6301F33724800F16A66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = allergiesapp/Supporting/Info.plist; sourceTree = "<group>"; };
+		AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = allergiesapp/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF35B6341F33725100F16A66 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = allergiesapp/Storyboards/Login.storyboard; sourceTree = "<group>"; };
+		AF35B6351F33725100F16A66 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = allergiesapp/Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		AF35B63B1F33774000F16A66 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = allergiesapp/Services/AuthService.swift; sourceTree = "<group>"; };
+		AF35B63D1F33A9EC00F16A66 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = allergiesapp/Supporting/Constants.swift; sourceTree = "<group>"; };
+		AF35B63F1F33ABEF00F16A66 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = allergiesapp/Helpers/Helpers.swift; sourceTree = "<group>"; };
+		AF35B6411F33ACB500F16A66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = allergiesapp/Models/User.swift; sourceTree = "<group>"; };
+		AF35B6431F33B60300F16A66 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = allergiesapp/Controllers/SignupViewController.swift; sourceTree = "<group>"; };
+		AFAC44861F32667B00D62744 /* allergiesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = allergiesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_allergiesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFAC44831F32667B00D62744 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF35B61C1F33717800F16A66 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF35B63F1F33ABEF00F16A66 /* Helpers.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AF35B61E1F33718500F16A66 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AF35B61F1F33718A00F16A66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF35B6341F33725100F16A66 /* Login.storyboard */,
+				AF35B6351F33725100F16A66 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF35B6201F33718D00F16A66 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */,
+				AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */,
+				AF35B6301F33724800F16A66 /* Info.plist */,
+				AF35B63D1F33A9EC00F16A66 /* Constants.swift */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		AF35B6211F33718F00F16A66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AF35B6221F33719200F16A66 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF35B62B1F33723000F16A66 /* LoginViewController.swift */,
+				AF35B62C1F33723000F16A66 /* ViewController.swift */,
+				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AF35B6231F33719500F16A66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF35B6411F33ACB500F16A66 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AF35B6281F3371F500F16A66 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF35B6291F33721100F16A66 /* UserService.swift */,
+				AF35B63B1F33774000F16A66 /* AuthService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		AFAC447D1F32667B00D62744 = {
+			isa = PBXGroup;
+			children = (
+				AF35B6251F3371AA00F16A66 /* Assets.xcassets */,
+				AF35B6241F3371AA00F16A66 /* AppDelegate.swift */,
+				AF35B6281F3371F500F16A66 /* Services */,
+				AF35B6231F33719500F16A66 /* Models */,
+				AF35B6221F33719200F16A66 /* View Controllers */,
+				AF35B6211F33718F00F16A66 /* Views */,
+				AF35B6201F33718D00F16A66 /* Supporting */,
+				AF35B61F1F33718A00F16A66 /* Storyboards */,
+				AF35B61E1F33718500F16A66 /* Extensions */,
+				AF35B61C1F33717800F16A66 /* Helpers */,
+				AFAC44871F32667B00D62744 /* Products */,
+				BE1F2E9F9FAAABC1885FB476 /* Pods */,
+				D8D1DFF54F0FFC4DFCC16520 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFAC44871F32667B00D62744 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFAC44861F32667B00D62744 /* allergiesapp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE1F2E9F9FAAABC1885FB476 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84F631A36E732F328F12580D /* Pods-allergiesapp.debug.xcconfig */,
+				7EA273F286C828D89B64B11C /* Pods-allergiesapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8D1DFF54F0FFC4DFCC16520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFAC44851F32667B00D62744 /* allergiesapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFAC44981F32667B00D62744 /* Build configuration list for PBXNativeTarget "allergiesapp" */;
+			buildPhases = (
+				A2C136883CDCD509BCF88BF7 /* [CP] Check Pods Manifest.lock */,
+				AFAC44821F32667B00D62744 /* Sources */,
+				AFAC44831F32667B00D62744 /* Frameworks */,
+				AFAC44841F32667B00D62744 /* Resources */,
+				E623F215FAEF6B6485A5867C /* [CP] Embed Pods Frameworks */,
+				BC4EC3EF566A0C56F2676F9E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = allergiesapp;
+			productName = allergiesapp;
+			productReference = AFAC44861F32667B00D62744 /* allergiesapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFAC447E1F32667B00D62744 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Genevieve Koffman";
+				TargetAttributes = {
+					AFAC44851F32667B00D62744 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = KG9AMG4XEV;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AFAC44811F32667B00D62744 /* Build configuration list for PBXProject "allergiesapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFAC447D1F32667B00D62744;
+			productRefGroup = AFAC44871F32667B00D62744 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFAC44851F32667B00D62744 /* allergiesapp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFAC44841F32667B00D62744 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */,
+				AF35B6361F33725100F16A66 /* LaunchScreen.storyboard in Resources */,
+				AF35B6311F33724800F16A66 /* GoogleService-Info.plist in Resources */,
+				AF35B6381F33725100F16A66 /* Main.storyboard in Resources */,
+				AF35B6371F33725100F16A66 /* Login.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2C136883CDCD509BCF88BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4EC3EF566A0C56F2676F9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E623F215FAEF6B6485A5867C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFAC44821F32667B00D62744 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
+				AF35B62D1F33723000F16A66 /* LoginViewController.swift in Sources */,
+				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
+				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
+				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
+				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
+				AF35B62E1F33723000F16A66 /* ViewController.swift in Sources */,
+				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
+				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AFAC44961F32667B00D62744 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFAC44971F32667B00D62744 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFAC44991F32667B00D62744 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84F631A36E732F328F12580D /* Pods-allergiesapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KG9AMG4XEV;
+				INFOPLIST_FILE = "$(SRCROOT)/allergiesapp/Supporting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.genevievekoffman.allergiesapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AFAC449A1F32667B00D62744 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EA273F286C828D89B64B11C /* Pods-allergiesapp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KG9AMG4XEV;
+				INFOPLIST_FILE = "$(SRCROOT)/allergiesapp/Supporting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.genevievekoffman.allergiesapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFAC44811F32667B00D62744 /* Build configuration list for PBXProject "allergiesapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAC44961F32667B00D62744 /* Debug */,
+				AFAC44971F32667B00D62744 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFAC44981F32667B00D62744 /* Build configuration list for PBXNativeTarget "allergiesapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFAC44991F32667B00D62744 /* Debug */,
+				AFAC449A1F32667B00D62744 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFAC447E1F32667B00D62744 /* Project object */;
+}
