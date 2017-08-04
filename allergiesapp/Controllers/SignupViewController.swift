@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.layer.cornerRadius = 6
+        nextButton.layer.cornerRadius = 6 //?
     }
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,23 +29,12 @@ class SignUpViewController: UIViewController {
         
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
-            !username.isEmpty else {return}
+            let name = nameTextField.text,
+            !username.isEmpty else {return} // checks if FirUser is logged in + username is provided
         
-        UserService.create(firUser, username: username) {(user) in
+        UserService.create(firUser, username: username, name: name ) {(user) in
             guard let user = user else {
-                // handle error
                 return
-            }
-            
-            guard let firUser = Auth.auth().currentUser,
-                let name = self.nameTextField.text,
-                !name.isEmpty else { return }
-            
-            UserService.create(firUser, name: name) {(user) in
-                guard let user = user else {
-                    //handle error
-                    return
-                }
             }
             guard let email = self.emailTextField.text, let password = self.passwordTextField.text else {return}
             Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
@@ -65,9 +54,10 @@ class SignUpViewController: UIViewController {
             if let initialViewController = storyboard.instantiateInitialViewController() {
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
-            } // after login, main storyboard opens
+            } // Main storyboard opens
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.usernameTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()

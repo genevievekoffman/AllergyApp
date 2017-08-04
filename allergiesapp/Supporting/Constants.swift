@@ -14,5 +14,7 @@ struct Constants {
         static let currentUser = "currentUser"
         static let uid = "uid"
         static let username = "username"
+        static let email = "email"
+        static let name = "name" 
     }
 }

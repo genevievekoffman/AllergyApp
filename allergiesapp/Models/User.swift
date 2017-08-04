@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
-class User: NSObject {
+class User: NSObject { // need to add email and name
     
     private static var _current: User?
     
@@ -23,35 +23,49 @@ class User: NSObject {
     
     let uid: String
     let username: String
+    let email: String
+    let name: String
     
-    init(uid: String, username: String) {
+    init(uid: String, username: String, email: String, name: String) {
         self.uid = uid
         self.username = username
+        self.email = email
+        self.name = name
         
         super.init()
     }
     
-    init?(snapshot: DataSnapshot) {
+    init?(snapshot: DataSnapshot) { // retrieving from firebase
         guard let dict = snapshot.value as? [String : Any],
-            let username = dict["username"] as? String
+            
+        let username = dict["username"] as? String,
+        let email = dict["email"] as? String,
+        let name = dict["name"] as? String
             else { return nil }
         
         self.uid = snapshot.key
         self.username = username
+        self.email = email
+        self.name = name
         
         super.init()
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
-            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String
+            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String,
+            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String,
+            let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String
             else { return nil }
-        
+    
         self.uid = uid
         self.username = username
+        self.email = email
+        self.name = name
         
         super.init()
-    }
+    } // ^^ retrieves the uid, username, email, and name for the user 
     
     class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
         if writeToUserDefaults {

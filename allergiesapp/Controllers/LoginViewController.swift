@@ -19,18 +19,18 @@ class SignInViewController: UIViewController {
     
     @IBAction func LoginButton(_ sender: Any) {
         if self.emailTextField.text ==  "" || self.passwordTextField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter an email and a a password", preferredStyle: .alert) //creating pop up box if either are empty
-            let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil) // the action on the box ("ok")
-            alertController.addAction(defaultAction) // put the action "ok" on the box
-            self.present(alertController, animated: true, completion: nil) // present the box
-            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and a a password", preferredStyle: .alert) //creating pop up box if either tabs are empty
+            let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil) // create constant, the "ok" on the box
+            alertController.addAction(defaultAction) // put the action "ok" on the popup box
+            self.present(alertController, animated: true, completion: nil) // presents the box
+            // ^if email or password wasnt entered
         } else {
             AuthService.signIn(controller: self, email: emailTextField.text!, password: passwordTextField.text!) { (user) in
-                guard user != nil else { // performs auth service func and then print
+                guard user != nil else { // performs auth service func, if user doesnt exist
                     print("error: FiRuser does not exist")
                     return
                 }
-                print("user is signed in")
+                print("user is signed in") //if there is an existing user
                 UserService.show(forUID: (user?.uid)!) { (user) in
                     if let user = user {
                         User.setCurrent(user, writeToUserDefaults: true)
@@ -53,6 +53,10 @@ class SignInViewController: UIViewController {
             
         }
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.passwordTextField.resignFirstResponder()
+        self.emailTextField.resignFirstResponder()
+    } // click to get out of keyboard
     
     @IBOutlet weak var containerview2: UIView!
     @IBOutlet weak var containerview1: UIView!
