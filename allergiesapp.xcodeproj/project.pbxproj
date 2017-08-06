@@ -11,7 +11,7 @@
 		AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6251F3371AA00F16A66 /* Assets.xcassets */; };
 		AF35B62A1F33721100F16A66 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6291F33721100F16A66 /* UserService.swift */; };
 		AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62B1F33723000F16A66 /* SignInViewController.swift */; };
-		AF35B62E1F33723000F16A66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62C1F33723000F16A66 /* ViewController.swift */; };
+		AF35B62E1F33723000F16A66 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62C1F33723000F16A66 /* MainViewController.swift */; };
 		AF35B6311F33724800F16A66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */; };
 		AF35B6361F33725100F16A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */; };
 		AF35B6371F33725100F16A66 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6341F33725100F16A66 /* Login.storyboard */; };
@@ -31,7 +31,7 @@
 		AF35B6251F3371AA00F16A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = allergiesapp/Assets.xcassets; sourceTree = "<group>"; };
 		AF35B6291F33721100F16A66 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = allergiesapp/Services/UserService.swift; sourceTree = "<group>"; };
 		AF35B62B1F33723000F16A66 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = allergiesapp/Controllers/SignInViewController.swift; sourceTree = "<group>"; };
-		AF35B62C1F33723000F16A66 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = allergiesapp/Controllers/ViewController.swift; sourceTree = "<group>"; };
+		AF35B62C1F33723000F16A66 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = allergiesapp/Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "allergiesapp/Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF35B6301F33724800F16A66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = allergiesapp/Supporting/Info.plist; sourceTree = "<group>"; };
 		AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = allergiesapp/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				AF35B62B1F33723000F16A66 /* SignInViewController.swift */,
-				AF35B62C1F33723000F16A66 /* ViewController.swift */,
 				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
+				AF35B62C1F33723000F16A66 /* MainViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
-				AF35B62E1F33723000F16A66 /* ViewController.swift in Sources */,
+				AF35B62E1F33723000F16A66 /* MainViewController.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
 				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
 			);

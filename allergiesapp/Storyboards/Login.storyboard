@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-3N-7yw">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-3N-7yw">
                                 <rect key="frame" x="0.0" y="354" width="414" height="29"/>
                                 <segments>
                                     <segment title="Sign In"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FB7-3P-wng">
-                                <rect key="frame" x="158" y="151" width="98.666666666666686" height="30"/>
+                                <rect key="frame" x="157.66666666666669" y="151" width="98.666666666666686" height="30"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -164,21 +164,21 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AT5-Wt-mY5">
-                                <rect key="frame" x="158.66666666666663" y="90" width="97.333333333333343" height="30"/>
+                                <rect key="frame" x="158.33333333333334" y="90" width="97.333333333333314" height="30"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWM-G6-Hos">
-                                <rect key="frame" x="158" y="150" width="98.666666666666686" height="30"/>
+                                <rect key="frame" x="157.66666666666669" y="150" width="98.666666666666686" height="30"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uk1-ZR-x2O">
-                                <rect key="frame" x="176.33333333333334" y="210" width="62" height="30"/>
+                                <rect key="frame" x="176" y="210" width="62" height="30"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
