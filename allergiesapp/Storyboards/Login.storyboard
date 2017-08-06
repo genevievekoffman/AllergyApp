@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-3N-7yw">
-                                <rect key="frame" x="0.0" y="354" width="414" height="29"/>
+                                <rect key="frame" x="0.0" y="270" width="414" height="29"/>
                                 <segments>
                                     <segment title="Sign In"/>
                                     <segment title="Sign Up"/>
@@ -34,39 +34,43 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-wI-JmU">
-                                <rect key="frame" x="0.0" y="382" width="414" height="354"/>
+                                <rect key="frame" x="0.0" y="298" width="414" height="438"/>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.76862745099999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="o4T-u1-qqP" kind="embed" identifier="SegueToSignInViewContainer" id="EIZ-Lx-Eon"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gju-Q7-NmR">
-                                <rect key="frame" x="0.0" y="382" width="414" height="354"/>
+                                <rect key="frame" x="0.0" y="298" width="414" height="438"/>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.76862745099999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="qID-Fv-F0m" kind="embed" identifier="SegueToSignUpViewContainer" id="VUq-Bz-lLg"/>
                                 </connections>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abe’snew" translatesAutoresizingMaskIntoConstraints="NO" id="G2k-qN-bAx">
-                                <rect key="frame" x="5" y="186" width="206" height="168"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoabes" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-i8-V66">
+                                <rect key="frame" x="107" y="46" width="200" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="SmJ-ie-aet"/>
+                                    <constraint firstAttribute="width" constant="200" id="YaX-QU-PZi"/>
+                                    <constraint firstAttribute="width" secondItem="2hi-i8-V66" secondAttribute="height" multiplier="5:4" id="iMa-lN-ea7"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.69803921568627447" green="0.84705882352941175" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="d8b-wI-JmU" secondAttribute="trailing" id="51O-pY-1oG"/>
-                            <constraint firstItem="Gju-Q7-NmR" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="B1z-Mh-yh7"/>
-                            <constraint firstItem="oyA-3N-7yw" firstAttribute="centerY" secondItem="Y3S-AG-LgK" secondAttribute="centerY" id="Eb9-qV-sqt"/>
-                            <constraint firstAttribute="bottom" secondItem="d8b-wI-JmU" secondAttribute="bottom" id="FCK-Qg-jLk"/>
-                            <constraint firstItem="d8b-wI-JmU" firstAttribute="top" secondItem="oyA-3N-7yw" secondAttribute="bottom" id="Ie0-jI-9oY"/>
-                            <constraint firstAttribute="trailing" secondItem="oyA-3N-7yw" secondAttribute="trailing" id="KJk-SE-Gc7"/>
-                            <constraint firstItem="oyA-3N-7yw" firstAttribute="top" secondItem="G2k-qN-bAx" secondAttribute="bottom" id="MZL-qx-pLk"/>
-                            <constraint firstItem="Gju-Q7-NmR" firstAttribute="top" secondItem="oyA-3N-7yw" secondAttribute="bottom" id="NLj-og-o4X"/>
-                            <constraint firstItem="G2k-qN-bAx" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" constant="5" id="W0p-yz-LWH"/>
-                            <constraint firstAttribute="trailing" secondItem="Gju-Q7-NmR" secondAttribute="trailing" id="g0z-tD-we8"/>
-                            <constraint firstItem="oyA-3N-7yw" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="lnZ-rs-vf6"/>
-                            <constraint firstItem="d8b-wI-JmU" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="nPJ-P8-xjr"/>
-                            <constraint firstAttribute="trailing" secondItem="G2k-qN-bAx" secondAttribute="trailing" constant="203" id="uIi-ee-CPN"/>
-                            <constraint firstAttribute="bottom" secondItem="Gju-Q7-NmR" secondAttribute="bottom" id="yTN-2k-g2j"/>
+                            <constraint firstAttribute="trailing" secondItem="oyA-3N-7yw" secondAttribute="trailing" id="3GM-4T-5Mp"/>
+                            <constraint firstItem="oyA-3N-7yw" firstAttribute="top" secondItem="M1F-iK-w2e" secondAttribute="bottom" constant="250" id="4mM-55-hbz"/>
+                            <constraint firstItem="2hi-i8-V66" firstAttribute="centerX" secondItem="oyA-3N-7yw" secondAttribute="centerX" id="5be-g9-BuI"/>
+                            <constraint firstItem="Gju-Q7-NmR" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="7dj-hN-eqt"/>
+                            <constraint firstItem="d8b-wI-JmU" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="8Dg-6h-Nau"/>
+                            <constraint firstItem="4aY-l3-EQ6" firstAttribute="top" secondItem="Gju-Q7-NmR" secondAttribute="bottom" id="9ds-7m-DNe"/>
+                            <constraint firstItem="oyA-3N-7yw" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="Npo-Mi-g6i"/>
+                            <constraint firstAttribute="trailing" secondItem="d8b-wI-JmU" secondAttribute="trailing" id="SAf-kM-xil"/>
+                            <constraint firstItem="Gju-Q7-NmR" firstAttribute="top" secondItem="oyA-3N-7yw" secondAttribute="bottom" id="YnP-yg-GjL"/>
+                            <constraint firstItem="2hi-i8-V66" firstAttribute="top" secondItem="M1F-iK-w2e" secondAttribute="bottom" constant="26" id="aER-oz-gps"/>
+                            <constraint firstAttribute="trailing" secondItem="Gju-Q7-NmR" secondAttribute="trailing" id="jO7-DO-epB"/>
+                            <constraint firstItem="d8b-wI-JmU" firstAttribute="top" secondItem="oyA-3N-7yw" secondAttribute="bottom" id="lRw-7t-ouE"/>
+                            <constraint firstItem="d8b-wI-JmU" firstAttribute="bottom" secondItem="4aY-l3-EQ6" secondAttribute="top" id="llm-M1-KUw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -88,7 +92,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cIa-yH-zEy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YnP-27-mtt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2W-tZ-EBX">
@@ -108,12 +112,6 @@
                                     <action selector="LoginButton:" destination="o4T-u1-qqP" eventType="touchUpInside" id="0OC-3O-DhA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="muffin" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-ny-svh">
-                                <rect key="frame" x="277" y="217" width="137" height="137"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="H0Z-ny-svh" secondAttribute="height" multiplier="1:1" id="QNX-hX-VMm"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FB7-3P-wng">
                                 <rect key="frame" x="157.66666666666669" y="151" width="98.666666666666686" height="30"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,14 +123,11 @@
                         <color key="backgroundColor" red="0.69803921568627447" green="0.84705882352941175" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XR2-2E-DFp" firstAttribute="top" secondItem="FB7-3P-wng" secondAttribute="bottom" constant="59" id="9dl-nF-lw4"/>
-                            <constraint firstAttribute="trailing" secondItem="H0Z-ny-svh" secondAttribute="trailing" id="9le-X8-ffE"/>
                             <constraint firstItem="FB7-3P-wng" firstAttribute="centerX" secondItem="YnP-27-mtt" secondAttribute="centerX" id="C2N-XF-Ihq"/>
                             <constraint firstItem="a2W-tZ-EBX" firstAttribute="centerX" secondItem="YnP-27-mtt" secondAttribute="centerX" id="OSy-ba-lSu"/>
                             <constraint firstItem="a2W-tZ-EBX" firstAttribute="top" secondItem="Kzn-cv-lOv" secondAttribute="bottom" constant="77" id="Pj6-dU-5hh"/>
                             <constraint firstItem="FB7-3P-wng" firstAttribute="top" secondItem="a2W-tZ-EBX" secondAttribute="bottom" constant="44" id="dwE-q7-1Rg"/>
                             <constraint firstItem="XR2-2E-DFp" firstAttribute="centerX" secondItem="YnP-27-mtt" secondAttribute="centerX" id="eoT-qJ-WdQ"/>
-                            <constraint firstAttribute="bottom" secondItem="H0Z-ny-svh" secondAttribute="bottom" id="ga5-0S-vtV"/>
-                            <constraint firstItem="H0Z-ny-svh" firstAttribute="leading" secondItem="YnP-27-mtt" secondAttribute="leading" constant="277" id="xyJ-kW-ZIZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -153,7 +148,7 @@
                         <viewControllerLayoutGuide type="bottom" id="I34-TJ-jL6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xvy-2c-U52">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rkM-hS-kG3">
@@ -193,12 +188,6 @@
                                     <action selector="nextButtonTapped:" destination="qID-Fv-F0m" eventType="touchUpInside" id="VA9-qY-Vzj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="muffin" translatesAutoresizingMaskIntoConstraints="NO" id="0aO-DV-cm6">
-                                <rect key="frame" x="277" y="217" width="137" height="137"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="0aO-DV-cm6" secondAttribute="height" multiplier="1:1" id="dYu-I9-g1d"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.69803921568627447" green="0.84705882352941175" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -206,15 +195,12 @@
                             <constraint firstItem="AT5-Wt-mY5" firstAttribute="top" secondItem="rkM-hS-kG3" secondAttribute="bottom" constant="30" id="377-id-EmA"/>
                             <constraint firstItem="jWM-G6-Hos" firstAttribute="centerX" secondItem="xvy-2c-U52" secondAttribute="centerX" id="6Ml-yH-4O4"/>
                             <constraint firstItem="rkM-hS-kG3" firstAttribute="top" secondItem="xvy-2c-U52" secondAttribute="top" constant="30" id="AUL-Eh-kb4"/>
-                            <constraint firstItem="0aO-DV-cm6" firstAttribute="leading" secondItem="xvy-2c-U52" secondAttribute="leading" constant="277" id="ECO-0L-6TN"/>
                             <constraint firstItem="su6-P1-3kS" firstAttribute="centerX" secondItem="xvy-2c-U52" secondAttribute="centerX" id="O4z-a9-s0Q"/>
                             <constraint firstItem="uk1-ZR-x2O" firstAttribute="centerX" secondItem="xvy-2c-U52" secondAttribute="centerX" id="Xz3-yG-u1S"/>
                             <constraint firstItem="uk1-ZR-x2O" firstAttribute="top" secondItem="jWM-G6-Hos" secondAttribute="bottom" constant="30" id="fH7-bI-kV1"/>
                             <constraint firstItem="su6-P1-3kS" firstAttribute="top" secondItem="uk1-ZR-x2O" secondAttribute="bottom" constant="30" id="mdL-L4-hdf"/>
                             <constraint firstItem="rkM-hS-kG3" firstAttribute="centerX" secondItem="xvy-2c-U52" secondAttribute="centerX" id="ppN-9r-3CT"/>
                             <constraint firstItem="AT5-Wt-mY5" firstAttribute="centerX" secondItem="xvy-2c-U52" secondAttribute="centerX" id="twg-Yx-ywl"/>
-                            <constraint firstAttribute="trailing" secondItem="0aO-DV-cm6" secondAttribute="trailing" id="xKW-Yn-hsQ"/>
-                            <constraint firstAttribute="bottom" secondItem="0aO-DV-cm6" secondAttribute="bottom" id="yJu-K5-j5g"/>
                         </constraints>
                     </view>
                     <connections>
@@ -231,7 +217,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="abe’snew" width="273" height="168"/>
-        <image name="muffin" width="364" height="378"/>
+        <image name="logoabes" width="910" height="635"/>
     </resources>
 </document>
