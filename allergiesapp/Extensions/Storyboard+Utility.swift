@@ -30,4 +30,4 @@ extension UIStoryboard {
         }
         return initialViewController
     } //if there is a view controller(stroyboard) then show it as an initial view controller. if there is no storyboard --> returns error
-}
+} // ^^ info for keeping a user logged in
