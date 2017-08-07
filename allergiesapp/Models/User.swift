@@ -70,6 +70,7 @@ class User: NSObject {
         
         super.init()
     } // ^^ retrieves the uid, username, email, and name for the user 
+    // NScoding protocol^^ allows users to be decoded from data
     
     class func setCurrent(_ User: User, writeToUserDefaults: Bool = false) {
         if writeToUserDefaults {
@@ -85,8 +86,8 @@ extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
         aCoder.encode(username, forKey: Constants.UserDefaults.username)
-        aCoder.encode(username, forKey: Constants.UserDefaults.email)
-        aCoder.encode(username, forKey: Constants.UserDefaults.name)
+        aCoder.encode(email, forKey: Constants.UserDefaults.email)
+        aCoder.encode(name, forKey: Constants.UserDefaults.name)
     }
 }
 

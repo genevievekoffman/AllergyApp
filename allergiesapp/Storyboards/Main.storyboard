@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cjr-GE-RHd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,22 +9,126 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainViewController-->
-        <scene sceneID="tne-QT-ifu">
+        <!--View Controller-->
+        <scene sceneID="FO4-oI-BR6">
             <objects>
-                <viewController title="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="UGg-hS-Rn7" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="qyo-G6-tBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="20p-RP-Fcs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8IP-ko-Qho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.69803921570000005" green="0.84705882349999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-1w-lfZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Zh-1w-lfZ" secondAttribute="trailing" id="AE8-CN-EW3"/>
+                            <constraint firstItem="8Zh-1w-lfZ" firstAttribute="top" secondItem="8IP-ko-Qho" secondAttribute="top" id="Ho3-zc-Qrs"/>
+                            <constraint firstAttribute="bottom" secondItem="8Zh-1w-lfZ" secondAttribute="bottom" id="Sad-gH-auf"/>
+                            <constraint firstItem="8Zh-1w-lfZ" firstAttribute="leading" secondItem="8IP-ko-Qho" secondAttribute="leading" id="p1i-TU-j6d"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="OcZ-ZD-a1p">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDj-TA-vDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-325" y="923"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rh5-Iu-rm6">
+            <objects>
+                <viewController id="msv-cz-5A5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MdO-dh-lKC"/>
+                        <viewControllerLayoutGuide type="bottom" id="tjg-NT-1qB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kzo-GY-O2H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="WuM-TR-aCc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WuM-TR-aCc" firstAttribute="top" secondItem="kzo-GY-O2H" secondAttribute="top" id="9Ss-1f-a5u"/>
+                            <constraint firstAttribute="trailing" secondItem="WuM-TR-aCc" secondAttribute="trailing" id="dFy-2V-V43"/>
+                            <constraint firstAttribute="bottom" secondItem="WuM-TR-aCc" secondAttribute="bottom" id="qDx-bE-DY5"/>
+                            <constraint firstItem="WuM-TR-aCc" firstAttribute="leading" secondItem="kzo-GY-O2H" secondAttribute="leading" id="wWJ-aZ-0ZO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="3ct-Yg-nGP">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USB-uA-Uyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="323"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wdZ-0g-Sog">
+            <objects>
+                <viewController id="9Ke-wx-a0s" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KaQ-Ke-aTq"/>
+                        <viewControllerLayoutGuide type="bottom" id="fRd-NM-qBY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PSb-MD-Ku1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="smh-kA-ZS6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="smh-kA-ZS6" firstAttribute="top" secondItem="PSb-MD-Ku1" secondAttribute="top" id="KzS-YZ-sgn"/>
+                            <constraint firstItem="smh-kA-ZS6" firstAttribute="leading" secondItem="PSb-MD-Ku1" secondAttribute="leading" id="NYb-G6-Nwb"/>
+                            <constraint firstAttribute="trailing" secondItem="smh-kA-ZS6" secondAttribute="trailing" id="cWG-48-pdK"/>
+                            <constraint firstAttribute="bottom" secondItem="smh-kA-ZS6" secondAttribute="bottom" id="jco-21-k7v"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_profile_black" id="fZM-pC-DJw">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4n5-tf-OlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="-333"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WAM-U6-TZc">
+            <objects>
+                <tabBarController id="cjr-GE-RHd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nOM-p9-xAa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UGg-hS-Rn7" kind="relationship" relationship="viewControllers" id="TcQ-MU-kBJ"/>
+                        <segue destination="msv-cz-5A5" kind="relationship" relationship="viewControllers" id="dVk-dS-t6J"/>
+                        <segue destination="9Ke-wx-a0s" kind="relationship" relationship="viewControllers" id="Fzj-vr-g24"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70f-S3-13O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356" y="-5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rectangle 7" width="937" height="1667"/>
+        <image name="tab_home_black" width="25" height="25"/>
+        <image name="tab_plus_black" width="25" height="25"/>
+        <image name="tab_profile_black" width="25" height="25"/>
+    </resources>
 </document>

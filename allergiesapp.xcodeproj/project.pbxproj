@@ -11,7 +11,6 @@
 		AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6251F3371AA00F16A66 /* Assets.xcassets */; };
 		AF35B62A1F33721100F16A66 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6291F33721100F16A66 /* UserService.swift */; };
 		AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62B1F33723000F16A66 /* SignInViewController.swift */; };
-		AF35B62E1F33723000F16A66 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B62C1F33723000F16A66 /* MainViewController.swift */; };
 		AF35B6311F33724800F16A66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */; };
 		AF35B6361F33725100F16A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */; };
 		AF35B6371F33725100F16A66 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6341F33725100F16A66 /* Login.storyboard */; };
@@ -21,6 +20,9 @@
 		AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B63F1F33ABEF00F16A66 /* Helpers.swift */; };
 		AF35B6421F33ACB500F16A66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6411F33ACB500F16A66 /* User.swift */; };
 		AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6431F33B60300F16A66 /* SignupViewController.swift */; };
+		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
+		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
+		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
 		F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +33,6 @@
 		AF35B6251F3371AA00F16A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = allergiesapp/Assets.xcassets; sourceTree = "<group>"; };
 		AF35B6291F33721100F16A66 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = allergiesapp/Services/UserService.swift; sourceTree = "<group>"; };
 		AF35B62B1F33723000F16A66 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = allergiesapp/Controllers/SignInViewController.swift; sourceTree = "<group>"; };
-		AF35B62C1F33723000F16A66 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = allergiesapp/Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		AF35B62F1F33724800F16A66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "allergiesapp/Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF35B6301F33724800F16A66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = allergiesapp/Supporting/Info.plist; sourceTree = "<group>"; };
 		AF35B6331F33725100F16A66 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = allergiesapp/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +43,9 @@
 		AF35B63F1F33ABEF00F16A66 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = allergiesapp/Helpers/Helpers.swift; sourceTree = "<group>"; };
 		AF35B6411F33ACB500F16A66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = allergiesapp/Models/User.swift; sourceTree = "<group>"; };
 		AF35B6431F33B60300F16A66 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = allergiesapp/Controllers/SignupViewController.swift; sourceTree = "<group>"; };
+		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
+		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
 		AFAC44861F32667B00D62744 /* allergiesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = allergiesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_allergiesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,7 +109,9 @@
 			children = (
 				AF35B62B1F33723000F16A66 /* SignInViewController.swift */,
 				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
-				AF35B62C1F33723000F16A66 /* MainViewController.swift */,
+				AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */,
+				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
+				AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -300,12 +306,14 @@
 			files = (
 				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
+				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
+				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
-				AF35B62E1F33723000F16A66 /* MainViewController.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
+				AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */,
 				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
