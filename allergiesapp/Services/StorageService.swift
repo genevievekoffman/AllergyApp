@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  StorageService.swift
 //  allergiesapp
 //
 //  Created by Genevieve Koffman on 8/7/17.
@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import FirebaseStorage
 
-class HomeViewController: UIViewController {
+
+struct StorageService { // method for uploading posts 
+    
+   
     
 }

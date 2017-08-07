@@ -19,7 +19,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var label: UILabel!
     
-    var companies = ["bai", "pearl river"]
+    var companies = ["No Company", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
     
     
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         label.text = companies[row]
-    }
+    } // ^^ allows user to use UIPicker to choose a company
     
     @IBAction func AskButtonTapped(_ sender: Any) {
         if self.questiontextfield.text ==  "" || self.tagstextfield.text == "" {
@@ -50,10 +50,18 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             // ^if email or password wasnt entered
         } else {
             print("Posted")
+            performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller
+            
         }
+        let question =  questiontextfield.text
+        let tags = tagstextfield.text
+        let company = label.text
+        
+        print ("\(String(describing: question)), \(String(describing: tags)), \(String(describing: company))") // just printing their post 
+        
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.questiontextfield.resignFirstResponder()
         self.tagstextfield.resignFirstResponder()
-    } // allows user to get out of keyboard 
+    } // allows user to get out of keyboard
 }
