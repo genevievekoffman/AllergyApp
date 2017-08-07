@@ -17,12 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
-        let storyboard = UIStoryboard(name: "Login", bundle: .main) // creates instance of LoginViewController set to initial view controller
-        if let initialViewController = storyboard.instantiateInitialViewController() { // if storyboard has initial viewcontroller
-             window?.rootViewController = initialViewController // set it to the window's rootViewController property ??
-             window?.makeKeyAndVisible() // make the window priority  // UIwindow
-        } // ^^ makes the first view controller to open - login storyboard and not main 
+        configureInitialRootViewController(for: window) // user stays logged in
         
         return true
     }
@@ -50,5 +45,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            
+            User.setCurrent(user)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    } //allows user to remain logged in^^
 }
 

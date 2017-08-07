@@ -38,17 +38,18 @@ class SignInViewController: UIViewController {
 //                           delay: TimeInterval(0),
 //                           options: animationCurve,
 //                           animations: { self.view.layoutIfNeeded() },
-//                           completion: nil)
+//                          completion: nil)
 //        }
-   // }  //^^moves the textfield when clicked on it so keyboard doesnt block it - doesnt work, it moves the muffin
+    // }  //^^moves the textfield when clicked on it so keyboard doesnt block it - doesnt work, it moves the muffin
 
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-//    func hidePassword () {
-//        passwordTextField.isSecureTextEntry = true // hides the password when user is typing
+//    func hideEmail () {
+//        emailTextField.isSecureTextEntry = true // hides the email when user is typing
 //    }
+    
     @IBAction func LoginButton(_ sender: Any) {
         if self.emailTextField.text ==  "" || self.passwordTextField.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter an email and a a password", preferredStyle: .alert) //creating pop up box if either tabs are empty
