@@ -41,4 +41,19 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         label.text = companies[row]
     }
     
+    @IBAction func AskButtonTapped(_ sender: Any) {
+        if self.questiontextfield.text ==  "" || self.tagstextfield.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter a question and atleast 1 tag", preferredStyle: .alert) //creating pop up box if either tabs are empty
+            let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil) // create constant, the "ok" on the box
+            alertController.addAction(defaultAction) // put the action "ok" on the popup box
+            self.present(alertController, animated: true, completion: nil) // presents the box
+            // ^if email or password wasnt entered
+        } else {
+            print("Posted")
+        }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.questiontextfield.resignFirstResponder()
+        self.tagstextfield.resignFirstResponder()
+    } // allows user to get out of keyboard 
 }
