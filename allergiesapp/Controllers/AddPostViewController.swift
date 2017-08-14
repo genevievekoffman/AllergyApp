@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 
 class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -19,7 +21,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var label: UILabel!
     
-    var companies = ["No Company", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
+    var companies = ["Public", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
     
     
     override func viewDidLoad() {
@@ -34,8 +36,11 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return companies.count
     }
+    var pickVar: String?
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return companies[row]
+        pickVar = companies[row]
+        return companies[row] // ?
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         label.text = companies[row]
@@ -50,18 +55,22 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             // ^if email or password wasnt entered
         } else {
             print("Posted")
-            performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller
-            
+            PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!) { (post) in
+                return
         }
-        let question =  questiontextfield.text
-        let tags = tagstextfield.text
-        let company = label.text
-        
-        print ("\(String(describing: question)), \(String(describing: tags)), \(String(describing: company))") // just printing their post 
-        
+            performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller
+
+//  guard let question = questiontextfield.text,
+//        let tags = tagstextfield.text,
+         // let company = companypickerview.//??
+        }
     }
+    
+
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.questiontextfield.resignFirstResponder()
         self.tagstextfield.resignFirstResponder()
     } // allows user to get out of keyboard
+    
 }

@@ -25,7 +25,9 @@
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
 		AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8B01F38C04B007DCC0B /* Storyboard+Utility.swift */; };
 		AF6FF8B31F38EB14007DCC0B /* PostAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8B21F38EB14007DCC0B /* PostAdded.swift */; };
-		AF6FF8B51F38F274007DCC0B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8B41F38F274007DCC0B /* StorageService.swift */; };
+		AF6FF8B91F39FCAD007DCC0B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8B81F39FCAD007DCC0B /* Post.swift */; };
+		AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */; };
+		AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8C21F3A6243007DCC0B /* PostService.swift */; };
 		F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +53,9 @@
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
 		AF6FF8B01F38C04B007DCC0B /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "allergiesapp/Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		AF6FF8B21F38EB14007DCC0B /* PostAdded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostAdded.swift; path = allergiesapp/Controllers/PostAdded.swift; sourceTree = "<group>"; };
-		AF6FF8B41F38F274007DCC0B /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = allergiesapp/Services/StorageService.swift; sourceTree = "<group>"; };
+		AF6FF8B81F39FCAD007DCC0B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = allergiesapp/Models/Post.swift; sourceTree = "<group>"; };
+		AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "allergiesapp/Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
+		AF6FF8C21F3A6243007DCC0B /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = allergiesapp/Services/PostService.swift; sourceTree = "<group>"; };
 		AFAC44861F32667B00D62744 /* allergiesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = allergiesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_allergiesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6FF8B01F38C04B007DCC0B /* Storyboard+Utility.swift */,
+				AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AF35B6411F33ACB500F16A66 /* User.swift */,
+				AF6FF8B81F39FCAD007DCC0B /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -135,9 +141,9 @@
 		AF35B6281F3371F500F16A66 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AF6FF8B41F38F274007DCC0B /* StorageService.swift */,
 				AF35B6291F33721100F16A66 /* UserService.swift */,
 				AF35B63B1F33774000F16A66 /* AuthService.swift */,
+				AF6FF8C21F3A6243007DCC0B /* PostService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -316,17 +322,19 @@
 				AF6FF8B31F38EB14007DCC0B /* PostAdded.swift in Sources */,
 				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
+				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */,
+				AF6FF8B91F39FCAD007DCC0B /* Post.swift in Sources */,
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
+				AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */,
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
 				AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */,
 				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
-				AF6FF8B51F38F274007DCC0B /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
