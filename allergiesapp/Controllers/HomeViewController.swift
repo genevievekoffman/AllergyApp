@@ -30,19 +30,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toResponse") {
+            let index = self.tableView.indexPathForSelectedRow!
+            let thePost = arrayOfPosts[index.row]
+            let responseVC = segue.destination as? ResponsesViewController
+            responseVC?.post = thePost
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfPosts.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
         
         cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
         cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
-//        cell.usernameLabel.text = // username of poster
         
         cell.cellPost = arrayOfPosts[indexPath.row]
+        
         return cell
         
     }

@@ -14,6 +14,7 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questiontextLabel: UILabel!
     @IBOutlet weak var tagstextLabel: UILabel!
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     
