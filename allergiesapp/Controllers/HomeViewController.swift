@@ -1,4 +1,4 @@
-//
+ //
 //  HomeViewController.swift
 //  allergiesapp
 //
@@ -9,13 +9,18 @@
 import UIKit
 
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var arrayOfPosts = [Post]()
+    var arrayOfPosts = [Post]() {
+        didSet {
+            tableView.reloadData()
+        } // constantly sees any change in array
+    }
 
+    @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         PostService.retrieveAllPosts(forUID: User.current.uid , completion: { (posts) in
             if let legitposts = posts  {
                 self.arrayOfPosts = legitposts
@@ -25,6 +30,7 @@ class HomeViewController: UIViewController {
         })
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfPosts.count
     }
@@ -32,28 +38,19 @@ class HomeViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
         
-        cell.cellPost = arrayOfPosts[indexPath.row]  
-        print("\(arrayOfPosts)")
+        cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
+        cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
+//        cell.usernameLabel.text = // username of poster
+        
+        cell.cellPost = arrayOfPosts[indexPath.row]
         return cell
         
     }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 
-//    var post: [Post]?
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if let post = post {
-//            questionLabel.text = post.question
-//            TagsLabel.text = post.tags
-//        } else {
-//            questionLabel.text = ""
-//            TagsLabel.text = ""
-//        }
-//    }
+
 
 

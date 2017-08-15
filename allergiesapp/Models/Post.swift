@@ -19,11 +19,10 @@ class Post {
     let company: String
     let uid: String
     
-//    let poster: User
+
     
     var dictvalue: [String: Any] {
-//        let userdict = ["uid" : poster.uid,
-//                        "username" : poster.username]
+
         return ["postURL": postURL, "response": response, "question": question, "tags": tags, "company": company]
     }
     
@@ -39,13 +38,11 @@ class Post {
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String: Any],
-            
-            let postURL = dict["post_url"] as? String,
-//            let userDict = dict["poster"] as? [String: Any], 
-            let response = dict["response"] as? String,
+            let postURL = (dict["post_url"] ?? "") as? String,
+            let response = (dict["response"] ?? "") as? String,
             let question = dict["question"] as? String,
             let tags = dict["tags"] as? String,
-            let company = dict["company"] as? String
+            let company = (dict["company"] ?? "") as? String
             else { return nil }
         
         self.uid = snapshot.key

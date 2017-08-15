@@ -23,8 +23,9 @@ struct PostService {
                     return completion([]) }
             
             var arrayOfAllPosts = [Post]()
-           
+           print(snapshot)
             for postSnap in snapshot {
+                print(postSnap)
                 guard let post = Post(snapshot: postSnap) // init post with data from snapshot
                     else { return completion([]) }
                 arrayOfAllPosts.append(post) }
