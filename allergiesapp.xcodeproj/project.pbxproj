@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B531F432F37002D6B56 /* PostTableViewCell.swift */; };
 		AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6241F3371AA00F16A66 /* AppDelegate.swift */; };
 		AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6251F3371AA00F16A66 /* Assets.xcassets */; };
 		AF35B62A1F33721100F16A66 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6291F33721100F16A66 /* UserService.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		7EA273F286C828D89B64B11C /* Pods-allergiesapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.release.xcconfig"; sourceTree = "<group>"; };
 		84F631A36E732F328F12580D /* Pods-allergiesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF294B531F432F37002D6B56 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = allergiesapp/Views/PostTableViewCell.swift; sourceTree = "<group>"; };
 		AF35B6241F3371AA00F16A66 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = allergiesapp/AppDelegate.swift; sourceTree = "<group>"; };
 		AF35B6251F3371AA00F16A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = allergiesapp/Assets.xcassets; sourceTree = "<group>"; };
 		AF35B6291F33721100F16A66 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = allergiesapp/Services/UserService.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		AF35B6211F33718F00F16A66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF294B531F432F37002D6B56 /* PostTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				AF6FF8B31F38EB14007DCC0B /* PostAdded.swift in Sources */,
 				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
+				AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */,
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,

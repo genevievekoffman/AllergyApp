@@ -6,28 +6,54 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseAuth.FIRUser
 import FirebaseDatabase
-// used makestagrams user struct syntax
+
 
 struct PostService {
-    static func findPost(forUID uid: String, completion: @escaping (Post?) -> Void) {
-        let ref = Database.database().reference().child("Posts").child(uid)
+    
+    static func retrieveAllPosts(forUID uid: String, completion: @escaping ([Post]?) -> Void) {
+        
+        let ref = Database.database().reference().child("GeneralPosts")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let post = Post(snapshot: snapshot) else {
-                return completion(nil)
-            }
-            completion(post)
-        })
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] // takes snapshot and breaks it down
+                else {
+                    return completion([]) }
+            
+            var arrayOfAllPosts = [Post]()
+           
+            for postSnap in snapshot {
+                guard let post = Post(snapshot: postSnap) // init post with data from snapshot
+                    else { return completion([]) }
+                arrayOfAllPosts.append(post) }
+            
+            completion(arrayOfAllPosts)
+            
+            
+        }) // retrieving every post on the app, returns an array of all posts
+        
+        
     }
     
     static func createPost(forUID uid: String, question: String, tags: String, company: String, completion: @escaping (Post?) -> Void) {
       
         let postAttrs = ["question": question, "tags": tags, "company": company]
         
-        let ref = Database.database().reference().child("Posts").child(uid).childByAutoId()
+        let ref = Database.database().reference().child("UserPosts").child(uid).childByAutoId()
+        let ref2 = Database.database().reference().child("GeneralPosts").childByAutoId()
+        
+        ref2.updateChildValues(postAttrs) { (error, ref2) in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return completion(nil)
+            }
+            ref2.observeSingleEvent(of: .value, with: { (snapshot) in
+                let post = Post(snapshot: snapshot)
+                completion(post)
+            })
+        }
         
         ref.updateChildValues(postAttrs) { (error, ref) in
             if let error = error {
@@ -41,5 +67,6 @@ struct PostService {
                 completion(post)
             })
         }
-    }
+    } //^^ saves question, tags, and company as a post under the user
+
 }

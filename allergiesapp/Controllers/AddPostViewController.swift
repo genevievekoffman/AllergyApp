@@ -56,7 +56,9 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         } else {
             print("Posted")
             PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!) { (post) in
-                return
+                
+//                HomeViewController.arrayOfPosts.append("\()")
+                
         }
             performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller
 
