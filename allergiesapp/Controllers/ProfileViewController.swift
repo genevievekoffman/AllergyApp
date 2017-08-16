@@ -6,4 +6,15 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        usernameLabel.text? = User.current.username
+    }
+
+}
