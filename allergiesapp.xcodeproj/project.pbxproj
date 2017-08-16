@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B531F432F37002D6B56 /* PostTableViewCell.swift */; };
 		AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */; };
-		AF294B591F438143002D6B56 /* RepliesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B581F438143002D6B56 /* RepliesTableViewCell.swift */; };
+		AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */; };
+		AF294B5B1F439F30002D6B56 /* ResponseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B5A1F439F30002D6B56 /* ResponseService.swift */; };
 		AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6241F3371AA00F16A66 /* AppDelegate.swift */; };
 		AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF35B6251F3371AA00F16A66 /* Assets.xcassets */; };
 		AF35B62A1F33721100F16A66 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6291F33721100F16A66 /* UserService.swift */; };
@@ -23,6 +24,7 @@
 		AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B63F1F33ABEF00F16A66 /* Helpers.swift */; };
 		AF35B6421F33ACB500F16A66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6411F33ACB500F16A66 /* User.swift */; };
 		AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6431F33B60300F16A66 /* SignupViewController.swift */; };
+		AF6D70A91F44835A00314E41 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70A81F44835A00314E41 /* Response.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -39,7 +41,8 @@
 		84F631A36E732F328F12580D /* Pods-allergiesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.debug.xcconfig"; sourceTree = "<group>"; };
 		AF294B531F432F37002D6B56 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = allergiesapp/Views/PostTableViewCell.swift; sourceTree = "<group>"; };
 		AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponsesViewController.swift; path = allergiesapp/Controllers/ResponsesViewController.swift; sourceTree = "<group>"; };
-		AF294B581F438143002D6B56 /* RepliesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepliesTableViewCell.swift; path = allergiesapp/Views/RepliesTableViewCell.swift; sourceTree = "<group>"; };
+		AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseTableViewCell.swift; path = allergiesapp/Views/ResponseTableViewCell.swift; sourceTree = "<group>"; };
+		AF294B5A1F439F30002D6B56 /* ResponseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseService.swift; path = allergiesapp/Services/ResponseService.swift; sourceTree = "<group>"; };
 		AF35B6241F3371AA00F16A66 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = allergiesapp/AppDelegate.swift; sourceTree = "<group>"; };
 		AF35B6251F3371AA00F16A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = allergiesapp/Assets.xcassets; sourceTree = "<group>"; };
 		AF35B6291F33721100F16A66 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = allergiesapp/Services/UserService.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		AF35B63F1F33ABEF00F16A66 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = allergiesapp/Helpers/Helpers.swift; sourceTree = "<group>"; };
 		AF35B6411F33ACB500F16A66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = allergiesapp/Models/User.swift; sourceTree = "<group>"; };
 		AF35B6431F33B60300F16A66 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = allergiesapp/Controllers/SignupViewController.swift; sourceTree = "<group>"; };
+		AF6D70A81F44835A00314E41 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = allergiesapp/Models/Response.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AF294B531F432F37002D6B56 /* PostTableViewCell.swift */,
-				AF294B581F438143002D6B56 /* RepliesTableViewCell.swift */,
+				AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -143,6 +147,7 @@
 			children = (
 				AF35B6411F33ACB500F16A66 /* User.swift */,
 				AF6FF8B81F39FCAD007DCC0B /* Post.swift */,
+				AF6D70A81F44835A00314E41 /* Response.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				AF35B6291F33721100F16A66 /* UserService.swift */,
 				AF35B63B1F33774000F16A66 /* AuthService.swift */,
 				AF6FF8C21F3A6243007DCC0B /* PostService.swift */,
+				AF294B5A1F439F30002D6B56 /* ResponseService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -330,8 +336,9 @@
 			files = (
 				AF6FF8B31F38EB14007DCC0B /* PostAdded.swift in Sources */,
 				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
-				AF294B591F438143002D6B56 /* RepliesTableViewCell.swift in Sources */,
+				AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */,
 				AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */,
+				AF294B5B1F439F30002D6B56 /* ResponseService.swift in Sources */,
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
@@ -340,6 +347,7 @@
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
+				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
 				AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */,
 				AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */,

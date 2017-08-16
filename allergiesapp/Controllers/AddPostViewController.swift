@@ -11,6 +11,7 @@ import Firebase
 
 
 
+
 class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var questiontextfield: UITextField!
@@ -21,7 +22,10 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var label: UILabel!
     
+    
     var companies = ["Public", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
+    
+    
     
     
     override func viewDidLoad() {
@@ -57,18 +61,12 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             print("Posted")
             PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!) { (post) in
                 
-//                HomeViewController.arrayOfPosts.append("\()")
-                
-        }
+            }
             performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller
-
-//  guard let question = questiontextfield.text,
-//        let tags = tagstextfield.text,
-         // let company = companypickerview.//??
         }
     }
     
-
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.questiontextfield.resignFirstResponder()
