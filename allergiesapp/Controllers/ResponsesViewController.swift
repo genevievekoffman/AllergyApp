@@ -8,14 +8,27 @@
 
 import UIKit
 
+
 class ResponsesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var arrayOfResponses = [Response]() {
         didSet {
             tableView.reloadData()
-        } // constantly sees any change in array
+        }
     }
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ResponseService.recieveAllResponse(forUID: User.current.uid , completion: { (response) in
+            if let legitResponse = response {
+            self.arrayOfResponses = legitResponse
+            } else {
+                print("error")
+            }
+        })
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfResponses.count
@@ -31,21 +44,28 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell 
     }
     
+
     var post: Post?
 
-    
     override func viewDidLoad() {
         print(post!.question)
         
         TagsQuestionLabel.text = post?.tags
         QuestiontextLabel.text = post?.question // sets the matching question and tag
-        
-        
-      //  ResponseTextLabel.text = response?.response
     }
     
     @IBOutlet weak var TagsQuestionLabel: UILabel!
     @IBOutlet weak var QuestiontextLabel: UILabel!
 
 
+    @IBOutlet weak var AddCommentTextLabel: UITextField!
+    
+    @IBAction func CommentArrow(_ sender: Any) {
+        ResponseService.saveResponse(forUID: User.current.uid , response: AddCommentTextLabel.text!) {
+            (response) in }
+        AddCommentTextLabel.text = ""
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.AddCommentTextLabel.resignFirstResponder()
+    }
 }

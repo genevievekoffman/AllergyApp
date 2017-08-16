@@ -12,6 +12,30 @@ import FirebaseDatabase
 
 struct ResponseService {
     
+    static func recieveAllResponse(forUID uid: String, completion: @escaping ([Response]?) -> Void) {
+        
+        let ref = Database.database().reference().child("AllResponse")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else {
+                    return completion([]) }
+            
+            var arrayOfAllResponses = [Response]()
+            
+            print(snapshot)
+            for postSnap in snapshot {
+                print(postSnap)
+                guard let response = Response(snapshot: postSnap)
+                    else { return completion([]) }
+                
+                arrayOfAllResponses.append(response) }
+            
+            completion(arrayOfAllResponses)
+        })
+    }
+    
+    
     static func saveResponse(forUID uid: String, response: String, completion: @escaping (Response?) -> Void) {
         
         let responseAttrs = ["response": response]

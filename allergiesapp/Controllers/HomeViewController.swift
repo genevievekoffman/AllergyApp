@@ -37,7 +37,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let responseVC = segue.destination as? ResponsesViewController
             responseVC?.post = thePost
         }
-    }
+    } // ^^??
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfPosts.count
