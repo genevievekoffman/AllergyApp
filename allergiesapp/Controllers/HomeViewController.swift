@@ -50,6 +50,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
         cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
         
+        cell.usernameLabel.text = arrayOfPosts[indexPath.row].userID
+        
+        
         
         cell.cellPost = arrayOfPosts[indexPath.row]
         

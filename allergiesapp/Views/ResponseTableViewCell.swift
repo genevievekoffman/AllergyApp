@@ -12,6 +12,8 @@ class ResponseTableViewCell: UITableViewCell {
     
     var Cellresponse: Response?
 
+
+    @IBOutlet weak var CellUsernameLabel: UILabel!
     @IBOutlet weak var ResponseTextLabel: UILabel!
     
 }

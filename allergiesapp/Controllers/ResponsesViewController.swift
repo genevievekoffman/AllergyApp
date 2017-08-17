@@ -17,11 +17,13 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    var post: Post?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        ResponseService.recieveAllResponse(forUID: User.current.uid , completion: { (response) in
+        ResponseService.recieveAllResponse(forUID: User.current.uid, postID: post!.postID , completion: { (response) in
             if let legitResponse = response {
             self.arrayOfResponses = legitResponse
             } else {
@@ -41,11 +43,13 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         cell.Cellresponse = arrayOfResponses[indexPath.row]
         
+        cell.CellUsernameLabel.text = arrayOfResponses[indexPath.row].usernameID
+        
         return cell 
     }
     
 
-    var post: Post?
+
 
     override func viewDidLoad() {
         print(post!.question)
@@ -61,7 +65,7 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var AddCommentTextLabel: UITextField!
     
     @IBAction func CommentArrow(_ sender: Any) {
-        ResponseService.saveResponse(forUID: User.current.uid , response: AddCommentTextLabel.text!) {
+        ResponseService.saveResponse(forUID: User.current.uid , response: AddCommentTextLabel.text!, usernameID: User.current.username, postID: post!.postID) {
             (response) in }
         AddCommentTextLabel.text = ""
     }

@@ -12,9 +12,9 @@ import FirebaseDatabase
 
 struct ResponseService {
     
-    static func recieveAllResponse(forUID uid: String, completion: @escaping ([Response]?) -> Void) {
+    static func recieveAllResponse(forUID uid: String, postID: String, completion: @escaping ([Response]?) -> Void) {
         
-        let ref = Database.database().reference().child("AllResponse")
+        let ref = Database.database().reference().child("AllResponse").child(postID)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
@@ -36,12 +36,12 @@ struct ResponseService {
     }
     
     
-    static func saveResponse(forUID uid: String, response: String, completion: @escaping (Response?) -> Void) {
+    static func saveResponse(forUID uid: String, response: String, usernameID: String, postID: String, completion: @escaping (Response?) -> Void) {
         
-        let responseAttrs = ["response": response]
+        let responseAttrs = ["response": response, "usernameID": usernameID]
         
-        let ref = Database.database().reference().child("UsersResponse").child(uid).childByAutoId()
-        let ref2 = Database.database().reference().child("AllResponse").childByAutoId()
+        let ref = Database.database().reference().child("UsersResponse").child(User.current.uid).childByAutoId()
+        let ref2 = Database.database().reference().child("AllResponse").child(postID).childByAutoId()
         
         ref2.updateChildValues(responseAttrs) { (error, ref2) in
             if let error = error {
@@ -67,4 +67,4 @@ struct ResponseService {
         }
     }
 }
-// created 
+  

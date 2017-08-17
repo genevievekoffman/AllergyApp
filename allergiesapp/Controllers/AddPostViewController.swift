@@ -9,9 +9,6 @@
 import UIKit
 import Firebase
 
-
-
-
 class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var questiontextfield: UITextField!
@@ -59,7 +56,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             // ^if email or password wasnt entered
         } else {
             print("Posted")
-            PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!) { (post) in
+            PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!, userID: User.current.uid) { (post) in
                 
             }
             performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller

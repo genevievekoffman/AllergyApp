@@ -38,9 +38,9 @@ struct PostService {
         
     }
     
-    static func createPost(forUID uid: String, question: String, tags: String, company: String, completion: @escaping (Post?) -> Void) {
+    static func createPost(forUID uid: String, question: String, tags: String, company: String, userID: String, completion: @escaping (Post?) -> Void) {
       
-        let postAttrs = ["question": question, "tags": tags, "company": company]
+        let postAttrs = ["question": question, "tags": tags, "company": company, "userID": userID]
         
         let ref = Database.database().reference().child("UserPosts").child(uid).childByAutoId()
         let ref2 = Database.database().reference().child("GeneralPosts").childByAutoId()

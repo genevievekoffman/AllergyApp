@@ -10,30 +10,35 @@ import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
 class Response{
-    let responseURL : String
-    let uid: String
-    let response : String
     
+    let responseID: String
+    let response : String
+    let uid: String
+    let usernameID: String
     
     var dictValue: [String: Any] {
-        return ["responseURL" : responseURL, "response" : response]
+        return [ "response" : response, "usernameID": usernameID]
     }
     
-    init(uid: String, responseURL: String, response: String) {
-        self.uid = uid
-        self.responseURL = responseURL
+    init(uid: String, response: String, responseID: String, usernameID: String) {
+        self.responseID = responseID
+    
         self.response = response
+        self.uid = uid
+        self.usernameID = usernameID
     }
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String: Any],
-            let responseURL = (dict["response_url"] ?? "") as? String,
-            let response = (dict["response"] ?? "") as? String
+            let response = (dict["response"] ?? "") as? String,
+            let responseID = (dict["responseID"] ?? "" ) as? String,
+            let usernameID = (dict["usernameID"] ?? "") as? String,
+            let uid = (dict["uid"] ?? "" ) as? String
             else { return nil }
-        
-        self.uid = snapshot.key
-        self.responseURL = responseURL
-        self.response = response 
+        self.uid = uid
+        self.responseID = snapshot.key
+       
+        self.response = response
+        self.usernameID = User.current.username
     }
 }
-// created 

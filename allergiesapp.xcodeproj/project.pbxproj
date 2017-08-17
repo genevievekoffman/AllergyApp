@@ -25,6 +25,10 @@
 		AF35B6421F33ACB500F16A66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6411F33ACB500F16A66 /* User.swift */; };
 		AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35B6431F33B60300F16A66 /* SignupViewController.swift */; };
 		AF6D70A91F44835A00314E41 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70A81F44835A00314E41 /* Response.swift */; };
+		AF6D70AC1F44D22300314E41 /* FoodAllergiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70AB1F44D22300314E41 /* FoodAllergiesViewController.swift */; };
+		AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70AF1F44D28B00314E41 /* allergies.swift */; };
+		AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B11F44D3E700314E41 /* AllergyService.swift */; };
+		AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -58,6 +62,10 @@
 		AF35B6411F33ACB500F16A66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = allergiesapp/Models/User.swift; sourceTree = "<group>"; };
 		AF35B6431F33B60300F16A66 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = allergiesapp/Controllers/SignupViewController.swift; sourceTree = "<group>"; };
 		AF6D70A81F44835A00314E41 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = allergiesapp/Models/Response.swift; sourceTree = "<group>"; };
+		AF6D70AB1F44D22300314E41 /* FoodAllergiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodAllergiesViewController.swift; path = allergiesapp/Controllers/FoodAllergiesViewController.swift; sourceTree = "<group>"; };
+		AF6D70AF1F44D28B00314E41 /* allergies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allergies.swift; sourceTree = "<group>"; };
+		AF6D70B11F44D3E700314E41 /* AllergyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyService.swift; sourceTree = "<group>"; };
+		AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAllergiesViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +146,8 @@
 				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
 				AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */,
 				AF6FF8B21F38EB14007DCC0B /* PostAdded.swift */,
+				AF6D70AB1F44D22300314E41 /* FoodAllergiesViewController.swift */,
+				AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 				AF35B6411F33ACB500F16A66 /* User.swift */,
 				AF6FF8B81F39FCAD007DCC0B /* Post.swift */,
 				AF6D70A81F44835A00314E41 /* Response.swift */,
+				AF6D70AF1F44D28B00314E41 /* allergies.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 				AF35B63B1F33774000F16A66 /* AuthService.swift */,
 				AF6FF8C21F3A6243007DCC0B /* PostService.swift */,
 				AF294B5A1F439F30002D6B56 /* ResponseService.swift */,
+				AF6D70B11F44D3E700314E41 /* AllergyService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -339,20 +351,24 @@
 				AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */,
 				AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */,
 				AF294B5B1F439F30002D6B56 /* ResponseService.swift in Sources */,
+				AF6D70AC1F44D22300314E41 /* FoodAllergiesViewController.swift in Sources */,
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
+				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */,
 				AF6FF8B91F39FCAD007DCC0B /* Post.swift in Sources */,
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
+				AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
 				AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */,
 				AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */,
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
+				AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */,
 				AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */,
 				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
 			);
