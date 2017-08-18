@@ -14,6 +14,8 @@ class ChooseAllergiesViewController: UIViewController, UITableViewDelegate, UITa
     
     let allergyList = ["Peanuts", "Tree Nuts", "Milk", "Eggs", "Wheat", "Soy", "Fish", "ShellFish"]
     
+    var myAllergiesList = [String]() // USE FOR RETRIEVAL
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(allergyList.count)
     }
@@ -27,17 +29,30 @@ class ChooseAllergiesViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            if let index = myAllergiesList.index(of: (tableView.cellForRow(at: indexPath)?.textLabel?.text)!) {
+                myAllergiesList.remove(at: index) // delete from array
+            }
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+             myAllergiesList.append((tableView.cellForRow(at: indexPath)?.textLabel?.text)!) // add the string to array
         }
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+   
     
+
+    
+
     @IBAction func addButtonTapped(_ sender: Any) {
-        // selected allergies save to firebase 
+        for allergy in myAllergiesList {
+            AllergyService.saveMyAllergies(allergy: allergy, userID: User.current.uid, completion: {_ in})
+        }
+        performSegue(withIdentifier: "unwindsegueToFoodAllergies", sender: self)
     }
     @IBAction func cancelButtonTapped(_ sender: Any) {
-       performSegue(withIdentifier: "segueToFoodAllergyViewController", sender: self)
+       performSegue(withIdentifier: "unwindsegueToFoodAllergies", sender: self)
     }
-    
     
 }

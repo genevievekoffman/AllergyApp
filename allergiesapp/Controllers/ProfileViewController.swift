@@ -16,5 +16,10 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         usernameLabel.text? = User.current.username
     }
+    
+    @IBAction func ButtonToMyAllergies(_ sender: Any) {
+        performSegue(withIdentifier: "segueToFoodAllergiesViewController", sender: self)
+    }
+     @IBAction func unwindToProfile(segue: UIStoryboardSegue) {} 
 
 }

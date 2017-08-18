@@ -47,8 +47,6 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return cell 
     }
-    
-
 
 
     override func viewDidLoad() {

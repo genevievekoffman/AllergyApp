@@ -9,26 +9,31 @@
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
-class Allergies {
-    let allergy : String
-    let uid: String
+class Allergy {
+    
+    let allergyName : String
+    let userID: String
     
     var dictValue: [String: Any] {
-        return ["allergy" : allergy]
+        return ["allergy" : allergyName]
     }
     
-    init(uid: String, allergy: String) {
-        self.uid = uid
-        self.allergy = allergy
+    init(userID: String, allergyName: String) {
+        self.userID = userID
+        self.allergyName = allergyName
     }
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String: Any],
-             let allergy = (dict["allergy"] ?? "") as? String
+             let allergyName = dict["allergy"] as? String
             else { return nil }
         
-        self.uid = snapshot.key
-        self.allergy = allergy
+        self.userID = snapshot.key
+        self.allergyName = allergyName
     }
 }
 // created 
+// saves an array of allergies 
+
+//let mynewallergies = Allergies(userID: "imsean", allergy: ["peanuts", "walnuts"])
+//mynewallergies.allergy
