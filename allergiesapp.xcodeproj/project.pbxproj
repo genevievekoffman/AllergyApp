@@ -29,6 +29,10 @@
 		AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70AF1F44D28B00314E41 /* allergies.swift */; };
 		AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B11F44D3E700314E41 /* AllergyService.swift */; };
 		AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */; };
+		AF6D70B91F47367000314E41 /* Vendors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B81F47367000314E41 /* Vendors.swift */; };
+		AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70BA1F473B2700314E41 /* VendorService.swift */; };
+		AF6D70C11F47488300314E41 /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6D70C01F47488300314E41 /* Vendor.storyboard */; };
+		AF6D70C31F475AB900314E41 /* LoginVendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -66,6 +70,10 @@
 		AF6D70AF1F44D28B00314E41 /* allergies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allergies.swift; sourceTree = "<group>"; };
 		AF6D70B11F44D3E700314E41 /* AllergyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyService.swift; sourceTree = "<group>"; };
 		AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAllergiesViewController.swift; sourceTree = "<group>"; };
+		AF6D70B81F47367000314E41 /* Vendors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendors.swift; sourceTree = "<group>"; };
+		AF6D70BA1F473B2700314E41 /* VendorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorService.swift; sourceTree = "<group>"; };
+		AF6D70C01F47488300314E41 /* Vendor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
+		AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVendorViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 			children = (
 				AF35B6341F33725100F16A66 /* Login.storyboard */,
 				AF35B6351F33725100F16A66 /* Main.storyboard */,
+				AF6D70C01F47488300314E41 /* Vendor.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -141,6 +150,7 @@
 			children = (
 				AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */,
 				AF35B62B1F33723000F16A66 /* SignInViewController.swift */,
+				AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */,
 				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
 				AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */,
 				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
@@ -159,6 +169,7 @@
 				AF6FF8B81F39FCAD007DCC0B /* Post.swift */,
 				AF6D70A81F44835A00314E41 /* Response.swift */,
 				AF6D70AF1F44D28B00314E41 /* allergies.swift */,
+				AF6D70B81F47367000314E41 /* Vendors.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 				AF6FF8C21F3A6243007DCC0B /* PostService.swift */,
 				AF294B5A1F439F30002D6B56 /* ResponseService.swift */,
 				AF6D70B11F44D3E700314E41 /* AllergyService.swift */,
+				AF6D70BA1F473B2700314E41 /* VendorService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -283,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6D70C11F47488300314E41 /* Vendor.storyboard in Resources */,
 				AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */,
 				AF35B6361F33725100F16A66 /* LaunchScreen.storyboard in Resources */,
 				AF35B6311F33724800F16A66 /* GoogleService-Info.plist in Resources */,
@@ -353,6 +366,7 @@
 				AF294B5B1F439F30002D6B56 /* ResponseService.swift in Sources */,
 				AF6D70AC1F44D22300314E41 /* FoodAllergiesViewController.swift in Sources */,
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
+				AF6D70B91F47367000314E41 /* Vendors.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
@@ -361,6 +375,7 @@
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
+				AF6D70C31F475AB900314E41 /* LoginVendorViewController.swift in Sources */,
 				AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
@@ -369,6 +384,7 @@
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
 				AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */,
+				AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */,
 				AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */,
 				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
 			);

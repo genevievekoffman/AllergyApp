@@ -40,10 +40,7 @@ class ChooseAllergiesViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-   
-    
 
-    
 
     @IBAction func addButtonTapped(_ sender: Any) {
         for allergy in myAllergiesList {

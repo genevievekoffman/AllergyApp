@@ -26,36 +26,65 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var consumerORvendor: UISegmentedControl!
+    
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        guard let username = usernameTextField.text,
-            let name = nameTextField.text,
-            let email = emailTextField.text,
-            let password = passwordTextField.text
-        else { return }
         
-        
-        AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
-            guard let firUser = authUser else {
-                return
-            }
+        if consumerORvendor.selectedSegmentIndex == 0 {
+            guard let username = usernameTextField.text,
+                let name = nameTextField.text,
+                let email = emailTextField.text,
+                let password = passwordTextField.text
+                else { return }
             
-            UserService.create(firUser, username: username, name: name, email: email) { (user) in
-            guard let user = user else {
-                return
-            }
-                User.setCurrent(user, writeToUserDefaults: true)
-
+            AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
+                guard let firUser = authUser else {
+                    return
+                }
                 
-                let storyboard = UIStoryboard(name: "Main" , bundle: .main)
-                if let initialViewController = storyboard.instantiateInitialViewController() {
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
-                } // Main storyboard opens
+                UserService.create(firUser, username: username, name: name, email: email) { (user) in
+                    guard let user = user else {
+                        return
+                    }
+                    User.setCurrent(user, writeToUserDefaults: true)
+                    
+                    
+                    let storyboard = UIStoryboard(name: "Main" , bundle: .main)
+                    if let initialViewController = storyboard.instantiateInitialViewController() {
+                        self.view.window?.rootViewController = initialViewController
+                        self.view.window?.makeKeyAndVisible()
+                    } // Main storyboard opens
+                }
+            }
+        }
+        
+       else if consumerORvendor.selectedSegmentIndex == 1 { //vendor/company signed up
+            guard let username = usernameTextField.text,
+                let name = nameTextField.text,
+                let email = emailTextField.text,
+                let password = passwordTextField.text
+                else { return }
+            
+            AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
+                guard let firUser = authUser else {
+                    return
+                }
+                
+                VendorService.create(firUser, username: username, companyName: name, email: email) { (vendor) in
+                    guard let vendor = vendor else {
+                        return
+                    }
+                    Vendor.setCurrent(vendor, writeToVendorDefaults: true)
+                    
+                    let storyboard = UIStoryboard(name: "Vendor", bundle: .main)
+                    if let initialViewController = storyboard.instantiateInitialViewController() {
+                        self.view.window?.rootViewController = initialViewController
+                        self.view.window?.makeKeyAndVisible()
+                    }
+                }
             }
         }
     }
-    
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.usernameTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()

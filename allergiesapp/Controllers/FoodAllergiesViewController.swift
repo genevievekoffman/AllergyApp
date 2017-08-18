@@ -13,12 +13,6 @@ class FoodAllergiesViewController: UIViewController, UITableViewDelegate, UITabl
    
     @IBOutlet weak var tableView: UITableView!
     
-//    var myAllergiesList = [String]() {
-//        didSet {
-//            self.tableView.reloadData()
-//        } // anytime array is changed it calls it again
-//    }
-    
     var noDuplicates = [String]() {
         didSet {
             self.tableView.reloadData()

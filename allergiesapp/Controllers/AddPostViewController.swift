@@ -19,8 +19,21 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var companySwitchView: UISwitch!
+    @IBAction func companySwitch(_ sender: Any) {
+        
+        if companySwitchView.isOn {
+            
+            companypickerview.isHidden = false
+        } else {
+            companypickerview.isHidden = true
+            
+        }
+        
+        
+    }
     
-    var companies = ["Public", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
+    var companies = ["Crafts", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
     
     
     

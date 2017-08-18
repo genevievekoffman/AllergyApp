@@ -17,4 +17,12 @@ struct Constants {
         static let email = "email"
         static let name = "name" 
     }
+    
+    struct VendorDefaults {
+        static let currentVendor = "currentVendor"
+        static let vendoruid = "vendoruid"
+        static let username = "username"
+        static let email = "email"
+        static let companyName = "companyName"
+    }
 }

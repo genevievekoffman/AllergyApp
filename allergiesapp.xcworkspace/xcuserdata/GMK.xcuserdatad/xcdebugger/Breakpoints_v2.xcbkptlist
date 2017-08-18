@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756330.684629"
+            filePath = "VendorService.swift"
+            timestampString = "524774939.019041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "Allergy"
-            landmarkType = "3">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "create(_:username:companyName:email:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,14 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756332.325044"
+            filePath = "VendorService.swift"
+            timestampString = "524774939.574376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "Allergy"
-            landmarkType = "3">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "create(_:username:companyName:email:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -41,157 +41,157 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756334.633794"
+            filePath = "VendorService.swift"
+            timestampString = "524774940.328144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "create(_:username:companyName:email:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static allergiesapp.VendorService.create (__ObjC.User, username : Swift.String, companyName : Swift.String, email : Swift.String, completion : (Swift.Optional&lt;allergiesapp.Vendor&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "allergiesapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/VendorService.swift"
+                  timestampString = "524782185.524547"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "959">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static allergiesapp.VendorService.(create (__ObjC.User, username : Swift.String, companyName : Swift.String, email : Swift.String, completion : (Swift.Optional&lt;allergiesapp.Vendor&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "allergiesapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/VendorService.swift"
+                  timestampString = "524782185.527466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VendorService.swift"
+            timestampString = "524774940.983524"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "create(_:username:companyName:email:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static allergiesapp.VendorService.(create (__ObjC.User, username : Swift.String, companyName : Swift.String, email : Swift.String, completion : (Swift.Optional&lt;allergiesapp.Vendor&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "allergiesapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/VendorService.swift"
+                  timestampString = "524782185.534592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static allergiesapp.VendorService.(create (__ObjC.User, username : Swift.String, companyName : Swift.String, email : Swift.String, completion : (Swift.Optional&lt;allergiesapp.Vendor&gt;) -&gt; ()) -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "allergiesapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/VendorService.swift"
+                  timestampString = "524782185.538033"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VendorService.swift"
+            timestampString = "524774941.649914"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "create(_:username:companyName:email:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static allergiesapp.VendorService.(create (__ObjC.User, username : Swift.String, companyName : Swift.String, email : Swift.String, completion : (Swift.Optional&lt;allergiesapp.Vendor&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "allergiesapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/VendorService.swift"
+                  timestampString = "524782185.544908"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "265">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static allergiesapp.VendorService.(create (__ObjC.User, username : Swift.String, companyName : Swift.String, email : Swift.String, completion : (Swift.Optional&lt;allergiesapp.Vendor&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "allergiesapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/VendorService.swift"
+                  timestampString = "524782185.548658"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VendorService.swift"
+            timestampString = "524774956.726723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "init(snapshot:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "allergiesapp.Allergy.init (snapshot : __ObjC.DataSnapshot) -&gt; Swift.Optional&lt;allergiesapp.Allergy&gt;"
-                  moduleName = "allergiesapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergies.swift"
-                  timestampString = "524756689.712022"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "15">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "allergiesapp.Allergy.__allocating_init (snapshot : __ObjC.DataSnapshot) -&gt; Swift.Optional&lt;allergiesapp.Allergy&gt;"
-                  moduleName = "allergiesapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergies.swift"
-                  timestampString = "524756689.716336"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756335.729939"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "init(snapshot:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "allergiesapp.Allergy.init (snapshot : __ObjC.DataSnapshot) -&gt; Swift.Optional&lt;allergiesapp.Allergy&gt;"
-                  moduleName = "allergiesapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergies.swift"
-                  timestampString = "524756689.723299"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "15">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "allergiesapp.Allergy.init (snapshot : __ObjC.DataSnapshot) -&gt; Swift.Optional&lt;allergiesapp.Allergy&gt;"
-                  moduleName = "allergiesapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergies.swift"
-                  timestampString = "524756689.726478"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "529">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756336.562533"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "init(snapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756337.309716"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "init(snapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756338.045988"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "init(snapshot:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "allergies.swift"
-            timestampString = "524756339.198889"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "init(snapshot:)"
+            landmarkName = "create(_:username:companyName:email:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

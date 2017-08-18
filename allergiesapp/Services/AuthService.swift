@@ -6,7 +6,7 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-// Seans code- ??? taken from him 
+// Seans code- ??? using his
 
 import UIKit
 import FirebaseAuth
