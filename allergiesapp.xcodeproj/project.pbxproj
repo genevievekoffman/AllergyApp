@@ -33,6 +33,7 @@
 		AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70BA1F473B2700314E41 /* VendorService.swift */; };
 		AF6D70C11F47488300314E41 /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6D70C01F47488300314E41 /* Vendor.storyboard */; };
 		AF6D70C31F475AB900314E41 /* LoginVendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */; };
+		AF6D70C51F47EEC900314E41 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -74,6 +75,7 @@
 		AF6D70BA1F473B2700314E41 /* VendorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorService.swift; sourceTree = "<group>"; };
 		AF6D70C01F47488300314E41 /* Vendor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
 		AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVendorViewController.swift; sourceTree = "<group>"; };
+		AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -148,10 +150,11 @@
 		AF35B6221F33719200F16A66 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */,
+				AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */,
 				AF35B62B1F33723000F16A66 /* SignInViewController.swift */,
 				AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */,
 				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
+				AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */,
 				AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */,
 				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
 				AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */,
@@ -362,6 +365,7 @@
 				AF6FF8B31F38EB14007DCC0B /* PostAdded.swift in Sources */,
 				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
 				AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */,
+				AF6D70C51F47EEC900314E41 /* OpeningViewController.swift in Sources */,
 				AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */,
 				AF294B5B1F439F30002D6B56 /* ResponseService.swift in Sources */,
 				AF6D70AC1F44D22300314E41 /* FoodAllergiesViewController.swift in Sources */,

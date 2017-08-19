@@ -28,6 +28,9 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var consumerORvendor: UISegmentedControl!
     
+    @IBAction func BackButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSignUpToOpeningScreen", sender: self)
+    }
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         
         if consumerORvendor.selectedSegmentIndex == 0 {

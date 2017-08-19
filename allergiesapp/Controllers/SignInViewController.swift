@@ -14,6 +14,9 @@ typealias FIRUser = FirebaseAuth.User
 
 class SignInViewController: UIViewController {
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSignInToOpeningScreen", sender: self)
+    }
 //    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -91,30 +94,30 @@ class SignInViewController: UIViewController {
         self.emailTextField.resignFirstResponder()
     } // click to get out of keyboard
     
-    @IBOutlet weak var containerview2: UIView!
-    @IBOutlet weak var containerview1: UIView!
-    @IBOutlet weak var containerview3: UIView!
+//    @IBOutlet weak var containerview2: UIView!
+//    @IBOutlet weak var containerview1: UIView!
+//    @IBOutlet weak var containerview3: UIView!
     
-    @IBOutlet weak var segmentedController: UISegmentedControl!
-    
-    @IBAction func indexChanged(_ sender: UISegmentedControl) {
-        
-        switch segmentedController.selectedSegmentIndex
-        {
-        case 0:
-            containerview1.isHidden = false
-            containerview2.isHidden = true
-            containerview3.isHidden = true
-        case 1: // PROBLEM: when opened, container A should show
-            containerview1.isHidden = true
-            containerview2.isHidden = false
-            containerview3.isHidden = true
-        case 2:
-            containerview3.isHidden = false
-            containerview1.isHidden = true
-            containerview2.isHidden = true
-        default:
-            break;
-        }
-   }
+//    @IBOutlet weak var segmentedController: UISegmentedControl!
+//    
+//    @IBAction func indexChanged(_ sender: UISegmentedControl) {
+//        
+//        switch segmentedController.selectedSegmentIndex
+//        {
+//        case 0:
+//            containerview1.isHidden = false
+//            containerview2.isHidden = true
+//            containerview3.isHidden = true
+//        case 1: // PROBLEM: when opened, container A should show
+//            containerview1.isHidden = true
+//            containerview2.isHidden = false
+//            containerview3.isHidden = true
+//        case 2:
+//            containerview3.isHidden = false
+//            containerview1.isHidden = true
+//            containerview2.isHidden = true
+//        default:
+//            break;
+//        }
+//   }
 }
