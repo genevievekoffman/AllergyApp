@@ -63,22 +63,10 @@
                                     <segue destination="qID-Fv-F0m" kind="embed" identifier="SegueToSignUpViewContainer" id="VUq-Bz-lLg"/>
                                 </connections>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abeslogo" translatesAutoresizingMaskIntoConstraints="NO" id="67e-cy-U0M">
-                                <rect key="frame" x="54.5" y="23" width="265" height="215"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="215" id="dJc-7z-t4N"/>
-                                    <constraint firstAttribute="width" constant="265" id="z4J-Qn-cVW"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUQ-Zs-R14">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oyA-3N-7yw" secondAttribute="trailing" id="3GM-4T-5Mp"/>
-                            <constraint firstItem="oyA-3N-7yw" firstAttribute="top" secondItem="67e-cy-U0M" secondAttribute="bottom" constant="20" id="4CM-Tb-bNo"/>
                             <constraint firstItem="4aY-l3-EQ6" firstAttribute="top" secondItem="Ixo-JM-E9d" secondAttribute="bottom" id="4ph-A9-wF2"/>
                             <constraint firstItem="Gju-Q7-NmR" firstAttribute="top" secondItem="5jZ-JK-cMo" secondAttribute="top" id="5TK-W6-JF0"/>
                             <constraint firstItem="Gju-Q7-NmR" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="7dj-hN-eqt"/>
@@ -92,7 +80,6 @@
                             <constraint firstItem="5jZ-JK-cMo" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="UDa-8W-Gca"/>
                             <constraint firstAttribute="trailing" secondItem="Ixo-JM-E9d" secondAttribute="trailing" id="VAf-t3-Yz8"/>
                             <constraint firstItem="Ixo-JM-E9d" firstAttribute="leading" secondItem="Y3S-AG-LgK" secondAttribute="leading" id="WgL-5o-L8W"/>
-                            <constraint firstItem="67e-cy-U0M" firstAttribute="centerX" secondItem="Y3S-AG-LgK" secondAttribute="centerX" id="cub-RH-fM6"/>
                             <constraint firstItem="4aY-l3-EQ6" firstAttribute="top" secondItem="5jZ-JK-cMo" secondAttribute="bottom" id="gcM-y5-Zql"/>
                             <constraint firstAttribute="trailing" secondItem="Gju-Q7-NmR" secondAttribute="trailing" id="jO7-DO-epB"/>
                             <constraint firstItem="d8b-wI-JmU" firstAttribute="top" secondItem="oyA-3N-7yw" secondAttribute="bottom" id="lRw-7t-ouE"/>
@@ -219,7 +206,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="su6-P1-3kS">
-                                <rect key="frame" x="171.5" y="270" width="32" height="30"/>
+                                <rect key="frame" x="169.5" y="270" width="36" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.736328125" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -318,7 +306,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="abeslogo" width="1025" height="755"/>
         <image name="muffin" width="546" height="568"/>
     </resources>
 </document>
