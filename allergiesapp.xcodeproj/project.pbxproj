@@ -32,7 +32,6 @@
 		AF6D70B91F47367000314E41 /* Vendors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B81F47367000314E41 /* Vendors.swift */; };
 		AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70BA1F473B2700314E41 /* VendorService.swift */; };
 		AF6D70C11F47488300314E41 /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6D70C01F47488300314E41 /* Vendor.storyboard */; };
-		AF6D70C31F475AB900314E41 /* LoginVendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */; };
 		AF6D70C51F47EEC900314E41 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
@@ -74,7 +73,6 @@
 		AF6D70B81F47367000314E41 /* Vendors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendors.swift; sourceTree = "<group>"; };
 		AF6D70BA1F473B2700314E41 /* VendorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorService.swift; sourceTree = "<group>"; };
 		AF6D70C01F47488300314E41 /* Vendor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
-		AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVendorViewController.swift; sourceTree = "<group>"; };
 		AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
@@ -150,10 +148,7 @@
 		AF35B6221F33719200F16A66 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */,
-				AF35B62B1F33723000F16A66 /* SignInViewController.swift */,
-				AF6D70C21F475AB900314E41 /* LoginVendorViewController.swift */,
-				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
+				AF6D70C71F48AA5C00314E41 /* Login/Signup Screens */,
 				AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */,
 				AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */,
 				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
@@ -188,6 +183,16 @@
 				AF6D70BA1F473B2700314E41 /* VendorService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		AF6D70C71F48AA5C00314E41 /* Login/Signup Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */,
+				AF35B62B1F33723000F16A66 /* SignInViewController.swift */,
+				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
+			);
+			name = "Login/Signup Screens";
 			sourceTree = "<group>";
 		};
 		AFAC447D1F32667B00D62744 = {
@@ -379,7 +384,6 @@
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
-				AF6D70C31F475AB900314E41 /* LoginVendorViewController.swift in Sources */,
 				AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,

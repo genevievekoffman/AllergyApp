@@ -20,6 +20,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var companySwitchView: UISwitch!
+    
     @IBAction func companySwitch(_ sender: Any) {
         
         if companySwitchView.isOn {
@@ -29,14 +30,10 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             companypickerview.isHidden = true
             
         }
-        
-        
     }
     
     var companies = ["Crafts", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +64,21 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             alertController.addAction(defaultAction) // put the action "ok" on the popup box
             self.present(alertController, animated: true, completion: nil) // presents the box
             // ^if email or password wasnt entered
-        } else {
+            
+        } else if companySwitchView.isOn == true { // if its on
+            
+            PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!, userID: User.current.uid) { (post) in
+                // also add func to send post to company **************
+        }
+            performSegue(withIdentifier: "segueToPostAdded", sender: self)
+        }
+            
+        else if companySwitchView.isOn == false { // if its off- does a regular post to feed
             print("Posted")
             PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!, userID: User.current.uid) { (post) in
                 
             }
-            performSegue(withIdentifier: "segueToPostAdded", sender: self) // if all info is there, goes to posted view controller
+            performSegue(withIdentifier: "segueToPostAdded", sender: self)
         }
     }
     

@@ -44,6 +44,18 @@ struct PostService {
         
         let ref = Database.database().reference().child("UserPosts").child(uid).childByAutoId()
         let ref2 = Database.database().reference().child("GeneralPosts").childByAutoId()
+        let refForCompanyQuestions = Database.database().reference().child("CompanyQuestions").child(company).childByAutoId() // saves as new node with company under companyquestions
+        
+        refForCompanyQuestions.updateChildValues(postAttrs) { (error, refForCompanyQuestions) in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return completion(nil)
+            }
+            refForCompanyQuestions.observeSingleEvent(of: .value, with: {(snapshot) in
+                let post = Post(snapshot: snapshot)
+                completion(post)
+            })
+        }
         
         ref2.updateChildValues(postAttrs) { (error, ref2) in
             if let error = error {
