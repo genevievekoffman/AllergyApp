@@ -27,6 +27,7 @@ struct VendorService {
                 completion(vendor)
             })
         } // func^^ takes the name, username and saves it in database
+         // add vendors name to array how do I access that companies var?? 
     }
     
     static func show(forUID uid: String, completion: @escaping (Vendor?) -> Void) {

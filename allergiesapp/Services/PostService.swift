@@ -13,6 +13,24 @@ import FirebaseDatabase
 
 struct PostService {
     
+    static func retrieveCompaniesPosts(forUID uid: String, completion: @escaping ([Post]?) -> Void) {
+        let ref = Database.database().reference().child("CompanyQuestions").child(uid) //reaching into the questions asked of a company
+        
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else {
+                    return completion([]) }
+            var arrayOfQuestionsaskedToCompany = [Post]()
+            print (snapshot)
+            for postSnap in snapshot {
+                print(postSnap)
+                guard let post = Post(snapshot: postSnap)
+                    else { return completion([]) }
+                arrayOfQuestionsaskedToCompany.append(post) }
+            completion(arrayOfQuestionsaskedToCompany)
+        }) // retrieving every question asked to the company/vendor
+    }
+    
     static func retrieveAllPosts(forUID uid: String, completion: @escaping ([Post]?) -> Void) {
         
         let ref = Database.database().reference().child("GeneralPosts")
@@ -23,7 +41,7 @@ struct PostService {
                     return completion([]) }
             
             var arrayOfAllPosts = [Post]()
-           print(snapshot)
+            print(snapshot)
             for postSnap in snapshot {
                 print(postSnap)
                 guard let post = Post(snapshot: postSnap) // init post with data from snapshot
@@ -31,15 +49,11 @@ struct PostService {
                 arrayOfAllPosts.append(post) }
             
             completion(arrayOfAllPosts)
-            
-            
         }) // retrieving every post on the app, returns an array of all posts
-        
-        
     }
     
     static func createPost(forUID uid: String, question: String, tags: String, company: String, userID: String, completion: @escaping (Post?) -> Void) {
-      
+        
         let postAttrs = ["question": question, "tags": tags, "company": company, "userID": userID]
         
         let ref = Database.database().reference().child("UserPosts").child(uid).childByAutoId()
@@ -81,5 +95,5 @@ struct PostService {
             })
         }
     } //^^ saves question, tags, and company as a post under the user
-
+    
 }

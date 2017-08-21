@@ -32,7 +32,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    var companies = ["Crafts", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app **
+    var companies = ["Crafts", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app ** when vendor signs up, theyre name is added to the array 
 
     
     override func viewDidLoad() {

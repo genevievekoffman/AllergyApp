@@ -6,7 +6,6 @@
 //  Copyright © 2017 Genevieve Koffman. All rights reserved.
 //
 
-// Seans code- ??? using his
 
 import UIKit
 import FirebaseAuth
@@ -59,7 +58,7 @@ struct AuthService {
      =========================================================
      */
     static func presentLogOut(viewController : UIViewController){
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Are You Sure You Want To Logout", message: nil, preferredStyle: .actionSheet)
         
 
         let signOutAction = UIAlertAction(title: "Log Out", style: .destructive) { _ in

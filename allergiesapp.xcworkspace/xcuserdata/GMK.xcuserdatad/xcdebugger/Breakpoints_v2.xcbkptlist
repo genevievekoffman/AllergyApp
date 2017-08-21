@@ -42,12 +42,12 @@
                   moduleName = "allergiesapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergiesapp/Controllers/SignInViewController.swift"
-                  timestampString = "524895359.800218"
+                  timestampString = "524942350.306518"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "93"
                   endingLineNumber = "93"
-                  offsetFromSymbolStart = "276">
+                  offsetFromSymbolStart = "263">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "allergiesapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergiesapp/Controllers/SignInViewController.swift"
-                  timestampString = "524895359.803411"
+                  timestampString = "524942350.309979"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -90,12 +90,12 @@
                   moduleName = "allergiesapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergiesapp/Controllers/SignInViewController.swift"
-                  timestampString = "524895359.809223"
+                  timestampString = "524942350.331556"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "19">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -105,7 +105,7 @@
                   moduleName = "allergiesapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/GMK/Desktop/MakeSchool%20projects/AllergyApp/allergiesapp/Controllers/SignInViewController.swift"
-                  timestampString = "524895359.811903"
+                  timestampString = "524942350.336068"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"

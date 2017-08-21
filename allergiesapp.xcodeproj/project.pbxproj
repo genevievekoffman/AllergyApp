@@ -33,6 +33,9 @@
 		AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70BA1F473B2700314E41 /* VendorService.swift */; };
 		AF6D70C11F47488300314E41 /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6D70C01F47488300314E41 /* Vendor.storyboard */; };
 		AF6D70C51F47EEC900314E41 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */; };
+		AF6D70CB1F494AEF00314E41 /* NotificationsQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */; };
+		AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */; };
+		AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -74,6 +77,9 @@
 		AF6D70BA1F473B2700314E41 /* VendorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorService.swift; sourceTree = "<group>"; };
 		AF6D70C01F47488300314E41 /* Vendor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
 		AF6D70C41F47EEC900314E41 /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
+		AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsQuestionsViewController.swift; sourceTree = "<group>"; };
+		AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCompaniesTableViewCell.swift; sourceTree = "<group>"; };
+		AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 			children = (
 				AF294B531F432F37002D6B56 /* PostTableViewCell.swift */,
 				AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */,
+				AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -148,14 +155,9 @@
 		AF35B6221F33719200F16A66 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF6D70C91F494A9100314E41 /* Vendors */,
+				AF6D70C81F494A8600314E41 /* Consumers */,
 				AF6D70C71F48AA5C00314E41 /* Login/Signup Screens */,
-				AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */,
-				AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */,
-				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
-				AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */,
-				AF6FF8B21F38EB14007DCC0B /* PostAdded.swift */,
-				AF6D70AB1F44D22300314E41 /* FoodAllergiesViewController.swift */,
-				AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -193,6 +195,29 @@
 				AF35B6431F33B60300F16A66 /* SignupViewController.swift */,
 			);
 			name = "Login/Signup Screens";
+			sourceTree = "<group>";
+		};
+		AF6D70C81F494A8600314E41 /* Consumers */ = {
+			isa = PBXGroup;
+			children = (
+				AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */,
+				AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */,
+				AF6FF8B21F38EB14007DCC0B /* PostAdded.swift */,
+				AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */,
+				AF6D70B31F44D84600314E41 /* ChooseAllergiesViewController.swift */,
+				AF6D70AB1F44D22300314E41 /* FoodAllergiesViewController.swift */,
+				AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */,
+				AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */,
+			);
+			name = Consumers;
+			sourceTree = "<group>";
+		};
+		AF6D70C91F494A9100314E41 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */,
+			);
+			name = Vendors;
 			sourceTree = "<group>";
 		};
 		AFAC447D1F32667B00D62744 = {
@@ -377,6 +402,7 @@
 				AF35B62D1F33723000F16A66 /* SignInViewController.swift in Sources */,
 				AF6D70B91F47367000314E41 /* Vendors.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
+				AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */,
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */,
@@ -386,12 +412,14 @@
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
 				AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
+				AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
 				AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */,
 				AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */,
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
 				AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */,
+				AF6D70CB1F494AEF00314E41 /* NotificationsQuestionsViewController.swift in Sources */,
 				AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */,
 				AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */,
 				AF35B63E1F33A9EC00F16A66 /* Constants.swift in Sources */,
