@@ -12,7 +12,10 @@ import FirebaseDatabase
 
 
 struct VendorService {
-    static func create(_ firUser: FIRUser, username: String, companyName: String, email: String, completion: @escaping (Vendor?) -> Void){
+    
+//    static var arrayOfCompanies = [String]() //empty array of companies
+    
+    static func create(_ firUser: FIRUser, username: String, companyName: String, email: String, completion: @escaping (Vendor?) -> Void) {
         // only when a users username is created can the code move on ^^
         
         let vendorAttrs = ["username": username, "companyName": companyName, "email": email]
@@ -26,12 +29,25 @@ struct VendorService {
                 let vendor = Vendor(snapshot: snapshot)
                 completion(vendor)
             })
-        } // func^^ takes the name, username and saves it in database
-         // add vendors name to array how do I access that companies var?? 
+         // func^^ takes the name, username and saves it in database
+//            arrayOfCompanies.append(username)
+        }         // adds vendors name to array
+    }
+    
+    static func allVendors(completion: @escaping ([Vendor]?) -> Void) {
+        let ref = Database.database().reference().child("Vendors")
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+        
+            guard let snapshotArray = snapshot.children.allObjects as? [DataSnapshot] else {
+                return completion(nil)
+            }
+            let vendorArray = snapshotArray.map({Vendor(snapshot: $0)!})
+            completion(vendorArray)
+        })
     }
     
     static func show(forUID uid: String, completion: @escaping (Vendor?) -> Void) {
-        let ref = Database.database().reference().child("Vendor").child(uid)
+        let ref = Database.database().reference().child("Vendors").child(uid)
         ref.observeSingleEvent(of: .value, with: {(snapShot) in
             guard let vendor = Vendor(snapshot: snapShot) else {
                 return completion(nil)

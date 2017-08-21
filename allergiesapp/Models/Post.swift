@@ -53,7 +53,7 @@ class Post {
         self.company = company
         self.question = question
         self.tags = tags
-        self.userID = User.current.username // added -> saves current user as the userID changes it to username
+        self.userID = userID // added -> saves current user as the userID changes it to username
         
 
     }

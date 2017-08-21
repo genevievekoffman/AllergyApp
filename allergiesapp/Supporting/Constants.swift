@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Constants {
 
@@ -25,4 +26,11 @@ struct Constants {
         static let email = "email"
         static let companyName = "companyName"
     }
+    
+    struct refs
+    {
+        static let databaseRoot = Database.database().reference()
+        static let databaseChats = databaseRoot.child("chats")
+    }
+    
 }

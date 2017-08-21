@@ -1,24 +1,29 @@
  //
-//  HomeViewController.swift
-//  allergiesapp
-//
-//  Created by Genevieve Koffman on 8/7/17.
-//  Copyright © 2017 Genevieve Koffman. All rights reserved.
-//
-
-import UIKit
-
-
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+ //  HomeViewController.swift
+ //  allergiesapp
+ //
+ //  Created by Genevieve Koffman on 8/7/17.
+ //  Copyright © 2017 Genevieve Koffman. All rights reserved.
+ //
+ 
+ import UIKit
+ 
+ 
+ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        
+    }
     
     var arrayOfPosts = [Post]() {
         didSet {
             tableView.reloadData()
         } // constantly sees any change in array
     }
-
+    
     @IBOutlet weak var tableView: UITableView!
     
+  
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         PostService.retrieveAllPosts(forUID: User.current.uid , completion: { (posts) in
@@ -50,7 +55,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
         cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
         
-        cell.usernameLabel.text = arrayOfPosts[indexPath.row].userID
+        UserService.show(forUID: arrayOfPosts[indexPath.row].userID, completion: {(user) in
+            cell.usernameLabel.text = user?.username
+            
+        })
         
         
         
@@ -62,8 +70,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-}
-
-
-
-
+ }
+ 
+ 
+ 
+ 

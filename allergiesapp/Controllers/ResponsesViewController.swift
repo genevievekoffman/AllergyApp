@@ -11,6 +11,9 @@ import UIKit
 
 class ResponsesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBAction func BackButton(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
+    }
     var arrayOfResponses = [Response]() {
         didSet {
             tableView.reloadData()

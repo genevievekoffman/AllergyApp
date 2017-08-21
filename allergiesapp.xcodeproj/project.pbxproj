@@ -36,6 +36,8 @@
 		AF6D70CB1F494AEF00314E41 /* NotificationsQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */; };
 		AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */; };
 		AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */; };
+		AF6D70D31F4B368700314E41 /* VendorOpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */; };
+		AF6D70D51F4B3A0C00314E41 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -80,6 +82,8 @@
 		AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsQuestionsViewController.swift; sourceTree = "<group>"; };
 		AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCompaniesTableViewCell.swift; sourceTree = "<group>"; };
 		AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOpeningViewController.swift; sourceTree = "<group>"; };
+		AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -215,7 +219,9 @@
 		AF6D70C91F494A9100314E41 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */,
 				AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */,
+				AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */,
 			);
 			name = Vendors;
 			sourceTree = "<group>";
@@ -403,7 +409,9 @@
 				AF6D70B91F47367000314E41 /* Vendors.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
 				AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */,
+				AF6D70D31F4B368700314E41 /* VendorOpeningViewController.swift in Sources */,
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
+				AF6D70D51F4B3A0C00314E41 /* ChatViewController.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */,
 				AF6FF8B91F39FCAD007DCC0B /* Post.swift in Sources */,
@@ -533,6 +541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genevievekoffman.allergiesapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -549,6 +558,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genevievekoffman.allergiesapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

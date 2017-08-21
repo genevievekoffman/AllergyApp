@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
     @IBAction func ButtonToMyAllergies(_ sender: Any) {
         performSegue(withIdentifier: "segueToFoodAllergiesViewController", sender: self)
     }
-     @IBAction func unwindToProfile(segue: UIStoryboardSegue) {} 
+     @IBAction func unwindToProfile(segue: UIStoryboardSegue) {}
+    @IBAction func unwindSettingsToProfile(segue: UIStoryboardSegue) {}
 
 }

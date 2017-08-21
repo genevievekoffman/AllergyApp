@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     
     @IBOutlet weak var questiontextfield: UITextField!
     
@@ -32,13 +33,33 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    var companies = ["Crafts", "bai", "pearl river"] // later I will have to add to this array for every vendor in the app ** when vendor signs up, theyre name is added to the array 
+
+    var companies = [Vendor]() {
+        didSet {
+            companypickerview.reloadAllComponents()
+        }
+    }// array for every vendor in the app ** when vendor signs up, theyre name is added to the array
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         companypickerview.delegate = self
         companypickerview.dataSource = self
+        
+        VendorService.allVendors(completion: { (vendors) in
+            
+            
+            if let vendors = vendors {
+                self.companies = vendors
+            } else {
+                print("Unable to obtain all vendors.")
+            }
+
+        
+        })
+        
+//        companies = VendorService.arrayOfCompanies
     }
     
     func numberOfComponents(in companypickerview: UIPickerView) -> Int {
@@ -50,11 +71,11 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var pickVar: String?
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        pickVar = companies[row]
-        return companies[row] // ?
+        pickVar = companies[row].companyName
+        return companies[row].companyName // ?
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        label.text = companies[row]
+        label.text = companies[row].companyName
     } // ^^ allows user to use UIPicker to choose a company
     
     @IBAction func AskButtonTapped(_ sender: Any) {

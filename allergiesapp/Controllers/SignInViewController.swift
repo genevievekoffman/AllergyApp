@@ -20,34 +20,6 @@ class SignInViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "unwindSignInToOpeningScreen", sender: self)
     }
-    //    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint?
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-    //    }
-    //    deinit {
-    //        NotificationCenter.default.removeObserver(self)
-    //    }
-    //    @objc func keyboardNotification(notification: NSNotification) {
-    //        if let userInfo = notification.userInfo {
-    //            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-    //            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-    //            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
-    //            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
-    //            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
-    //            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
-    //                self.keyboardHeightLayoutConstraint?.constant = 0.0
-    //            } else {
-    //                self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 0.0
-    //            }
-    //            UIView.animate(withDuration: duration,
-    //                           delay: TimeInterval(0),
-    //                           options: animationCurve,
-    //                           animations: { self.view.layoutIfNeeded() },
-    //                          completion: nil)
-    //        }
-    // }  //^^moves the textfield when clicked on it so keyboard doesnt block it - doesnt work, it moves the muffin
-    
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -90,7 +62,7 @@ class SignInViewController: UIViewController {
                     return
                 }
                 print("vendor is signed in")
-                VendorService.show(forUID: (vendor?.uid)!){ (vendor) in
+                VendorService.show(forUID: (vendor?.uid)!){ (vendor)  in
                     if let vendor = vendor {
                         Vendor.setCurrent(vendor, writeToVendorDefaults: true)
                         self.finishVendorLoggingIn()
@@ -104,6 +76,7 @@ class SignInViewController: UIViewController {
         } // gets user from database
         
     }
+    
     func finishUserLoggingIn() {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         if let initialViewController = storyboard.instantiateInitialViewController() {
@@ -113,6 +86,7 @@ class SignInViewController: UIViewController {
             
         }
     }
+    
     func finishVendorLoggingIn() {
         let storyboard = UIStoryboard(name: "Vendor", bundle: .main)
         if let initialViewController = storyboard.instantiateInitialViewController() {

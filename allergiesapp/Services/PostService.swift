@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 struct PostService {
     
-    static func retrieveCompaniesPosts(forUID uid: String, completion: @escaping ([Post]?) -> Void) {
+    static func retrieveCompaniesQuestions(forUID uid: String, completion: @escaping ([Post]?) -> Void) {
         let ref = Database.database().reference().child("CompanyQuestions").child(uid) //reaching into the questions asked of a company
         
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
@@ -46,7 +46,8 @@ struct PostService {
                 print(postSnap)
                 guard let post = Post(snapshot: postSnap) // init post with data from snapshot
                     else { return completion([]) }
-                arrayOfAllPosts.append(post) }
+                arrayOfAllPosts.append(post)
+            }
             
             completion(arrayOfAllPosts)
         }) // retrieving every post on the app, returns an array of all posts

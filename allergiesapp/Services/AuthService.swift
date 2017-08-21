@@ -9,6 +9,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 struct AuthService {
     
@@ -63,10 +64,11 @@ struct AuthService {
 
         let signOutAction = UIAlertAction(title: "Log Out", style: .destructive) { _ in
             logUserOut()
-}
+        }
         alertController.addAction(signOutAction)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
         alertController.addAction(cancelAction)
         
         viewController.present(alertController, animated: true)
@@ -78,6 +80,12 @@ struct AuthService {
         } catch let error as NSError {
             assertionFailure("Error signing out: \(error.localizedDescription)")
         }
+        
+//        let storyboard = UIStoryboard(name: "Opening", bundle: .main)
+//        if let initialViewController = storyboard.instantiateInitialViewController() {
+//            self.view.window?.rootViewController = initialViewController
+//            self.view.window?.makeKeyAndVisible()
+//        }
 }
     private static func loginErrors(error : Error, controller : UIViewController){
         switch (error.localizedDescription) {

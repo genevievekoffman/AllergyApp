@@ -9,5 +9,16 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSettingsToProfile", sender: self)
+    }
+    @IBAction func LogoutTapped(_ sender: Any) {
+       AuthService.presentLogOut(viewController: self)
+    } // ?? 
 }
+
+
+
+
+

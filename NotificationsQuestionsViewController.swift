@@ -20,7 +20,7 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        PostService.retrieveCompaniesPosts(forUID: Vendor.current.vendoruid, completion: {(posts) in
+        PostService.retrieveCompaniesQuestions(forUID: Vendor.current.username, completion: {(posts) in
             if let legitCompanyPost = posts {
                 self.arrayOfCompanyPosts = legitCompanyPost
             } else {
@@ -50,7 +50,7 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
         cell.questiontextLabel.text = arrayOfCompanyPosts[indexPath.row].question
         cell.tagstextLabel.text = arrayOfCompanyPosts[indexPath.row].tags
         cell.companyLabel.text = arrayOfCompanyPosts[indexPath.row].company
-        cell.usernameLabel.text = arrayOfCompanyPosts[indexPath.row].userID
+        cell.usernameLabel.text = arrayOfCompanyPosts[indexPath.row].userID // change to username 
 
         cell.cellCompaniesPost = arrayOfCompanyPosts[indexPath.row]
  
