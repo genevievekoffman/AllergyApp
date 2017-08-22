@@ -9,7 +9,9 @@
  import UIKit
  
  
- class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
         
@@ -21,9 +23,17 @@
         } // constantly sees any change in array
     }
     
+    var isSearching = false //
+    
+    var filteredPosts = [Post]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     
-  
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         PostService.retrieveAllPosts(forUID: User.current.uid , completion: { (posts) in
@@ -33,6 +43,9 @@
                 print("error")
             }
         })
+        //searchBar.delegate = self //
+        //searchBar.returnKeyType = UIReturnKeyType.done //
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,28 +58,64 @@
     } // ^^??
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfPosts.count
+        
+        if isSearching { //
+            return filteredPosts.count
+        } else {
+            return arrayOfPosts.count
+        }
+
     }
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
         
-        cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
-        cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
-        
-        UserService.show(forUID: arrayOfPosts[indexPath.row].userID, completion: {(user) in
-            cell.usernameLabel.text = user?.username
+        if isSearching { //when you are searching case
+            cell.questiontextLabel.text = filteredPosts[indexPath.row].question
+            cell.tagstextLabel.text = filteredPosts[indexPath.row].tags
+            UserService.show(forUID: filteredPosts[indexPath.row].userID, completion: {(user) in
+                cell.usernameLabel.text = user?.username
+            })
+            cell.cellPost = filteredPosts[indexPath.row]
             
-        })
-        
-        
-        
-        cell.cellPost = arrayOfPosts[indexPath.row]
+            
+            
+        } else { //when you are not searching case
+            
+            cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
+            cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
+            UserService.show(forUID: arrayOfPosts[indexPath.row].userID, completion: {(user) in
+                cell.usernameLabel.text = user?.username
+            })
+            cell.cellPost = arrayOfPosts[indexPath.row]
+            
+            
+        }
+    
         
         return cell
-        
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearching = false
+            
+            view.endEditing(true)
+            
+            tableView.reloadData()
+        } else {
+            
+            isSearching = true
+            filteredPosts = arrayOfPosts.filter({$0.tags.contains(searchText)})
+            tableView.reloadData()
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

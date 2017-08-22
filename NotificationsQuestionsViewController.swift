@@ -16,11 +16,23 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
         }
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "segueNotificationsToResponse") {
+//            let index = self.tableView.indexPathForSelectedRow!
+//            let thePost = arrayOfCompanyPosts[index.row]
+//            let responseVC = segue.destination as? ResponsesViewController
+//            responseVC?.post = thePost
+//        }
+//    }
+    
+    @IBAction func backbutton(_ sender: Any) {
+        performSegue(withIdentifier: "unwindNotificationsToVendorProfile ", sender: self)
+    }
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        PostService.retrieveCompaniesQuestions(forUID: Vendor.current.username, completion: {(posts) in
+        PostService.retrieveCompaniesQuestions(forUID: Vendor.current.companyName, completion: {(posts) in
             if let legitCompanyPost = posts {
                 self.arrayOfCompanyPosts = legitCompanyPost
             } else {
@@ -38,6 +50,9 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
 //            notificationVC?.post = theCompanyQuestion
 //    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueNotificationsToResponse", sender: self)
+    }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

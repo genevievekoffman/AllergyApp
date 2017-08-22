@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class SettingsViewController: UIViewController {
     
@@ -15,6 +16,9 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func LogoutTapped(_ sender: Any) {
        AuthService.presentLogOut(viewController: self)
+        AppDelegate.clearUserDefaults()
+        
+
     } // ?? 
 }
 

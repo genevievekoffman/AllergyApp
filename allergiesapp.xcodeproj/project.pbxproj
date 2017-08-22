@@ -46,6 +46,7 @@
 		AF6FF8B91F39FCAD007DCC0B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8B81F39FCAD007DCC0B /* Post.swift */; };
 		AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */; };
 		AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8C21F3A6243007DCC0B /* PostService.swift */; };
+		AFCC0D841F4C8ACC00CA7C8D /* VendorResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */; };
 		F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "allergiesapp/Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
 		AF6FF8C21F3A6243007DCC0B /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = allergiesapp/Services/PostService.swift; sourceTree = "<group>"; };
 		AFAC44861F32667B00D62744 /* allergiesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = allergiesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorResponseViewController.swift; sourceTree = "<group>"; };
 		C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_allergiesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 				AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */,
 				AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */,
 				AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */,
+				AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */,
 			);
 			name = Vendors;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6FF8B31F38EB14007DCC0B /* PostAdded.swift in Sources */,
+				AFCC0D841F4C8ACC00CA7C8D /* VendorResponseViewController.swift in Sources */,
 				AF35B6441F33B60300F16A66 /* SignupViewController.swift in Sources */,
 				AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */,
 				AF6D70C51F47EEC900314E41 /* OpeningViewController.swift in Sources */,

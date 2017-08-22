@@ -19,4 +19,6 @@ class VendorOpeningViewController: UIViewController {
         companyNameLabel.text? = Vendor.current.companyName
     }
     
+    @IBAction func unwindSegueToVendorProfile(segue: UIStoryboardSegue) {}
+    
 }

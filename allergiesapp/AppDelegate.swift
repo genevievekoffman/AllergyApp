@@ -44,6 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    static func clearUserDefaults () {
+        let appDomain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: appDomain)
+    }
+
+
 
 }
 
@@ -59,6 +65,15 @@ extension AppDelegate {
             User.setCurrent(user)
             
             initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else if Auth.auth().currentUser != nil,
+            let vendorData = defaults.object(forKey: Constants.VendorDefaults.currentVendor) as? Data,
+            let vendor = NSKeyedUnarchiver.unarchiveObject(with: vendorData) as? Vendor {
+            
+            Vendor.setCurrent(vendor)
+            let storyboard = UIStoryboard(name: "Vendor", bundle: .main)
+            initialViewController = storyboard.instantiateInitialViewController()!
+            
+            
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)
         }
@@ -66,5 +81,8 @@ extension AppDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     } //allows user to remain logged in^^
+//    func configueInitialRootViewControllerVendors(for window: UIWindow?) {
+//        let defaults = Vendor
+//    }
 }
 
