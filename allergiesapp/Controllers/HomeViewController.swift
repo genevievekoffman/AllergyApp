@@ -100,7 +100,13 @@
         return cell
     }
     
+    override func viewDidLoad() {
+        searchBar.delegate = self
+        super.viewDidLoad()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBar.showsScopeBar = true
         if searchBar.text == nil || searchBar.text == "" {
             isSearching = false
             
@@ -110,9 +116,13 @@
         } else {
             
             isSearching = true
-            filteredPosts = arrayOfPosts.filter({$0.tags.contains(searchText)})
+            filteredPosts = arrayOfPosts.filter({$0.tags.contains(searchText.lowercased()) || $0.question.contains(searchText.lowercased())})
             tableView.reloadData()
         }
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsScopeBar = false // 
     }
     
     

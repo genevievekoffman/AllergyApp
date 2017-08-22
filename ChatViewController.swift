@@ -10,10 +10,4 @@ import UIKit
 import JSQMessagesViewController
 import Firebase
 
-//channel
 
-class ChatViewController: JSQMessagesViewController{
-    
-    
-    
-  }
