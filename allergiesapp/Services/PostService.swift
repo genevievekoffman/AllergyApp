@@ -58,8 +58,8 @@ struct PostService {
         let postAttrs = ["question": question, "tags": tags, "company": company, "userID": userID]
         
         let ref = Database.database().reference().child("UserPosts").child(uid).childByAutoId()
-        let ref2 = Database.database().reference().child("GeneralPosts").childByAutoId()
-        let refForCompanyQuestions = Database.database().reference().child("CompanyQuestions").child(company).childByAutoId() // saves as new node with company under companyquestions
+        let ref2 = Database.database().reference().child("GeneralPosts").child(ref.key)
+        let refForCompanyQuestions = Database.database().reference().child("CompanyQuestions").child(company).child(ref.key) // saves as new node with company under companyquestions
         
         refForCompanyQuestions.updateChildValues(postAttrs) { (error, refForCompanyQuestions) in
             if let error = error {

@@ -72,7 +72,8 @@ struct ResponseService {
         let responseAttrs = ["response": response, "vendorID": vendorID]
         
         let ref = Database.database().reference().child("VendorsResponse").child(Vendor.current.vendoruid).childByAutoId()
-        let ref2 = Database.database().reference().child("AllResponse").child(postID).childByAutoId()
+        let refKey = ref.key
+        let ref2 = Database.database().reference().child("AllResponse").child(postID).child(refKey)
         
         ref2.updateChildValues(responseAttrs) { (error, ref2) in
             if let error = error {
