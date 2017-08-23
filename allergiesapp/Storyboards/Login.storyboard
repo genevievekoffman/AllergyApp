@@ -194,7 +194,7 @@
                                     <constraint firstAttribute="width" constant="304" id="UfQ-ug-V5X"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="muffinblack" translatesAutoresizingMaskIntoConstraints="NO" id="g5R-fa-vD6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="muffinBlackAll" translatesAutoresizingMaskIntoConstraints="NO" id="g5R-fa-vD6">
                                 <rect key="frame" x="81" y="145" width="213" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="213" id="SGl-yo-F8Y"/>
@@ -445,7 +445,7 @@
         <image name="Rectanglenext" width="445" height="185"/>
         <image name="donutfinal" width="1260" height="1260"/>
         <image name="finalAbes" width="1025" height="490"/>
-        <image name="muffinblack" width="865" height="940"/>
+        <image name="muffinBlackAll" width="655" height="710"/>
         <image name="pie" width="1230" height="820"/>
         <image name="white back" width="75" height="135"/>
         <image name="whiteoutline" width="1530" height="195"/>

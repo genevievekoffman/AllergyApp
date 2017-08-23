@@ -43,9 +43,6 @@
                 print("error")
             }
         })
-        //searchBar.delegate = self //
-        //searchBar.returnKeyType = UIReturnKeyType.done //
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

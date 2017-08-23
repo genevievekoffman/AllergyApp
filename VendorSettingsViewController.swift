@@ -23,8 +23,7 @@ class VendorSettingsViewController: UIViewController {
     
     @IBAction func LogoutButtonTapped(_ sender: Any) {
         AuthService.presentLogOut(viewController: self)
-        AppDelegate.clearUserDefaults()()
-        
+        AppDelegate.clearUserDefaults()
     } // ?? 
     
     

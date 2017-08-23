@@ -10,6 +10,8 @@ import UIKit
 
 class NotificationsQuestionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+     @IBAction func unwindToNotifications(segue: UIStoryboardSegue) {}
+    
     var arrayOfCompanyPosts = [Post]() {
         didSet {
             tableView.reloadData()
@@ -41,15 +43,6 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
         })
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "segueToNotifications") {
-//        let index = self.tableView.indexPathForSelectedRow!
-//        let theCompanyQuestion = arrayOfCompanyPosts[index.row]
-//        let notificationVC = segue.destination as?
-//            // storyboard
-//            notificationVC?.post = theCompanyQuestion
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueNotificationsToResponse", sender: self)
     }
@@ -65,12 +58,17 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
         cell.questiontextLabel.text = arrayOfCompanyPosts[indexPath.row].question
         cell.tagstextLabel.text = arrayOfCompanyPosts[indexPath.row].tags
         cell.companyLabel.text = arrayOfCompanyPosts[indexPath.row].company
-        cell.usernameLabel.text = arrayOfCompanyPosts[indexPath.row].userID // change to username 
-
-        cell.cellCompaniesPost = arrayOfCompanyPosts[indexPath.row]
- 
-        return cell
+        UserService.show(forUID: arrayOfCompanyPosts[indexPath.row].userID, completion: {(user) in
+            cell.usernameLabel.text = user?.username
         
-    }
+        // cell.usernameLabel.text = arrayOfCompanyPosts[indexPath.row].userID // change to username
+
+        cell.cellCompaniesPost = self.arrayOfCompanyPosts[indexPath.row]
+ 
+        
+        
+        })
     
+    return cell
+    }
 }

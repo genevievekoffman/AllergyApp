@@ -264,7 +264,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkbluerectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Bp9-cA-vRi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="Bp9-cA-vRi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="Hlu-yN-hed"/>
@@ -374,7 +374,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkbluerectangle" translatesAutoresizingMaskIntoConstraints="NO" id="AYK-Ue-TTq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="AYK-Ue-TTq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW POST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONI-kn-wLx">
@@ -595,7 +595,7 @@
                                     <outlet property="delegate" destination="HZZ-dN-44E" id="ET0-ZF-2Th"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkbluerectangle" translatesAutoresizingMaskIntoConstraints="NO" id="qvG-x5-3vA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="qvG-x5-3vA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="VAF-47-c09"/>
@@ -647,7 +647,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkbluerectangle" translatesAutoresizingMaskIntoConstraints="NO" id="gAp-5b-94t">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="gAp-5b-94t">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="XAT-Gu-8gM"/>
@@ -714,7 +714,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkbluerectangle" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-1W-Xlc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-1W-Xlc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="uOE-ou-nOz"/>
@@ -954,7 +954,7 @@
     <resources>
         <image name="BlueCurlyClick" width="1555" height="410"/>
         <image name="GreenBackground" width="1875" height="1255"/>
-        <image name="darkbluerectangle" width="1875" height="515"/>
+        <image name="blueTopBar" width="1870" height="305"/>
         <image name="finalAbes" width="1025" height="490"/>
         <image name="muffin black" width="500" height="535"/>
         <image name="muffinBlackAll" width="655" height="710"/>
