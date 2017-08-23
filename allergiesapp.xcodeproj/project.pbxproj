@@ -47,6 +47,8 @@
 		AF6FF8BD1F3A077F007DCC0B /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */; };
 		AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8C21F3A6243007DCC0B /* PostService.swift */; };
 		AFCC0D841F4C8ACC00CA7C8D /* VendorResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */; };
+		AFCC0D861F4CD52400CA7C8D /* VendorResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */; };
+		AFCC0D881F4DE4C800CA7C8D /* VendorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D871F4DE4C800CA7C8D /* VendorSettingsViewController.swift */; };
 		F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		AF6FF8C21F3A6243007DCC0B /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = allergiesapp/Services/PostService.swift; sourceTree = "<group>"; };
 		AFAC44861F32667B00D62744 /* allergiesapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = allergiesapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorResponseViewController.swift; sourceTree = "<group>"; };
+		AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorResponseTableViewCell.swift; sourceTree = "<group>"; };
+		AFCC0D871F4DE4C800CA7C8D /* VendorSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSettingsViewController.swift; sourceTree = "<group>"; };
 		C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_allergiesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +158,7 @@
 				AF294B531F432F37002D6B56 /* PostTableViewCell.swift */,
 				AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */,
 				AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */,
+				AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */,
 				AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */,
 				AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */,
+				AFCC0D871F4DE4C800CA7C8D /* VendorSettingsViewController.swift */,
 			);
 			name = Vendors;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */,
 				AF6D70D31F4B368700314E41 /* VendorOpeningViewController.swift in Sources */,
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
+				AFCC0D861F4CD52400CA7C8D /* VendorResponseTableViewCell.swift in Sources */,
 				AF6D70D51F4B3A0C00314E41 /* ChatViewController.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */,
@@ -423,6 +430,7 @@
 				AF35B62A1F33721100F16A66 /* UserService.swift in Sources */,
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
 				AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */,
+				AFCC0D881F4DE4C800CA7C8D /* VendorSettingsViewController.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,

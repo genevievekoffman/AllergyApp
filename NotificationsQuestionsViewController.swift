@@ -16,14 +16,14 @@ class NotificationsQuestionsViewController: UIViewController, UITableViewDelegat
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "segueNotificationsToResponse") {
-//            let index = self.tableView.indexPathForSelectedRow!
-//            let thePost = arrayOfCompanyPosts[index.row]
-//            let responseVC = segue.destination as? ResponsesViewController
-//            responseVC?.post = thePost
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueNotificationsToResponse") {
+            let index = self.tableView.indexPathForSelectedRow!
+            let thePost = arrayOfCompanyPosts[index.row]
+            let responseVC = segue.destination as? VendorResponseViewController
+            responseVC?.post = thePost
+        }
+    }
     
     @IBAction func backbutton(_ sender: Any) {
         performSegue(withIdentifier: "unwindNotificationsToVendorProfile ", sender: self)

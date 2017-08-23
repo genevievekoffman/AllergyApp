@@ -122,7 +122,7 @@
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.showsScopeBar = false // 
+        searchBar.showsScopeBar = false //
     }
     
     

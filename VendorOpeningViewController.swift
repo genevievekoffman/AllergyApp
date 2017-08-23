@@ -21,4 +21,14 @@ class VendorOpeningViewController: UIViewController {
     
     @IBAction func unwindSegueToVendorProfile(segue: UIStoryboardSegue) {}
     
+
+    @IBAction func SettingsButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "SegueToSettings", sender: self)
+    }
+
+
+
+
 }
+
+
