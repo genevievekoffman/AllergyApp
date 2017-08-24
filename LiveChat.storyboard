@@ -80,7 +80,7 @@
         <!--Live Chat Screen View Controller-->
         <scene sceneID="cU0-DV-z5c">
             <objects>
-                <viewController id="Ukp-7v-0Tb" customClass="LiveChatScreenViewController" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="liveChat" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ukp-7v-0Tb" customClass="LiveChatScreenViewController" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2JZ-oI-i4x"/>
                         <viewControllerLayoutGuide type="bottom" id="JYl-MW-NBY"/>

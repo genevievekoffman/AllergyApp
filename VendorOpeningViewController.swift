@@ -41,6 +41,7 @@ class VendorOpeningViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak alert] (_) in
             if let textFieldText = alert?.textFields?[0].text {
                 self.createLiveChat(chatName: textFieldText)
+                performSegue(withIdentifier: "segueToHostLiveChat", sender: self)
                 }
             })
         )}

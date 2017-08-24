@@ -76,7 +76,6 @@
                                 <state key="normal" title="Button" image="BlueCurlyClick"/>
                                 <connections>
                                     <action selector="HostLiveChatButtonClicked:" destination="COm-hp-e1e" eventType="touchUpInside" id="hH1-qc-tPT"/>
-                                    <segue destination="XF2-qj-1KL" kind="show" identifier="SegueHostLiveChat" id="ed0-hy-7P1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhi-5y-MFx">
@@ -140,46 +139,12 @@
                     <connections>
                         <outlet property="companyNameLabel" destination="l0v-Pl-hyh" id="eEM-NM-H2j"/>
                         <segue destination="wl5-dN-X4D" kind="show" identifier="SegueToSettings" id="Vfr-f0-qtQ"/>
+                        <segue destination="Zg0-wh-SS3" kind="show" identifier="segueToHostLiveChat" id="R4w-VF-w6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pa4-HH-dOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="118.29085457271366"/>
-        </scene>
-        <!--ChatViewController-->
-        <scene sceneID="Jdo-nE-qVx">
-            <objects>
-                <viewController title="ChatViewController" id="XF2-qj-1KL" customClass="ChatViewController" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yso-AF-AZI"/>
-                        <viewControllerLayoutGuide type="bottom" id="juu-G2-rB8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TNZ-Q2-Vgt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-r8-94T">
-                                <rect key="frame" x="0.0" y="38" width="375" height="629"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mnQ-Ab-EE4">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mnQ-Ab-EE4" id="TxK-jc-mAc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3UY-0j-qxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="120.8" y="893.70314842578716"/>
         </scene>
         <!--Vendor Settings View Controller-->
         <scene sceneID="Dul-8V-Ijs">
@@ -213,14 +178,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-ax-uHU">
-                                <rect key="frame" x="15" y="109" width="156" height="35"/>
+                                <rect key="frame" x="15" y="120" width="156" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4d-O4-JsP">
-                                <rect key="frame" x="16" y="189" width="98" height="21"/>
+                                <rect key="frame" x="16" y="199" width="98" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -249,9 +214,100 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-MS-yk1">
-                                <rect key="frame" x="16" y="273" width="55" height="23"/>
+                                <rect key="frame" x="16" y="283" width="55" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHl-4y-33S">
+                                <rect key="frame" x="196" y="127" width="163" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIg-JL-aXJ">
+                                <rect key="frame" x="196" y="199" width="163" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgM-hx-qDG">
+                                <rect key="frame" x="136" y="274" width="223" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLB-YW-HWi">
+                                <rect key="frame" x="334" y="359" width="10" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Line 7"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 8" translatesAutoresizingMaskIntoConstraints="NO" id="93F-qc-1DQ">
+                                <rect key="frame" x="20" y="169" width="355" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="companyNameLabel" destination="gHl-4y-33S" id="49Z-yO-RFz"/>
+                        <outlet property="emailLabel" destination="YgM-hx-qDG" id="Sim-c4-hU7"/>
+                        <outlet property="usernameLabel" destination="RIg-JL-aXJ" id="dlH-g3-9Qk"/>
+                        <segue destination="Mb6-Mv-qK8" kind="unwind" identifier="VendorSettingsToOpeningVC" unwindAction="unwindSegueToVendorProfileWithSegue:" id="DAb-SQ-Gte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCn-9M-py3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Mb6-Mv-qK8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="985.45727136431788"/>
+        </scene>
+        <!--Vendor Chat ListVC-->
+        <scene sceneID="pAu-fx-TZ0">
+            <objects>
+                <viewController id="Zg0-wh-SS3" customClass="VendorChatListVC" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ggj-tN-pns"/>
+                        <viewControllerLayoutGuide type="bottom" id="lwu-za-brr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gpb-Tx-Rwk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dv1-S0-sZU">
+                                <rect key="frame" x="0.0" y="201" width="375" height="406"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="vendorChatListCell" id="nlQ-71-q8h" customClass="VendorChatListTableViewCell" customModule="allergiesapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nlQ-71-q8h" id="5Im-iD-fhh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfq-tT-Zfk">
+                                                    <rect key="frame" x="30" y="8" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatTitleLabel" destination="Kfq-tT-Zfk" id="IrO-Ps-gur"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwb-s7-a2g">
+                                <rect key="frame" x="145" y="95" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -259,13 +315,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Mb6-Mv-qK8" kind="unwind" identifier="VendorSettingsToOpeningVC" unwindAction="unwindSegueToVendorProfileWithSegue:" id="DAb-SQ-Gte"/>
+                        <outlet property="tableView" destination="dv1-S0-sZU" id="GMO-LQ-VTs"/>
+                        <outlet property="usernameLabel" destination="lwb-s7-a2g" id="jzH-6I-hp0"/>
+                        <segue destination="vd8-he-29P" kind="show" identifier="segueToVendorLiveChatVC" id="ssi-bq-2vr"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vCn-9M-py3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Mb6-Mv-qK8" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7n-mB-68c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="893.70314842578716"/>
+            <point key="canvasLocation" x="1100" y="1011.544227886057"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gzf-n1-AxV">
+            <objects>
+                <viewController id="vd8-he-29P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfB-SJ-aF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="dRC-BP-9fW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AnR-8S-UEM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xua-qf-xNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="1012"/>
         </scene>
         <!--Notifications Questions View Controller-->
         <scene sceneID="waU-oy-WdQ">
@@ -614,6 +689,8 @@
     <resources>
         <image name="BlueCurlyClick" width="1555" height="410"/>
         <image name="GreenBackground" width="1875" height="1255"/>
+        <image name="Line 7" width="35" height="55"/>
+        <image name="Line 8" width="1760" height="10"/>
         <image name="blueTopBar" width="1870" height="305"/>
         <image name="logoutGreen" width="1555" height="410"/>
         <image name="muffinBlackAll" width="655" height="710"/>

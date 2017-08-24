@@ -35,6 +35,7 @@ final class LiveChatScreenViewController: JSQMessagesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.senderId = User.current.uid
         self.senderDisplayName = User.current.username
         

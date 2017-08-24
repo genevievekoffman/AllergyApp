@@ -10,6 +10,9 @@
 		AF1E94F01F4F0E0600AADCF2 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */; };
 		AF1E94F21F4F139F00AADCF2 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94F11F4F139F00AADCF2 /* ChatListTableViewCell.swift */; };
 		AF1E94F41F4F172400AADCF2 /* LiveChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */; };
+		AF1E94F91F4F7DC800AADCF2 /* VendorLiveChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */; };
+		AF1E94FB1F4F7DDC00AADCF2 /* VendorChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94FA1F4F7DDC00AADCF2 /* VendorChatListVC.swift */; };
+		AF1E94FD1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94FC1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift */; };
 		AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B531F432F37002D6B56 /* PostTableViewCell.swift */; };
 		AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */; };
 		AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */; };
@@ -65,6 +68,9 @@
 		AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		AF1E94F11F4F139F00AADCF2 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveChatScreenViewController.swift; sourceTree = "<group>"; };
+		AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLiveChatVC.swift; sourceTree = "<group>"; };
+		AF1E94FA1F4F7DDC00AADCF2 /* VendorChatListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorChatListVC.swift; sourceTree = "<group>"; };
+		AF1E94FC1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorChatListTableViewCell.swift; sourceTree = "<group>"; };
 		AF294B531F432F37002D6B56 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = allergiesapp/Views/PostTableViewCell.swift; sourceTree = "<group>"; };
 		AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponsesViewController.swift; path = allergiesapp/Controllers/ResponsesViewController.swift; sourceTree = "<group>"; };
 		AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseTableViewCell.swift; path = allergiesapp/Views/ResponseTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 			children = (
 				AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */,
 				AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */,
+				AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */,
+				AF1E94FA1F4F7DDC00AADCF2 /* VendorChatListVC.swift */,
 			);
 			name = LiveChat;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 				AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */,
 				AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */,
 				AF1E94F11F4F139F00AADCF2 /* ChatListTableViewCell.swift */,
+				AF1E94FC1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -465,6 +474,7 @@
 				AF6D70B91F47367000314E41 /* Vendors.swift in Sources */,
 				AF6FF8C31F3A6243007DCC0B /* PostService.swift in Sources */,
 				AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */,
+				AF1E94FD1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift in Sources */,
 				AF6D70D31F4B368700314E41 /* VendorOpeningViewController.swift in Sources */,
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
 				AFCC0D861F4CD52400CA7C8D /* VendorResponseTableViewCell.swift in Sources */,
@@ -481,6 +491,7 @@
 				AFCC0D881F4DE4C800CA7C8D /* VendorSettingsViewController.swift in Sources */,
 				AFCC0D931F4E79EB00CA7C8D /* LiveChatService.swift in Sources */,
 				AF1E94F21F4F139F00AADCF2 /* ChatListTableViewCell.swift in Sources */,
+				AF1E94FB1F4F7DDC00AADCF2 /* VendorChatListVC.swift in Sources */,
 				AFCC0D901F4E715700CA7C8D /* Group.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */,
@@ -491,6 +502,7 @@
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
 				AF1E94F01F4F0E0600AADCF2 /* ChatListViewController.swift in Sources */,
 				AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */,
+				AF1E94F91F4F7DC800AADCF2 /* VendorLiveChatVC.swift in Sources */,
 				AF6D70CB1F494AEF00314E41 /* NotificationsQuestionsViewController.swift in Sources */,
 				AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */,
 				AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */,
