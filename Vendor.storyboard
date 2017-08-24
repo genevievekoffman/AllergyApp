@@ -75,6 +75,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="BlueCurlyClick"/>
                                 <connections>
+                                    <action selector="HostLiveChatButtonClicked:" destination="COm-hp-e1e" eventType="touchUpInside" id="hH1-qc-tPT"/>
                                     <segue destination="XF2-qj-1KL" kind="show" identifier="SegueHostLiveChat" id="ed0-hy-7P1"/>
                                 </connections>
                             </button>
