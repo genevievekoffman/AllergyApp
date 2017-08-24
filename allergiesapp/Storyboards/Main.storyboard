@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eI7-Wx-hPh">
-                                <rect key="frame" x="0.0" y="60" width="375" height="558"/>
+                                <rect key="frame" x="0.0" y="55" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="kwp-xC-1nW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -128,10 +128,10 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalAbes" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-Ob-isY">
-                                <rect key="frame" x="143" y="25" width="90" height="35"/>
+                                <rect key="frame" x="143" y="25" width="80" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="OWZ-wk-QfQ"/>
-                                    <constraint firstAttribute="width" constant="90" id="cTv-IV-hXa"/>
+                                    <constraint firstAttribute="height" constant="30" id="OWZ-wk-QfQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="cTv-IV-hXa"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -271,7 +271,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94E-XD-LiQ">
-                                <rect key="frame" x="339" y="205" width="31" height="34"/>
+                                <rect key="frame" x="339" y="204.5" width="31" height="34"/>
                                 <state key="normal" title="add">
                                     <color key="titleColor" red="0.0" green="0.16215548747265007" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -352,10 +352,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tags" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JG-PN-yn5">
-                                <rect key="frame" x="16" y="193" width="42.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TAGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JG-PN-yn5">
+                                <rect key="frame" x="13" y="193" width="50" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -367,10 +367,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq4-B7-yUP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COMPANY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq4-B7-yUP">
                                 <rect key="frame" x="16" y="293" width="169" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -383,10 +383,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDK-Tz-3Yb">
-                                <rect key="frame" x="16" y="94" width="81" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUESTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDK-Tz-3Yb">
+                                <rect key="frame" x="16" y="94" width="100" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -394,10 +394,6 @@
                                 <rect key="frame" x="28" y="332" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="muffin black" translatesAutoresizingMaskIntoConstraints="NO" id="IUw-YH-34C">
-                                <rect key="frame" x="28" y="490" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7rD-IQ-37V">
                                 <rect key="frame" x="123" y="290" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -406,14 +402,21 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0o-I3-67u">
-                                <rect key="frame" x="304" y="535" width="30" height="30"/>
+                                <rect key="frame" x="160" y="553" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ASK"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <state key="normal" title="ASK">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="AskButtonTapped:" destination="msv-cz-5A5" eventType="touchUpInside" id="jqR-cI-Hbl"/>
                                     <segue destination="q90-YA-xXD" kind="show" identifier="segueToPostAdded" id="Z0z-WB-9Gf"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icecream" translatesAutoresizingMaskIntoConstraints="NO" id="5dd-PE-ukO">
+                                <rect key="frame" x="282" y="167" width="68" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -452,7 +455,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tri color background" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-b4-Ej5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-b4-Ej5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdR-hA-IIr">
@@ -472,6 +475,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand holding" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-sb-Nrt">
+                                <rect key="frame" x="0.0" y="113" width="196" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -804,17 +811,17 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6y-yR-XpZ">
-                                <rect key="frame" x="27" y="300" width="320" height="55"/>
+                                <rect key="frame" x="77" y="300" width="220" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="egZ-8Z-g15"/>
+                                    <constraint firstAttribute="width" constant="220" id="egZ-8Z-g15"/>
                                     <constraint firstAttribute="height" constant="55" id="i9V-ao-Xkq"/>
                                 </constraints>
                                 <state key="normal" title="NotificationsButton" image="BlueCurlyClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXr-F2-kJY">
-                                <rect key="frame" x="27" y="375" width="320" height="55"/>
+                                <rect key="frame" x="77" y="375" width="220" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="1od-wO-y46"/>
+                                    <constraint firstAttribute="width" constant="220" id="1od-wO-y46"/>
                                     <constraint firstAttribute="height" constant="55" id="gUp-tX-d8c"/>
                                 </constraints>
                                 <state key="normal" title="ButtonToMyAllergies" image="BlueCurlyClick"/>
@@ -824,17 +831,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqD-P2-4pD">
-                                <rect key="frame" x="27" y="450" width="320" height="55"/>
+                                <rect key="frame" x="77" y="450" width="220" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="eO3-4M-tm8"/>
-                                    <constraint firstAttribute="width" constant="320" id="yNN-PA-lcw"/>
+                                    <constraint firstAttribute="width" constant="220" id="yNN-PA-lcw"/>
                                 </constraints>
                                 <state key="normal" title="MyPostsButton" image="BlueCurlyClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-Ar-b2v">
-                                <rect key="frame" x="27.5" y="525" width="320" height="55"/>
+                                <rect key="frame" x="77.5" y="525" width="220" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="iPe-Cb-acX"/>
+                                    <constraint firstAttribute="width" constant="220" id="iPe-Cb-acX"/>
                                     <constraint firstAttribute="height" constant="55" id="lib-XE-mhR"/>
                                 </constraints>
                                 <state key="normal" title="InformationButton" image="BlueCurlyClick"/>
@@ -931,7 +938,6 @@
         <!--Navigation Controller-->
         <scene sceneID="mCx-dr-PKS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6mL-QS-zs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="u1w-AU-rmI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="OcZ-ZD-a1p">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
@@ -947,6 +953,7 @@
                         <segue destination="UGg-hS-Rn7" kind="relationship" relationship="rootViewController" id="0T9-oW-rDV"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mL-QS-zs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-356" y="959.37031484257875"/>
         </scene>
@@ -956,12 +963,12 @@
         <image name="GreenBackground" width="1875" height="1255"/>
         <image name="blueTopBar" width="1870" height="305"/>
         <image name="finalAbes" width="1025" height="490"/>
-        <image name="muffin black" width="500" height="535"/>
+        <image name="hand holding" width="1135" height="2995"/>
+        <image name="icecream" width="355" height="840"/>
         <image name="muffinBlackAll" width="655" height="710"/>
         <image name="tab_home_black" width="25" height="25"/>
         <image name="tab_plus_black" width="25" height="25"/>
         <image name="tab_profile_black" width="25" height="25"/>
-        <image name="tri color background" width="1875" height="3335"/>
         <image name="white back" width="75" height="135"/>
         <image name="whiteshadowBar" width="1540" height="320"/>
     </resources>

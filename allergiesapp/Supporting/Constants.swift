@@ -16,7 +16,15 @@ struct Constants {
         static let uid = "uid"
         static let username = "username"
         static let email = "email"
-        static let name = "name" 
+        static let name = "name"
+        
+        
+        static let key = "key"
+        static let title = "title"
+        static let usersListInChat = "usersListInChat"
+        
+        static let chat = "chat"
+        static let currentChat = "currentChat" // do I need to add in vendors 
     }
     
     struct VendorDefaults {

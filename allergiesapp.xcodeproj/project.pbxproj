@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1E94F01F4F0E0600AADCF2 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */; };
+		AF1E94F21F4F139F00AADCF2 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94F11F4F139F00AADCF2 /* ChatListTableViewCell.swift */; };
+		AF1E94F41F4F172400AADCF2 /* LiveChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */; };
 		AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B531F432F37002D6B56 /* PostTableViewCell.swift */; };
 		AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */; };
 		AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */; };
@@ -49,12 +52,19 @@
 		AFCC0D841F4C8ACC00CA7C8D /* VendorResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */; };
 		AFCC0D861F4CD52400CA7C8D /* VendorResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */; };
 		AFCC0D881F4DE4C800CA7C8D /* VendorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D871F4DE4C800CA7C8D /* VendorSettingsViewController.swift */; };
+		AFCC0D8A1F4E6ED400CA7C8D /* LiveChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCC0D891F4E6ED400CA7C8D /* LiveChat.storyboard */; };
+		AFCC0D8D1F4E6FBE00CA7C8D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D8C1F4E6FBE00CA7C8D /* Chat.swift */; };
+		AFCC0D901F4E715700CA7C8D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D8F1F4E715700CA7C8D /* Group.swift */; };
+		AFCC0D931F4E79EB00CA7C8D /* LiveChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0D921F4E79EB00CA7C8D /* LiveChatService.swift */; };
 		F9D2138089E8790B6C2C1DA1 /* Pods_allergiesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7EA273F286C828D89B64B11C /* Pods-allergiesapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.release.xcconfig"; sourceTree = "<group>"; };
 		84F631A36E732F328F12580D /* Pods-allergiesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allergiesapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-allergiesapp/Pods-allergiesapp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		AF1E94F11F4F139F00AADCF2 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveChatScreenViewController.swift; sourceTree = "<group>"; };
 		AF294B531F432F37002D6B56 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = allergiesapp/Views/PostTableViewCell.swift; sourceTree = "<group>"; };
 		AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponsesViewController.swift; path = allergiesapp/Controllers/ResponsesViewController.swift; sourceTree = "<group>"; };
 		AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseTableViewCell.swift; path = allergiesapp/Views/ResponseTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +109,10 @@
 		AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorResponseViewController.swift; sourceTree = "<group>"; };
 		AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorResponseTableViewCell.swift; sourceTree = "<group>"; };
 		AFCC0D871F4DE4C800CA7C8D /* VendorSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSettingsViewController.swift; sourceTree = "<group>"; };
+		AFCC0D891F4E6ED400CA7C8D /* LiveChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveChat.storyboard; sourceTree = "<group>"; };
+		AFCC0D8C1F4E6FBE00CA7C8D /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		AFCC0D8F1F4E715700CA7C8D /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AFCC0D921F4E79EB00CA7C8D /* LiveChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveChatService.swift; sourceTree = "<group>"; };
 		C3DF8F2D091EA399CA7D7FE5 /* Pods_allergiesapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_allergiesapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1E94EE1F4F0DD600AADCF2 /* LiveChat */ = {
+			isa = PBXGroup;
+			children = (
+				AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */,
+				AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */,
+			);
+			name = LiveChat;
+			sourceTree = "<group>";
+		};
 		AF35B61C1F33717800F16A66 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +160,7 @@
 				AF35B6341F33725100F16A66 /* Login.storyboard */,
 				AF35B6351F33725100F16A66 /* Main.storyboard */,
 				AF6D70C01F47488300314E41 /* Vendor.storyboard */,
+				AFCC0D891F4E6ED400CA7C8D /* LiveChat.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -159,6 +183,7 @@
 				AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */,
 				AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */,
 				AFCC0D851F4CD52400CA7C8D /* VendorResponseTableViewCell.swift */,
+				AF1E94F11F4F139F00AADCF2 /* ChatListTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -166,6 +191,7 @@
 		AF35B6221F33719200F16A66 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF1E94EE1F4F0DD600AADCF2 /* LiveChat */,
 				AF6D70C91F494A9100314E41 /* Vendors */,
 				AF6D70C81F494A8600314E41 /* Consumers */,
 				AF6D70C71F48AA5C00314E41 /* Login/Signup Screens */,
@@ -176,6 +202,7 @@
 		AF35B6231F33719500F16A66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AFCC0D8B1F4E6FA700CA7C8D /* LiveChat */,
 				AF35B6411F33ACB500F16A66 /* User.swift */,
 				AF6FF8B81F39FCAD007DCC0B /* Post.swift */,
 				AF6D70A81F44835A00314E41 /* Response.swift */,
@@ -188,6 +215,7 @@
 		AF35B6281F3371F500F16A66 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AFCC0D911F4E76DA00CA7C8D /* LiveChat */,
 				AF35B6291F33721100F16A66 /* UserService.swift */,
 				AF35B63B1F33774000F16A66 /* AuthService.swift */,
 				AF6FF8C21F3A6243007DCC0B /* PostService.swift */,
@@ -260,6 +288,23 @@
 				AFAC44861F32667B00D62744 /* allergiesapp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AFCC0D8B1F4E6FA700CA7C8D /* LiveChat */ = {
+			isa = PBXGroup;
+			children = (
+				AFCC0D8F1F4E715700CA7C8D /* Group.swift */,
+				AFCC0D8C1F4E6FBE00CA7C8D /* Chat.swift */,
+			);
+			name = LiveChat;
+			sourceTree = "<group>";
+		};
+		AFCC0D911F4E76DA00CA7C8D /* LiveChat */ = {
+			isa = PBXGroup;
+			children = (
+				AFCC0D921F4E79EB00CA7C8D /* LiveChatService.swift */,
+			);
+			name = LiveChat;
 			sourceTree = "<group>";
 		};
 		BE1F2E9F9FAAABC1885FB476 /* Pods */ = {
@@ -343,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCC0D8A1F4E6ED400CA7C8D /* LiveChat.storyboard in Resources */,
 				AF6D70C11F47488300314E41 /* Vendor.storyboard in Resources */,
 				AF35B6271F3371AA00F16A66 /* Assets.xcassets in Resources */,
 				AF35B6361F33725100F16A66 /* LaunchScreen.storyboard in Resources */,
@@ -423,7 +469,9 @@
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
 				AFCC0D861F4CD52400CA7C8D /* VendorResponseTableViewCell.swift in Sources */,
 				AF6D70D51F4B3A0C00314E41 /* ChatViewController.swift in Sources */,
+				AFCC0D8D1F4E6FBE00CA7C8D /* Chat.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
+				AF1E94F41F4F172400AADCF2 /* LiveChatScreenViewController.swift in Sources */,
 				AF6FF8B11F38C04B007DCC0B /* Storyboard+Utility.swift in Sources */,
 				AF6FF8B91F39FCAD007DCC0B /* Post.swift in Sources */,
 				AF35B6401F33ABEF00F16A66 /* Helpers.swift in Sources */,
@@ -431,6 +479,9 @@
 				AF35B63C1F33774000F16A66 /* AuthService.swift in Sources */,
 				AF6D70B41F44D84600314E41 /* ChooseAllergiesViewController.swift in Sources */,
 				AFCC0D881F4DE4C800CA7C8D /* VendorSettingsViewController.swift in Sources */,
+				AFCC0D931F4E79EB00CA7C8D /* LiveChatService.swift in Sources */,
+				AF1E94F21F4F139F00AADCF2 /* ChatListTableViewCell.swift in Sources */,
+				AFCC0D901F4E715700CA7C8D /* Group.swift in Sources */,
 				AF6D70A91F44835A00314E41 /* Response.swift in Sources */,
 				AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */,
 				AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */,
@@ -438,6 +489,7 @@
 				AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */,
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
+				AF1E94F01F4F0E0600AADCF2 /* ChatListViewController.swift in Sources */,
 				AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */,
 				AF6D70CB1F494AEF00314E41 /* NotificationsQuestionsViewController.swift in Sources */,
 				AF6D70BB1F473B2700314E41 /* VendorService.swift in Sources */,
