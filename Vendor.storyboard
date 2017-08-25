@@ -332,10 +332,10 @@
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtontapped:" destination="Zg0-wh-SS3" eventType="touchUpInside" id="rtK-2i-D9Y"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="backButtontapped:" destination="Zg0-wh-SS3" id="yB6-es-9d4"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
