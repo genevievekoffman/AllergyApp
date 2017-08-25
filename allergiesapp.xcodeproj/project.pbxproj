@@ -139,8 +139,8 @@
 			children = (
 				AF1E94EF1F4F0E0600AADCF2 /* ChatListViewController.swift */,
 				AF1E94F31F4F172400AADCF2 /* LiveChatScreenViewController.swift */,
-				AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */,
 				AF1E94FA1F4F7DDC00AADCF2 /* VendorChatListVC.swift */,
+				AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */,
 			);
 			name = LiveChat;
 			sourceTree = "<group>";

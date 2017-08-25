@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class VendorChatListVC: UIViewController {
+    
     var chatArray = [Chat]()
     
     
@@ -26,6 +27,7 @@ class VendorChatListVC: UIViewController {
     
     var vendorSendingName = Vendor.current.username
     
+    
     private lazy var chatRef : DatabaseReference =  Database.database().reference().child("chats")
     
     private var chatRefHandle: DatabaseHandle?
@@ -33,10 +35,11 @@ class VendorChatListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameLabel.text = "welcome \(Vendor.current.companyName)"
+        observeChat()
     }
     
     deinit {
-        if let refHandle = chatRefHandle {
+        if chatRefHandle != nil {
             chatRef.removeObserver(withHandle: chatRefHandle!)
         }
     }
@@ -46,6 +49,9 @@ class VendorChatListVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // needs to grab all the chats
+        super.viewWillAppear(animated)
+        
         self.listOfChats.removeAll()
         observeChat() //??
         self.tableView.reloadData()
@@ -89,6 +95,12 @@ class VendorChatListVC: UIViewController {
         })
     }
 }
+    
+//    func getChatList(completion: @escaping (Chat?)->Void){
+//        let ref = Database.database().reference().child("chats") // pulling from chats 
+//        ref.observeSingleEvent(of: .value,with: {(snapshot) in
+//           
+//}
 //    @IBAction func unwindToChatListVC(_ sender: UIStoryboardSegue) {
 //        self.tableView.reloadData()
 //    }

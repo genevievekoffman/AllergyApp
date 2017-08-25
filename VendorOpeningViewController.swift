@@ -32,16 +32,21 @@ class VendorOpeningViewController: UIViewController {
         newChatRef.setValue(chatItem)
     }
     
+    func performSegue(identifier: String) {
+        self.performSegue(withIdentifier: identifier, sender: self )
+    }
+    
     @IBAction func HostLiveChatButtonClicked(_ sender: Any) {
         
         let alert = UIAlertController(title: "New Live Chat", message: "Enter a new Chat name:", preferredStyle: .alert)
         alert.addTextField { (textField) in
-            textField.placeholder = "ex: the 5 natural ingredients in our cake"
+            textField.placeholder = "ex: The 5 natural ingredients in our cake"
         }
+        self.present(alert, animated: true, completion: nil) // correct placement? 
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak alert] (_) in
             if let textFieldText = alert?.textFields?[0].text {
                 self.createLiveChat(chatName: textFieldText)
-                performSegue(withIdentifier: "segueToHostLiveChat", sender: self)
+                self.performSegue(identifier: "segueToHostLiveChat")
                 }
             })
         )}

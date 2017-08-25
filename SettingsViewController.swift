@@ -11,6 +11,17 @@ import Foundation
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameLabel.text = User.current.name
+        usernameLabel.text = User.current.username
+        emailLabel.text = User.current.email
+    }
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "unwindSettingsToProfile", sender: self)
     }

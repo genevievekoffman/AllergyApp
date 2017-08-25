@@ -36,10 +36,11 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameLabel.text = "welcome \(User.current.name)"
+        observeChat()
     }
     
     deinit {
-        if let refHandle = chatRefHandle {
+        if chatRefHandle != nil {
             chatRef.removeObserver(withHandle: chatRefHandle!)
         }
     }
@@ -79,7 +80,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         // revealViewController().pushFrontViewController(revealViewController().frontViewController, animated: true)
     }
     
-    func observeChat() {
+    func observeChat() { // whats this func?
         chatRefHandle = chatRef.observe(.childAdded, with: { (snapshot) -> Void in
             let chatData = snapshot.value as! Dictionary<String, AnyObject>
             let id = snapshot.key
