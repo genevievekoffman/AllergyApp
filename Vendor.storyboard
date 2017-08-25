@@ -139,7 +139,7 @@
                     <connections>
                         <outlet property="companyNameLabel" destination="l0v-Pl-hyh" id="eEM-NM-H2j"/>
                         <segue destination="wl5-dN-X4D" kind="show" identifier="SegueToSettings" id="Vfr-f0-qtQ"/>
-                        <segue destination="Zg0-wh-SS3" kind="show" identifier="segueToHostLiveChat" id="R4w-VF-w6F"/>
+                        <segue destination="6tc-uk-ZcE" kind="show" identifier="segueToHostLiveChat" id="c4Y-A7-Ssi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pa4-HH-dOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="985.45727136431788"/>
         </scene>
-        <!--Vendor Chat ListVC-->
+        <!--Host A Chat-->
         <scene sceneID="pAu-fx-TZ0">
             <objects>
                 <viewController id="Zg0-wh-SS3" customClass="VendorChatListVC" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -326,15 +326,45 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Host A Chat" id="KZs-u1-fGn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="e2B-DK-OAK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qsm-9I-Q5P">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <connections>
+                                <action selector="backButtontapped:" destination="Zg0-wh-SS3" id="yB6-es-9d4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dv1-S0-sZU" id="GMO-LQ-VTs"/>
                         <outlet property="usernameLabel" destination="lwb-s7-a2g" id="jzH-6I-hp0"/>
                         <segue destination="vd8-he-29P" kind="show" identifier="segueToVendorLiveChatVC" id="ssi-bq-2vr"/>
+                        <segue destination="uJT-87-L8T" kind="unwind" identifier="unwindsegue" unwindAction="unwindSegueToVendorProfileWithSegue:" id="ebm-C9-FkX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7n-mB-68c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uJT-87-L8T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="1011.544227886057"/>
+            <point key="canvasLocation" x="1804" y="1023"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sUC-3u-bR4">
+            <objects>
+                <navigationController id="6tc-uk-ZcE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qdo-bC-OHa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Zg0-wh-SS3" kind="relationship" relationship="rootViewController" id="jMY-qn-DZ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05S-g8-4k7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="1022"/>
         </scene>
         <!--Vendor Live ChatVC-->
         <scene sceneID="gzf-n1-AxV">
@@ -349,10 +379,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="2GU-93-hBq" kind="unwind" identifier="unwindToVendorList" unwindAction="unwindToVendorListWithSegue:" id="6cI-x5-4X0"/>
+                        <segue destination="2GU-93-hBq" kind="unwind" unwindAction="unwindToVendorListWithSegue:" id="bzh-cw-gYr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xua-qf-xNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2GU-93-hBq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="1012"/>
+            <point key="canvasLocation" x="2634" y="1023"/>
         </scene>
         <!--Notifications Questions View Controller-->
         <scene sceneID="waU-oy-WdQ">

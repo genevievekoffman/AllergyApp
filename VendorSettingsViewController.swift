@@ -30,7 +30,12 @@ class VendorSettingsViewController: UIViewController {
     @IBAction func LogoutButtonTapped(_ sender: Any) {
         AuthService.presentLogOut(viewController: self)
         AppDelegate.clearUserDefaults()
-    } // ?? 
-    
+        
+        let loginstoryboard = UIStoryboard(name: "Login", bundle: .main)
+        if let initialViewController = storyboard?.instantiateInitialViewController() {
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+    }
     
 }

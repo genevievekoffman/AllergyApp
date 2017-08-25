@@ -13,7 +13,7 @@ import JSQMessagesViewController
 
 class VendorLiveChatVC: JSQMessagesViewController {
     
-    static var chatRef: DatabaseReference?
+    var chatRef: DatabaseReference?
     var chat: Chat? {
         
         didSet {
@@ -63,11 +63,15 @@ class VendorLiveChatVC: JSQMessagesViewController {
     
     
     
-    private lazy var messageRef: DatabaseReference = VendorLiveChatVC.chatRef!.child("messages")
-    private var newMessageRefHandle: DatabaseHandle?
+    var messageRef: DatabaseReference?
+    var newMessageRefHandle: DatabaseHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.chatRef = Database.database().reference().child("chats").child((chat?.chatID)!)
+        self.messageRef = self.chatRef?.child("messages")
+
+        self.inputToolbar.contentView.leftBarButtonItem = nil
         
         self.senderId = Vendor.current.vendoruid // what are these 2 lines
         self.senderDisplayName = Vendor.current.username
@@ -78,9 +82,6 @@ class VendorLiveChatVC: JSQMessagesViewController {
         observeMessages()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//    }
     
     private func addMessage(withId id: String, name: String, text: String ) {
         if let message = JSQMessage(senderId: id, displayName: name, text: text) {
@@ -88,26 +89,16 @@ class VendorLiveChatVC: JSQMessagesViewController {
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
-//        let message = messages[indexPath.item]
-//        
-//        if message.senderId == senderId {
-//            cell.textView?.textColor = UIColor.white
-//        } else {
-//            cell.textView?.textColor = UIColor.black
-//        }
-//        return cell
-//    }
+
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        let itemRef = messageRef.childByAutoId()
+        let itemRef = messageRef?.childByAutoId()
         let messageItem = [
             "senderId": senderId!,
             "senderName": senderDisplayName!,
             "text": text!,
             ]
-        itemRef.setValue(messageItem)
+        itemRef?.setValue(messageItem)
         
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
@@ -125,11 +116,9 @@ class VendorLiveChatVC: JSQMessagesViewController {
     }
 
     private func observeMessages() {
-        messageRef = VendorLiveChatVC.chatRef!.child("messages")
+        let messageQuery = messageRef?.queryLimited(toLast:25)
         
-        let messageQuery = messageRef.queryLimited(toLast:25)
-        
-        newMessageRefHandle = messageQuery.observe(.childAdded, with: { (snapshot) -> Void in
+        newMessageRefHandle = messageQuery?.observe(.childAdded, with: { (snapshot) -> Void in
             
             let messageData = snapshot.value as! Dictionary<String, String>
             
@@ -141,4 +130,12 @@ class VendorLiveChatVC: JSQMessagesViewController {
             }
         })
     }
+    
+    
+    override func didMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+             self.chatRef?.removeValue()
+        }
+    }
+    
 }

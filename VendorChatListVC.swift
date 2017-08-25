@@ -10,8 +10,12 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBAction func backButtontapped(_ sender: Any) {
+        performSegue(withIdentifier: "unwindsegue", sender: self)
+    }
+     @IBAction func unwindToVendorList(segue: UIStoryboardSegue) {}
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,10 +36,12 @@ class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     private var chatRefHandle: DatabaseHandle?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationController?.title = "Chat List"
         
-        super.viewDidLoad()
         usernameLabel.text = "welcome \(Vendor.current.companyName)"
         // observeChat()
     }
@@ -87,8 +93,10 @@ class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToVendorLiveChatVC" {
             let vc = segue.destination as! VendorLiveChatVC
-            vc.chat = selectedChat!
-            VendorLiveChatVC.chatRef = chatRef
+            vc.chat = selectedChat
+            vc.chatRef = chatRef
+            
+            self.selectedChat = nil
         }
 
     }

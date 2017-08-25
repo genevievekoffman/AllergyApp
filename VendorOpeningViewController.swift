@@ -19,7 +19,9 @@ class VendorOpeningViewController: UIViewController {
         companyNameLabel.text? = Vendor.current.companyName
     }
     
-    @IBAction func unwindSegueToVendorProfile(segue: UIStoryboardSegue) {}
+    @IBAction func unwindSegueToVendorProfile(segue: UIStoryboardSegue) {
+    
+    }
     
 
     @IBAction func SettingsButtonClicked(_ sender: Any) {
@@ -44,7 +46,9 @@ class VendorOpeningViewController: UIViewController {
         }
         self.present(alert, animated: true, completion: nil) // correct placement? 
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [weak alert] (_) in
+
             if let textFieldText = alert?.textFields?[0].text {
+                if textFieldText == "" || textFieldText == nil {return}
                 self.createLiveChat(chatName: textFieldText)
                 self.performSegue(identifier: "segueToHostLiveChat")
                 }

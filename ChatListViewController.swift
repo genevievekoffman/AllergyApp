@@ -79,18 +79,16 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedChat = self.listOfChats[(indexPath as NSIndexPath).row]
+      
 
-//        let chat = self.listOfChats[(indexPath as NSIndexPath).row]
         self.performSegue(withIdentifier: "SegueToLiveChatVC", sender: self)
-        // Course.setCurrent(courseChat, writeToUserDefaults:true)
-        // revealViewController().pushFrontViewController(revealViewController().frontViewController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToLiveChatVC" {
             let vc = segue.destination as! LiveChatScreenViewController
-            vc.chat = selectedChat!
-            LiveChatScreenViewController.chatRef = chatRef
+            vc.chat = selectedChat
+            vc.chatRef = chatRef
         }
     }
     
@@ -105,22 +103,6 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
             }
         })
     }
-    
-//    @IBAction func unwindToChatListVC(_ sender: UIStoryboardSegue) {
-//    self.tableView.reloadData()
-//    }
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        if let chat = sender as? Chat {
-//            let chatVC = segue.destination as! LiveChatScreenViewController
-//            //chatVc.senderDisplayName = senderDisplayName
-//           // chatVc.channel = channel
-//          //  chatVc.channelRef = channelRef.child(channel.id)
-//        }
-//    }
-    
-
 }
     
 

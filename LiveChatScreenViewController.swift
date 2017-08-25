@@ -14,7 +14,7 @@ import JSQMessagesViewController
 class LiveChatScreenViewController: JSQMessagesViewController {
     
     
-    static var chatRef: DatabaseReference?
+    var chatRef: DatabaseReference?
     var chat: Chat? {
         
         didSet {
@@ -65,11 +65,13 @@ class LiveChatScreenViewController: JSQMessagesViewController {
     
     
     
-    private lazy var messageRef: DatabaseReference = LiveChatScreenViewController.chatRef!.child("messages")
+    private lazy var messageRef: DatabaseReference = self.chatRef!.child("messages")
     private var newMessageRefHandle: DatabaseHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.inputToolbar.contentView.leftBarButtonItem = nil 
         
         self.senderId = User.current.uid
         self.senderDisplayName = User.current.username
@@ -80,10 +82,7 @@ class LiveChatScreenViewController: JSQMessagesViewController {
         observeMessages()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//    }
-//    
+
     private func addMessage(withId id: String, name: String, text: String ) {
         if let message = JSQMessage(senderId: id, displayName: name, text: text) {
             messages.append(message)
@@ -107,8 +106,6 @@ class LiveChatScreenViewController: JSQMessagesViewController {
     }
     
     
-    
-    
     private func setupIncomingBubble() -> JSQMessagesBubbleImage {
         let bubbleImageFactory = JSQMessagesBubbleImageFactory()
         return bubbleImageFactory!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
@@ -121,7 +118,7 @@ class LiveChatScreenViewController: JSQMessagesViewController {
     
     
     private func observeMessages() {
-        messageRef = LiveChatScreenViewController.chatRef!.child("messages")
+        messageRef = self.chatRef!.child("messages")
         
         let messageQuery = messageRef.queryLimited(toLast:25)
     
