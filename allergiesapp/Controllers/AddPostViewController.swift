@@ -18,7 +18,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var companypickerview: UIPickerView!
     
-    @IBOutlet weak var label: UILabel!
+//    @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var companySwitchView: UISwitch!
     
@@ -75,7 +75,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return companies[row].companyName // ?
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        label.text = companies[row].companyName
+//        company = companies[row].companyName
     } // ^^ allows user to use UIPicker to choose a company
     
     @IBAction func AskButtonTapped(_ sender: Any) {

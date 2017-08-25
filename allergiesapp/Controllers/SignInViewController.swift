@@ -14,6 +14,11 @@ typealias FIRUser = FirebaseAuth.User
 
 class SignInViewController: UIViewController {
     
+    override func viewDidLoad() {
+        applyKeyboardPush()
+        super.viewDidLoad()
+    }
+    
     @IBOutlet weak var ConsumerOrVendor: UISegmentedControl!
     
     

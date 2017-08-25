@@ -10,6 +10,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    
+    @IBAction func LiveChatsButtonTapped(_ sender: Any) {
+        goToLiveChatStoryboard()
+    }
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -23,4 +28,12 @@ class ProfileViewController: UIViewController {
      @IBAction func unwindToProfile(segue: UIStoryboardSegue) {}
     @IBAction func unwindSettingsToProfile(segue: UIStoryboardSegue) {}
 
+    
+    func goToLiveChatStoryboard() {
+        let storyboard = UIStoryboard(name: "LiveChat", bundle: .main)
+        if let initialViewController = storyboard.instantiateInitialViewController() {
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+    } // goes to live chat storyboard
 }

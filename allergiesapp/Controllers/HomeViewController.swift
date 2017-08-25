@@ -13,9 +13,7 @@
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
     
     var arrayOfPosts = [Post]() {
         didSet {
@@ -100,6 +98,10 @@
     override func viewDidLoad() {
         searchBar.delegate = self
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

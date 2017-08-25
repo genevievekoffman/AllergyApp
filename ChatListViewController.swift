@@ -13,8 +13,6 @@ import FirebaseDatabase
 
 
 class ChatListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var chatArray = [Chat]()
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,15 +26,18 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     var userSendingName = User.current.username
+    var selectedChat : Chat?
     
     private lazy var chatRef : DatabaseReference =  Database.database().reference().child("chats")
     
     private var chatRefHandle: DatabaseHandle?
     
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         super.viewDidLoad()
         usernameLabel.text = "welcome \(User.current.name)"
-        observeChat()
     }
     
     deinit {
@@ -50,9 +51,12 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
         self.listOfChats.removeAll()
         observeChat() //??
-        self.tableView.reloadData()
+        
         UIApplication.shared.isStatusBarHidden = true
     }
     
@@ -72,42 +76,51 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedChat = self.listOfChats[(indexPath as NSIndexPath).row]
 
-        let chat = self.listOfChats[(indexPath as NSIndexPath).row]
-        self.performSegue(withIdentifier: "SegueToLiveChatVC", sender: chat)
+//        let chat = self.listOfChats[(indexPath as NSIndexPath).row]
+        self.performSegue(withIdentifier: "SegueToLiveChatVC", sender: self)
         // Course.setCurrent(courseChat, writeToUserDefaults:true)
         // revealViewController().pushFrontViewController(revealViewController().frontViewController, animated: true)
     }
     
-    func observeChat() { // whats this func?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueToLiveChatVC" {
+            let vc = segue.destination as! LiveChatScreenViewController
+            vc.chat = selectedChat!
+            LiveChatScreenViewController.chatRef = chatRef
+        }
+    }
+    
+    func observeChat() {
         chatRefHandle = chatRef.observe(.childAdded, with: { (snapshot) -> Void in
             let chatData = snapshot.value as! Dictionary<String, AnyObject>
             let id = snapshot.key
             if let chatName = chatData["chatName"] as! String!, chatName.characters.count > 0 {
-                self.chatArray.append(Chat(chatID: id, chatTitle: chatName))
-                self.tableView.reloadData()
+                self.listOfChats.append(Chat(chatID: id, chatTitle: chatName))
             } else {
                print("Error")
             }
         })
     }
     
-    @IBAction func unwindToChatListVC(_ sender: UIStoryboardSegue) {
-    self.tableView.reloadData()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if let chat = sender as? Chat {
-            let chatVC = segue.destination as! LiveChatScreenViewController
-            //chatVc.senderDisplayName = senderDisplayName
-           // chatVc.channel = channel
-          //  chatVc.channelRef = channelRef.child(channel.id)
-        }
-    }
+//    @IBAction func unwindToChatListVC(_ sender: UIStoryboardSegue) {
+//    self.tableView.reloadData()
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//        if let chat = sender as? Chat {
+//            let chatVC = segue.destination as! LiveChatScreenViewController
+//            //chatVc.senderDisplayName = senderDisplayName
+//           // chatVc.channel = channel
+//          //  chatVc.channelRef = channelRef.child(channel.id)
+//        }
+//    }
     
 
-    }
+}
     
 
