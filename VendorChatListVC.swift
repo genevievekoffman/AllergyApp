@@ -10,10 +10,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class VendorChatListVC: UIViewController {
-    
-    var chatArray = [Chat]()
-    
+class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +24,7 @@ class VendorChatListVC: UIViewController {
     }
     
     var vendorSendingName = Vendor.current.username
+    var selectedChat : Chat?
     
     
     private lazy var chatRef : DatabaseReference =  Database.database().reference().child("chats")
@@ -33,9 +32,12 @@ class VendorChatListVC: UIViewController {
     private var chatRefHandle: DatabaseHandle?
     
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         super.viewDidLoad()
         usernameLabel.text = "welcome \(Vendor.current.companyName)"
-        observeChat()
+        // observeChat()
     }
     
     deinit {
@@ -49,12 +51,11 @@ class VendorChatListVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // needs to grab all the chats
+        
         super.viewWillAppear(animated)
         
-        self.listOfChats.removeAll()
-        observeChat() //??
-        self.tableView.reloadData()
+        self.listOfChats.removeAll() // ?? 
+        observeChat()
         UIApplication.shared.isStatusBarHidden = true
     }
     
@@ -74,12 +75,22 @@ class VendorChatListVC: UIViewController {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let chat = self.listOfChats[(indexPath as NSIndexPath).row]
-        self.performSegue(withIdentifier: "segueToVendorLiveChatVC", sender: chat)
+        selectedChat = self.listOfChats[(indexPath as NSIndexPath).row]
+        self.performSegue(withIdentifier: "segueToVendorLiveChatVC", sender: self)
+
         // Course.setCurrent(courseChat, writeToUserDefaults:true)
         // revealViewController().pushFrontViewController(revealViewController().frontViewController, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToVendorLiveChatVC" {
+            let vc = segue.destination as! VendorLiveChatVC
+            vc.chat = selectedChat!
+            VendorLiveChatVC.chatRef = chatRef
+        }
+
     }
     
     func observeChat() {
@@ -87,8 +98,7 @@ class VendorChatListVC: UIViewController {
             let chatData = snapshot.value as! Dictionary<String, AnyObject>
             let id = snapshot.key
             if let chatName = chatData["chatName"] as! String!, chatName.characters.count > 0 {
-                self.chatArray.append(Chat(chatID: id, chatTitle: chatName))
-                self.tableView.reloadData()
+                self.listOfChats.append(Chat(chatID: id, chatTitle: chatName))
             } else {
                 print("Error")
             }

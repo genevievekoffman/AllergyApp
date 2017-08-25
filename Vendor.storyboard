@@ -235,19 +235,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgM-hx-qDG">
-                                <rect key="frame" x="136" y="274" width="223" height="21"/>
+                                <rect key="frame" x="136" y="282" width="223" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLB-YW-HWi">
-                                <rect key="frame" x="334" y="359" width="10" height="18"/>
+                                <rect key="frame" x="334" y="361" width="10" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Line 7"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 8" translatesAutoresizingMaskIntoConstraints="NO" id="93F-qc-1DQ">
                                 <rect key="frame" x="20" y="169" width="355" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 8" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-IO-PqM">
+                                <rect key="frame" x="20" y="247" width="355" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 8" translatesAutoresizingMaskIntoConstraints="NO" id="AGi-wi-UtA">
+                                <rect key="frame" x="20" y="327" width="355" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 8" translatesAutoresizingMaskIntoConstraints="NO" id="PO0-tP-cxw">
+                                <rect key="frame" x="20" y="408" width="355" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -290,7 +302,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfq-tT-Zfk">
-                                                    <rect key="frame" x="30" y="8" width="70" height="21"/>
+                                                    <rect key="frame" x="30" y="8" width="317" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -324,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="1100" y="1011.544227886057"/>
         </scene>
-        <!--View Controller-->
+        <!--Vendor Live ChatVC-->
         <scene sceneID="gzf-n1-AxV">
             <objects>
-                <viewController id="vd8-he-29P" sceneMemberID="viewController">
+                <viewController id="vd8-he-29P" customClass="VendorLiveChatVC" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gfB-SJ-aF4"/>
                         <viewControllerLayoutGuide type="bottom" id="dRC-BP-9fW"/>

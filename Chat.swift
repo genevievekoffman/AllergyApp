@@ -17,4 +17,6 @@ class Chat {
         self.chatID = chatID
         self.chatTitle = chatTitle
     }
+    
+    
 }
