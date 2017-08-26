@@ -33,7 +33,7 @@ class VendorResponseViewController: UIViewController, UITableViewDelegate, UITab
     
     func loadResponses() {
         
-        ResponseService.recieveAllResponse(forUID: Vendor.current.vendoruid, postID: post!.postID, completion: { (response) in
+        ResponseService.recieveAllResponse(forUID: Vendor.current.vendoruid, postID: post!.postID!, completion: { (response) in
             if let legitResponse = response {
                 self.arrayOfResponses = legitResponse
             } else {
@@ -73,7 +73,7 @@ class VendorResponseViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var AddResponseTextLabel: UITextField!
     
     @IBAction func commentResponse(_ sender: Any) {
-        ResponseService.saveVendorResponse(forUID: Vendor.current.vendoruid, response: AddResponseTextLabel.text!, vendorID: Vendor.current.username, postID: post!.postID) {
+        ResponseService.saveVendorResponse(forUID: Vendor.current.vendoruid, response: AddResponseTextLabel.text!, vendorID: Vendor.current.username, postID: post!.postID!) {
             (response) in }
         AddResponseTextLabel.text = ""
         

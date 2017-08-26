@@ -80,6 +80,14 @@ class User: NSObject {
         _current = User
     } // new parameter that takes a bool - whether user should be written to UserDefaults. if true, user object is written to UserDefaults. < NSKeyedArchive > turns user into data, store data with correct key
     
+    class func clearCurrent(){
+        UserDefaults.standard.removeObject(forKey: "currentUser")
+        _current = nil
+    }
+    
+    
+    
+    
 } // whenever user signs up or logs in, user is stored in UserDefaults
 
 extension User: NSCoding {

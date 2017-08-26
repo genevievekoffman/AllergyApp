@@ -64,6 +64,7 @@ struct AuthService {
 
         let signOutAction = UIAlertAction(title: "Log Out", style: .destructive) { _ in
             logUserOut()
+            
         }
         alertController.addAction(signOutAction)
         
@@ -71,22 +72,28 @@ struct AuthService {
         
         alertController.addAction(cancelAction)
         
+        if let popover = alertController.popoverPresentationController {
+            popover.sourceView = viewController.view;
+            popover.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+        }
+        
         viewController.present(alertController, animated: true)
     }
     
-    static func logUserOut(){
+    
+    static func logUserOut(_ clearUser : Bool = true){
         do {
             try Auth.auth().signOut()
+            if clearUser {
+                User.clearCurrent()
+            }
+            
         } catch let error as NSError {
             assertionFailure("Error signing out: \(error.localizedDescription)")
         }
-        
-//        let storyboard = UIStoryboard(name: "Opening", bundle: .main)
-//        if let initialViewController = storyboard.instantiateInitialViewController() {
-//            self.view.window?.rootViewController = initialViewController
-//            self.view.window?.makeKeyAndVisible()
-//        }
-}
+    }
+    
+    
     private static func loginErrors(error : Error, controller : UIViewController){
         switch (error.localizedDescription) {
         case "The email address is badly formatted.":
@@ -131,4 +138,5 @@ struct AuthService {
             break;
         }
     }
+    
 }

@@ -13,7 +13,6 @@
 		AF1E94F91F4F7DC800AADCF2 /* VendorLiveChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */; };
 		AF1E94FB1F4F7DDC00AADCF2 /* VendorChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94FA1F4F7DDC00AADCF2 /* VendorChatListVC.swift */; };
 		AF1E94FD1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94FC1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift */; };
-		AF1E94FF1F506CF000AADCF2 /* ViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E94FE1F506CF000AADCF2 /* ViewController+Utility.swift */; };
 		AF294B541F432F37002D6B56 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B531F432F37002D6B56 /* PostTableViewCell.swift */; };
 		AF294B561F4372E0002D6B56 /* ResponsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */; };
 		AF294B591F438143002D6B56 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */; };
@@ -72,7 +71,6 @@
 		AF1E94F81F4F7DC800AADCF2 /* VendorLiveChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLiveChatVC.swift; sourceTree = "<group>"; };
 		AF1E94FA1F4F7DDC00AADCF2 /* VendorChatListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorChatListVC.swift; sourceTree = "<group>"; };
 		AF1E94FC1F4F7F7700AADCF2 /* VendorChatListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorChatListTableViewCell.swift; sourceTree = "<group>"; };
-		AF1E94FE1F506CF000AADCF2 /* ViewController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Utility.swift"; sourceTree = "<group>"; };
 		AF294B531F432F37002D6B56 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = allergiesapp/Views/PostTableViewCell.swift; sourceTree = "<group>"; };
 		AF294B551F4372E0002D6B56 /* ResponsesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponsesViewController.swift; path = allergiesapp/Controllers/ResponsesViewController.swift; sourceTree = "<group>"; };
 		AF294B581F438143002D6B56 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseTableViewCell.swift; path = allergiesapp/Views/ResponseTableViewCell.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				AF6FF8B01F38C04B007DCC0B /* Storyboard+Utility.swift */,
 				AF6FF8BC1F3A077F007DCC0B /* StorageReference+Post.swift */,
-				AF1E94FE1F506CF000AADCF2 /* ViewController+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -504,7 +501,6 @@
 				AF35B6421F33ACB500F16A66 /* User.swift in Sources */,
 				AF35B6261F3371AA00F16A66 /* AppDelegate.swift in Sources */,
 				AF1E94F01F4F0E0600AADCF2 /* ChatListViewController.swift in Sources */,
-				AF1E94FF1F506CF000AADCF2 /* ViewController+Utility.swift in Sources */,
 				AF6D70B01F44D28B00314E41 /* allergies.swift in Sources */,
 				AF1E94F91F4F7DC800AADCF2 /* VendorLiveChatVC.swift in Sources */,
 				AF6D70CB1F494AEF00314E41 /* NotificationsQuestionsViewController.swift in Sources */,

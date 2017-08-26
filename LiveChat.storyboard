@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fv5-3U-hat">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2dp-xv-dXF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,9 +10,25 @@
     </dependencies>
     <scenes>
         <!--LiveChat-->
+        <scene sceneID="mOh-Qi-LP1">
+            <objects>
+                <navigationController title="LiveChat" id="2dp-xv-dXF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P9C-AS-koH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fv5-3U-hat" kind="relationship" relationship="rootViewController" id="guo-ve-H7c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pJ-kt-flA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431" y="-290"/>
+        </scene>
+        <!--JOIN A LIVE CHAT-->
         <scene sceneID="sBi-zn-JOt">
             <objects>
-                <viewController title="LiveChat" id="fv5-3U-hat" customClass="ChatListViewController" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fv5-3U-hat" customClass="ChatListViewController" customModule="allergiesapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LiW-We-sub"/>
                         <viewControllerLayoutGuide type="bottom" id="vMv-hh-Vgr"/>
@@ -52,15 +68,6 @@
                                     <outlet property="delegate" destination="fv5-3U-hat" id="abc-q4-Wli"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="LrK-fa-x4g">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-5J-IZ7">
-                                <rect key="frame" x="16" y="20" width="15" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="white back"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LIVE CHATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCB-rg-Ics">
                                 <rect key="frame" x="111" y="20" width="152" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -78,6 +85,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="JOIN A LIVE CHAT" id="ULf-CO-dAP">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="TTV-aq-7Sl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U5b-CK-HBO">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backButtontapped:" destination="fv5-3U-hat" eventType="touchUpInside" id="91b-HL-xrn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="A0v-78-yva" id="Q9v-ZB-qPF"/>
                         <outlet property="usernameLabel" destination="fBP-BQ-20D" id="dTK-bA-Vaq"/>
@@ -107,8 +126,4 @@
             <point key="canvasLocation" x="538" y="-267"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="blueTopBar" width="1870" height="305"/>
-        <image name="white back" width="75" height="135"/>
-    </resources>
 </document>

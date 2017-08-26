@@ -97,4 +97,24 @@ struct PostService {
         }
     } //^^ saves question, tags, and company as a post under the user
     
+    static func flag(_ post: Post) {
+        guard let postKey = post.postID else { return } // checks if its a post
+        let flaggedPostRef = Database.database().reference().child("flaggedPosts").child(postKey)
+        
+        
+        let flaggedDict = ["postID": post.postID,
+                           "reporterID": User.current.uid]
+        
+        flaggedPostRef.updateChildValues(flaggedDict)
+    
+        let flagCountRef = flaggedPostRef.child("flag_count")
+        flagCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+            let currentCount = mutableData.value as? Int ?? 0
+            
+            mutableData.value = currentCount + 1
+            
+            return TransactionResult.success(withValue: mutableData)
+        })
+    }
+    
 }

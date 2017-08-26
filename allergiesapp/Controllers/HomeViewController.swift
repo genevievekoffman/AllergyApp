@@ -66,6 +66,28 @@
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        func handleFlagButtonTapped(from cell: PostTableViewCell) { // deals with flagging/ reporting posts
+        
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+                let post = arrayOfPosts[indexPath.section]
+                let poster = post.userID
+            
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            if poster != User.current.uid {
+                
+                let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default) { _ in
+                    PostService.flag(post)
+                    
+                    let okAlert = UIAlertController(title: nil, message: "The post has been flagged.", preferredStyle: .alert)
+                    okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+                    self.present(okAlert, animated: true)
+                }
+                alertController.addAction(flagAction)
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
         
@@ -83,6 +105,7 @@
             
             cell.questiontextLabel.text = arrayOfPosts[indexPath.row].question
             cell.tagstextLabel.text = arrayOfPosts[indexPath.row].tags
+            cell.didTapOptionsButtonForCell = handleFlagButtonTapped(from:)
             UserService.show(forUID: arrayOfPosts[indexPath.row].userID, completion: {(user) in
                 cell.usernameLabel.text = user?.username
             })

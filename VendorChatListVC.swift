@@ -43,7 +43,7 @@ class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.navigationController?.title = "Chat List"
         
         usernameLabel.text = "welcome \(Vendor.current.companyName)"
-        // observeChat()
+        
     }
     
     deinit {
@@ -85,9 +85,6 @@ class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         selectedChat = self.listOfChats[(indexPath as NSIndexPath).row]
         self.performSegue(withIdentifier: "segueToVendorLiveChatVC", sender: self)
-
-        // Course.setCurrent(courseChat, writeToUserDefaults:true)
-        // revealViewController().pushFrontViewController(revealViewController().frontViewController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,22 +111,7 @@ class VendorChatListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
 }
     
-//    func getChatList(completion: @escaping (Chat?)->Void){
-//        let ref = Database.database().reference().child("chats") // pulling from chats 
-//        ref.observeSingleEvent(of: .value,with: {(snapshot) in
-//           
-//}
-//    @IBAction func unwindToChatListVC(_ sender: UIStoryboardSegue) {
-//        self.tableView.reloadData()
-//    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        if let chat = sender as? Chat {
-//            let chatVC = segue.destination as! LiveChatScreenViewController
-            //chatVc.senderDisplayName = senderDisplayName
-            // chatVc.channel = channel
-            //  chatVc.channelRef = channelRef.child(channel.id)
+
 
 
 

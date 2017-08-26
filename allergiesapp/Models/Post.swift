@@ -19,7 +19,7 @@ class Post {
     let company: String
     let userID: String
     
-    let postID: String //??
+    let postID: String?
     
 
     

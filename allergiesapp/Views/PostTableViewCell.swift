@@ -17,7 +17,12 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var usernameLabel: UILabel!
     
-    
+    @IBAction func flagButton(_ sender: UIButton) {
+        if let closure = didTapOptionsButtonForCell {
+            closure(self)
+        }
+    }
+     var didTapOptionsButtonForCell: ((PostTableViewCell) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -13,7 +13,12 @@ import FirebaseDatabase
 
 
 class ChatListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    @IBAction func backButtontapped(_ sender: Any) {
+        backToProfile()
+        // performSegue(withIdentifier: <#T##String#>, sender: self)
+    }
+ //   @IBAction func unwindToUserList(segue: UIStoryboardSegue) {}
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,10 +38,12 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     private var chatRefHandle: DatabaseHandle?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+    //    self.navigationController.title = "Chat List"
         
-        super.viewDidLoad()
         usernameLabel.text = "welcome \(User.current.name)"
     }
     
@@ -79,8 +86,6 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedChat = self.listOfChats[(indexPath as NSIndexPath).row]
-      
-
         self.performSegue(withIdentifier: "SegueToLiveChatVC", sender: self)
     }
     
@@ -89,6 +94,8 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
             let vc = segue.destination as! LiveChatScreenViewController
             vc.chat = selectedChat
             vc.chatRef = chatRef
+            
+            self.selectedChat = nil 
         }
     }
     
@@ -102,6 +109,13 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
                print("Error")
             }
         })
+    }
+    func backToProfile() {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        if let initialViewController = storyboard.instantiateInitialViewController() {
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+        }
     }
 }
     

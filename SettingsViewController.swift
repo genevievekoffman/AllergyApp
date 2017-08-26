@@ -26,10 +26,13 @@ class SettingsViewController: UIViewController {
         performSegue(withIdentifier: "unwindSettingsToProfile", sender: self)
     }
     @IBAction func LogoutTapped(_ sender: Any) {
-       AuthService.presentLogOut(viewController: self)
-        AppDelegate.clearUserDefaults()
-        
+        AuthService.presentLogOut(viewController: self)
 
+//        let loginstoryboard = UIStoryboard(name: "Login", bundle: .main)
+//        let controller = UIStoryboard.initialViewController(for: .login)
+//        self.present(controller, animated: false, completion: nil)
+
+        
     } // ?? 
 }
 

@@ -17,7 +17,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        applyKeyboardPush() 
+       
         nextButton.layer.cornerRadius = 6 //?
     }
     @IBOutlet weak var nameTextField: UITextField!

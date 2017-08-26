@@ -7,17 +7,20 @@
 //
 
 import UIKit
-import Firebase
+import Firebase 
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+
 
     var window: UIWindow?
-
-
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         configureInitialRootViewController(for: window) // user stays logged in
+        IQKeyboardManager.sharedManager().enable = true
         
         return true
     }
@@ -80,9 +83,6 @@ extension AppDelegate {
         
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
-    } //allows user to remain logged in^^
-//    func configueInitialRootViewControllerVendors(for window: UIWindow?) {
-//        let defaults = Vendor
-//    }
+    }
 }
 

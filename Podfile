@@ -12,4 +12,5 @@ target 'allergiesapp' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
  pod 'JSQMessagesViewController'
+ pod ‘IQKeyboardManagerSwift’
 end
