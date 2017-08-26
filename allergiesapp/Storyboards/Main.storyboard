@@ -216,7 +216,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fpv-bD-Ecs" id="Dk7-Nd-nWa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYi-mT-xf5">
@@ -477,13 +477,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueTopBar" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-b4-Ej5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-b4-Ej5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdR-hA-IIr">
-                                <rect key="frame" x="73" y="578" width="302" height="40"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
-                                <state key="normal" title="RETURN TO HOME SCREEN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR QUESTION HAS BEEN POSTED" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wa-xD-jNp">
+                                <rect key="frame" x="71" y="91" width="232" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdR-hA-IIr">
+                                <rect key="frame" x="37" y="288" width="300" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="RETURN TO HOME SCREEN" image="whiteshadowBar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -491,29 +498,24 @@
                                     <segue destination="cjr-GE-RHd" kind="show" identifier="segueToHomeScreen" id="HAs-Y8-L3D"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR QUESTION HAS BEEN POSTED" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wa-xD-jNp">
-                                <rect key="frame" x="2" y="0.0" width="226" height="32.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RETURN TO HOMESCREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LA-NO-Vj0">
+                                <rect key="frame" x="72" y="319" width="237" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand holding" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-sb-Nrt">
-                                <rect key="frame" x="0.0" y="113" width="196" height="505"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="muffinBlackAll" translatesAutoresizingMaskIntoConstraints="NO" id="USF-pY-e0o">
+                                <rect key="frame" x="87" y="388" width="200" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Wa-xD-jNp" firstAttribute="leading" secondItem="dhk-FF-Ajf" secondAttribute="leading" constant="2" id="4fq-ZE-yuO"/>
-                            <constraint firstItem="vpW-2C-8qP" firstAttribute="top" secondItem="LdR-hA-IIr" secondAttribute="bottom" id="E19-H1-MbG"/>
                             <constraint firstItem="Ggi-b4-Ej5" firstAttribute="top" secondItem="dhk-FF-Ajf" secondAttribute="top" id="EIB-nZ-3gD"/>
                             <constraint firstAttribute="bottom" secondItem="Ggi-b4-Ej5" secondAttribute="bottom" id="EkY-Ye-JkN"/>
-                            <constraint firstItem="LdR-hA-IIr" firstAttribute="leading" secondItem="dhk-FF-Ajf" secondAttribute="leading" constant="73" id="OSg-vh-Leo"/>
-                            <constraint firstAttribute="trailing" secondItem="9Wa-xD-jNp" secondAttribute="trailing" constant="147" id="Xj8-ct-Z69"/>
                             <constraint firstItem="Ggi-b4-Ej5" firstAttribute="leading" secondItem="dhk-FF-Ajf" secondAttribute="leading" id="fbW-TZ-7sw"/>
                             <constraint firstAttribute="trailing" secondItem="Ggi-b4-Ej5" secondAttribute="trailing" id="ixj-JO-oHX"/>
-                            <constraint firstItem="9Wa-xD-jNp" firstAttribute="top" secondItem="dhk-FF-Ajf" secondAttribute="top" id="mOv-Na-zeD"/>
-                            <constraint firstAttribute="trailing" secondItem="LdR-hA-IIr" secondAttribute="trailing" id="tdD-ck-zuC"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1008,9 +1010,9 @@
         <image name="GreenBackground" width="1875" height="1255"/>
         <image name="Line 7" width="35" height="55"/>
         <image name="Line 8" width="1760" height="10"/>
+        <image name="background" width="1875" height="3325"/>
         <image name="blueTopBar" width="1870" height="305"/>
         <image name="finalAbes" width="1025" height="490"/>
-        <image name="hand holding" width="1135" height="2995"/>
         <image name="logoutGreen" width="1555" height="410"/>
         <image name="muffinBlackAll" width="655" height="710"/>
         <image name="tab_home_black" width="25" height="25"/>
