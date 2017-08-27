@@ -666,6 +666,14 @@
             </objects>
             <point key="canvasLocation" x="-2386.4000000000001" y="720.08995502248877"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="5Wf-rP-t37">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="Gr3-nG-Xud" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wk-Co-nto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1327" y="2237"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="hWV-Pn-7bG">
             <objects>
@@ -798,6 +806,7 @@
                         <outlet property="nameLabel" destination="fNI-ft-RgG" id="xyL-Sk-Pow"/>
                         <outlet property="usernameLabel" destination="9aK-IM-ANw" id="TGl-Bl-51i"/>
                         <segue destination="rwT-Ss-yi9" kind="unwind" identifier="unwindSettingsToProfile" unwindAction="unwindSettingsToProfileWithSegue:" id="GBU-nj-pev"/>
+                        <segue destination="Gr3-nG-Xud" kind="show" identifier="backToLogin" id="z1R-bc-7Qy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8H-Ym-uzB" userLabel="First Responder" sceneMemberID="firstResponder"/>

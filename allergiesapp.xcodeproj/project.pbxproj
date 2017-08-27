@@ -43,7 +43,6 @@
 		AF6D70CF1F49F1C900314E41 /* PostCompaniesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */; };
 		AF6D70D11F4A741C00314E41 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */; };
 		AF6D70D31F4B368700314E41 /* VendorOpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */; };
-		AF6D70D51F4B3A0C00314E41 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */; };
 		AF6FF8A91F38ACCB007DCC0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */; };
 		AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */; };
 		AF6FF8AF1F38AD66007DCC0B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */; };
@@ -102,7 +101,6 @@
 		AF6D70CE1F49F1C900314E41 /* PostCompaniesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCompaniesTableViewCell.swift; sourceTree = "<group>"; };
 		AF6D70D01F4A741C00314E41 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOpeningViewController.swift; sourceTree = "<group>"; };
-		AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AF6FF8A81F38ACCB007DCC0B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = allergiesapp/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AC1F38AD45007DCC0B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = allergiesapp/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		AF6FF8AE1F38AD66007DCC0B /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = allergiesapp/Controllers/AddPostViewController.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 			children = (
 				AF6D70D21F4B368700314E41 /* VendorOpeningViewController.swift */,
 				AF6D70CA1F494AEF00314E41 /* NotificationsQuestionsViewController.swift */,
-				AF6D70D41F4B3A0C00314E41 /* ChatViewController.swift */,
 				AFCC0D831F4C8ACC00CA7C8D /* VendorResponseViewController.swift */,
 				AFCC0D871F4DE4C800CA7C8D /* VendorSettingsViewController.swift */,
 			);
@@ -478,7 +475,6 @@
 				AF6D70D31F4B368700314E41 /* VendorOpeningViewController.swift in Sources */,
 				AF6D70B21F44D3E700314E41 /* AllergyService.swift in Sources */,
 				AFCC0D861F4CD52400CA7C8D /* VendorResponseTableViewCell.swift in Sources */,
-				AF6D70D51F4B3A0C00314E41 /* ChatViewController.swift in Sources */,
 				AFCC0D8D1F4E6FBE00CA7C8D /* Chat.swift in Sources */,
 				AF6FF8AD1F38AD45007DCC0B /* ProfileViewController.swift in Sources */,
 				AF1E94F41F4F172400AADCF2 /* LiveChatScreenViewController.swift in Sources */,

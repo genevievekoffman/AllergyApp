@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 struct VendorService {
     
-//    static var arrayOfCompanies = [String]() //empty array of companies
+
     
     static func create(_ firUser: FIRUser, username: String, companyName: String, email: String, completion: @escaping (Vendor?) -> Void) {
         // only when a users username is created can the code move on ^^

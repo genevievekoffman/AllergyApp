@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -579,8 +578,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzA-vY-l7k">
-                                <rect key="frame" x="126" y="73" width="45" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzA-vY-l7k">
+                                <rect key="frame" x="126" y="73" width="233" height="24"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -595,44 +594,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-3N-Kv9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-3N-Kv9">
                                 <rect key="frame" x="0.0" y="270" width="375" height="397"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="responsecell" rowHeight="55" id="C5V-8W-F0Y" customClass="VendorResponseTableViewCell" customModule="allergiesapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="responsecell" rowHeight="150" id="C5V-8W-F0Y" customClass="VendorResponseTableViewCell" customModule="allergiesapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C5V-8W-F0Y" id="PZB-3O-jxc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rld-hq-EOv">
-                                                    <rect key="frame" x="8" y="17" width="67" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="rld-hq-EOv" secondAttribute="height" multiplier="67:20" id="qOF-Z2-nKh"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rld-hq-EOv">
+                                                    <rect key="frame" x="8" y="8" width="359" height="105"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czx-mv-Dfc">
-                                                    <rect key="frame" x="297" y="17" width="70" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Czx-mv-Dfc" secondAttribute="height" multiplier="7:2" id="WPv-hb-Khz"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czx-mv-Dfc">
+                                                    <rect key="frame" x="263" y="121" width="104" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Czx-mv-Dfc" firstAttribute="trailing" secondItem="PZB-3O-jxc" secondAttribute="trailingMargin" id="Cbj-Yc-2gp"/>
-                                                <constraint firstItem="Czx-mv-Dfc" firstAttribute="top" secondItem="PZB-3O-jxc" secondAttribute="topMargin" constant="9" id="SI4-YZ-3AT"/>
-                                                <constraint firstItem="rld-hq-EOv" firstAttribute="leading" secondItem="PZB-3O-jxc" secondAttribute="leadingMargin" id="duO-nU-Cbp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rld-hq-EOv" secondAttribute="bottom" constant="10" id="lBu-Or-mGR"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Czx-mv-Dfc" secondAttribute="bottom" constant="10" id="mlN-n6-GsS"/>
-                                                <constraint firstItem="rld-hq-EOv" firstAttribute="top" secondItem="PZB-3O-jxc" secondAttribute="topMargin" constant="9" id="v2i-Jc-skT"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="CellUsernameLabel" destination="Czx-mv-Dfc" id="Dxn-CC-ZJr"/>
@@ -710,6 +697,7 @@
                             <constraint firstItem="WIj-xL-d5B" firstAttribute="top" secondItem="1TL-Sr-x6V" secondAttribute="bottom" constant="10" id="hOi-MB-M0z"/>
                             <constraint firstItem="OEC-tl-Jbd" firstAttribute="top" secondItem="IhR-4x-e2H" secondAttribute="top" constant="166" id="hWI-zb-qpc"/>
                             <constraint firstAttribute="trailing" secondItem="dqY-fK-zHF" secondAttribute="trailing" constant="15" id="jC0-xR-g9b"/>
+                            <constraint firstItem="YzA-vY-l7k" firstAttribute="trailing" secondItem="IhR-4x-e2H" secondAttribute="trailingMargin" id="jJE-2D-5gz"/>
                             <constraint firstItem="WIj-xL-d5B" firstAttribute="leading" secondItem="IhR-4x-e2H" secondAttribute="leading" constant="10" id="kGl-nx-E2H"/>
                             <constraint firstItem="dqY-fK-zHF" firstAttribute="top" secondItem="OEC-tl-Jbd" secondAttribute="bottom" constant="23" id="tse-An-0iM"/>
                             <constraint firstItem="B5z-I4-WsN" firstAttribute="top" secondItem="EbQ-3N-Kv9" secondAttribute="bottom" id="uMO-cW-pWz"/>

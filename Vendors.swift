@@ -25,7 +25,8 @@ class Vendor: NSObject {
     let username: String
     let companyName: String
     let email: String
-    // let verified: Bool // 5 numbers - backup to passcode
+    
+   // var verifiedVendor = Bool() // starts false, I can change it in firebase -> cant see VC until verified(bool value changed by me)
    
     var dictValue: [String: Any] {
         return ["username" : username, "companyName" : companyName, "email" : email]

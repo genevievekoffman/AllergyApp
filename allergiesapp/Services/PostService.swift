@@ -102,7 +102,7 @@ struct PostService {
         let flaggedPostRef = Database.database().reference().child("flaggedPosts").child(postKey)
         
         
-        let flaggedDict = ["postID": post.postID,
+        let flaggedDict = ["postID": post.postID!,
                            "reporterID": User.current.uid]
         
         flaggedPostRef.updateChildValues(flaggedDict)

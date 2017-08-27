@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     
@@ -26,15 +27,35 @@ class SettingsViewController: UIViewController {
         performSegue(withIdentifier: "unwindSettingsToProfile", sender: self)
     }
     @IBAction func LogoutTapped(_ sender: Any) {
+        // presentLogOut(viewController: self)
         AuthService.presentLogOut(viewController: self)
+    }
+    
+//    func logUserOut() {
+//        do {
+//            try Auth.auth().signOut()
+//            performSegue(withIdentifier: "backToLogin" , sender: self)
+//        }
+//        catch let error as NSError {
+//    assertionFailure("Error: error signing in \(error.localizedDescription)")
+//        }
+//    }
+    
+//    func presentLogOut(viewController: UIViewController) {
+//        let logOutAlert = UIAlertController(title: "Logout", message: nil, preferredStyle: .alert)
+//        let cancelAction = UIAlertAction(title: "Log out", style: .default, handler: { _ in
+//            self.logUserOut()
+//        })
+//        
+//        let cancelAction2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        logOutAlert.addAction(cancelAction)
+//        logOutAlert.addAction(cancelAction2)
+//        
+//        self.present(logOutAlert, animated: true, completion: nil)
+//    }
 
-//        let loginstoryboard = UIStoryboard(name: "Login", bundle: .main)
-//        let controller = UIStoryboard.initialViewController(for: .login)
-//        self.present(controller, animated: false, completion: nil)
-
-        
-    } // ?? 
 }
+
 
 
 
