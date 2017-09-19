@@ -18,7 +18,7 @@ class VendorResponseViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
+    
     
     @IBOutlet weak var vendortableview: UITableView!
     
@@ -57,7 +57,7 @@ class VendorResponseViewController: UIViewController, UITableViewDelegate, UITab
         
         cell.ResponseTextLabel.text = arrayOfResponses[indexPath.row].response
         cell.Cellresponse = arrayOfResponses[indexPath.row]
-        cell.CellUsernameLabel.text = arrayOfResponses[indexPath.row].usernameID
+        cell.CellUsernameLabel.text = arrayOfResponses[indexPath.row].usernameID // username
         
         return cell
     }
@@ -66,7 +66,7 @@ class VendorResponseViewController: UIViewController, UITableViewDelegate, UITab
         
         questionLabel.text = post?.question
         tagsLabel.text = post?.tags
-        usernameLabel.text = post?.userID
+         
         
     }
     

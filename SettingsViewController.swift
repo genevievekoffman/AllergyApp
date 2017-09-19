@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation
+import SCLAlertView
 import FirebaseAuth
 
 class SettingsViewController: UIViewController {
@@ -30,6 +30,8 @@ class SettingsViewController: UIViewController {
         // presentLogOut(viewController: self)
         AuthService.presentLogOut(viewController: self)
     }
+    
+  
     
 //    func logUserOut() {
 //        do {
@@ -54,6 +56,7 @@ class SettingsViewController: UIViewController {
 //        self.present(logOutAlert, animated: true, completion: nil)
 //    }
 
+    
 }
 
 

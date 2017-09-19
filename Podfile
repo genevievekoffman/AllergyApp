@@ -6,11 +6,13 @@ target 'allergiesapp' do
   use_frameworks!
 
   # Pods for allergiesapp
- pod 'Firebase/Core'
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
-  pod 'Firebase/Storage'
+  pod ‘Firebase/Storage’
+
+  pod ‘IQKeyboardManagerSwift’
+  pod ‘SCLAlertView’
  pod 'JSQMessagesViewController'
- pod ‘IQKeyboardManagerSwift’
 end

@@ -29,7 +29,7 @@ class VendorOpeningViewController: UIViewController {
     }
     
     func createLiveChat(chatName: String?) {
-        let newChatRef =  Database.database().reference().child("chats").childByAutoId()
+        let newChatRef =  Database.database().reference().child("chats").childByAutoId() //each channel has a unique key 
         let chatItem = ["chatName": chatName ]
         newChatRef.setValue(chatItem)
     }

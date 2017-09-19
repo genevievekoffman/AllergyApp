@@ -52,6 +52,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SCLAlertView (0.7.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - IQKeyboardManagerSwift
   - JSQMessagesViewController
+  - SCLAlertView
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -77,7 +79,8 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
 
-PODFILE CHECKSUM: ce682544d44fdbab11be30a862a2a3ff80717fc5
+PODFILE CHECKSUM: da73b71d53326f41f91ade8b94ba4ec4ce0f0fa6
 
 COCOAPODS: 1.2.1

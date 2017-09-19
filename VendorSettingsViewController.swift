@@ -8,6 +8,8 @@
 
 
 import UIKit
+import FirebaseAuth
+import SCLAlertView
 
 
 class VendorSettingsViewController: UIViewController {
@@ -25,6 +27,11 @@ class VendorSettingsViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         performSegue(withIdentifier: "VendorSettingsToOpeningVC", sender: self)
     }
+    @IBAction func ChangePasswordButton(_ sender: Any) {
+        AuthService.presentPasswordReset(controller: self ) ///
+    }
+    
+    
     
     
     @IBAction func LogoutButtonTapped(_ sender: Any) {

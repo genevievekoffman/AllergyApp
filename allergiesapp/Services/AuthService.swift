@@ -10,6 +10,8 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import SCLAlertView 
+
 
 struct AuthService {
     
@@ -44,6 +46,53 @@ struct AuthService {
             }
         }
 }
+    
+    static func presentPasswordReset(controller : UIViewController){
+        let alertController = UIAlertController(title: "Are you sure you want to reset your password?", message: nil, preferredStyle: .actionSheet)
+        
+        let signOutAction = UIAlertAction(title: "Send Email", style: .default) { _ in
+            guard let auth = Auth.auth().currentUser,
+                let email = auth.email else {
+                    
+                    print ("error")
+                    // SCLAlertView().genericError()
+                    return
+            }
+            AuthService.passwordReset(email: email, success: { (success) in
+                if success {
+                    SCLAlertView().showSuccess("Success!", subTitle: "Email sent.")
+                }
+                else {
+                    print ("error")
+                    // SCLAlertView().genericError()
+                }
+            })
+        }
+        
+        alertController.addAction(signOutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        if let popover = alertController.popoverPresentationController {
+            popover.sourceView = controller.view;
+            popover.sourceRect = CGRect(x: controller.view.bounds.midX, y: controller.view.bounds.midY, width: 0, height: 0)
+        }
+        
+        controller.present(alertController, animated: true)
+    }
+    
+    static func passwordReset(email: String, success : @escaping (Bool) -> Void){
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                print("email error for: \(email)")
+                print("error: \(error.localizedDescription)")
+                return success(false)
+            }
+            return success(true)
+        }
+    }
+    
     static func removeAuthListener(authHandle : AuthStateDidChangeListenerHandle?){
         if let authHandle = authHandle {
             Auth.auth().removeStateDidChangeListener(authHandle)
@@ -66,10 +115,10 @@ struct AuthService {
             logUserOut()
             
         }
+        
         alertController.addAction(signOutAction)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
         alertController.addAction(cancelAction)
         
         if let popover = alertController.popoverPresentationController {

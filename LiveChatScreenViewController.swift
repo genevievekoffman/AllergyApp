@@ -26,6 +26,37 @@ class LiveChatScreenViewController: JSQMessagesViewController {
     
     
     var messages = [JSQMessage]()
+    lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = self.setupOutgoingBubble()
+    lazy var incomingBubbleImageView: JSQMessagesBubbleImage = self.setupIncomingBubble()
+    
+    private lazy var messageRef: DatabaseReference = self.chatRef!.child("messages") // of that specific chat -- need to use a sepcific key(every chat has its own key) 
+    
+    private var newMessageRefHandle: DatabaseHandle?
+    
+//    func inWhichChat(notification: Notification) -> Void { // ???whats this func
+//        messages.removeAll()
+//        if let chat = Chat.current
+//    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.inputToolbar.contentView.leftBarButtonItem = nil
+        
+        self.senderId = User.current.uid
+        self.senderDisplayName = User.current.username
+        
+        collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
+        collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
+        
+        observeMessages()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) { // added func
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "title"), object: nil, userInfo: ["name":"Chat"])
+    }
+    
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item]
@@ -35,8 +66,6 @@ class LiveChatScreenViewController: JSQMessagesViewController {
         return messages.count
     }
     
-    lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = self.setupOutgoingBubble()
-    lazy var incomingBubbleImageView: JSQMessagesBubbleImage = self.setupIncomingBubble()
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         let message = messages[indexPath.item]
@@ -65,22 +94,8 @@ class LiveChatScreenViewController: JSQMessagesViewController {
     
     
     
-    private lazy var messageRef: DatabaseReference = self.chatRef!.child("messages")
-    private var newMessageRefHandle: DatabaseHandle?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.inputToolbar.contentView.leftBarButtonItem = nil 
-        
-        self.senderId = User.current.uid
-        self.senderDisplayName = User.current.username
-        
-        collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
-        collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
-        
-        observeMessages()
-    }
+  
+ 
     
 
     private func addMessage(withId id: String, name: String, text: String ) {
