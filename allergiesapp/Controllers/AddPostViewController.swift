@@ -89,7 +89,7 @@ class AddPostViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         } else if companySwitchView.isOn == true { // if its on
             
             PostService.createPost(forUID: User.current.uid , question: questiontextfield.text!, tags: tagstextfield.text!, company: pickVar!, userID: User.current.uid) { (post) in
-                // also add func to send post to company **************
+                
         }
             performSegue(withIdentifier: "segueToPostAdded", sender: self)
         }

@@ -883,15 +883,7 @@
                                     <segue destination="HZZ-dN-44E" kind="show" identifier="segueToFoodAllergiesViewController" id="EiU-1L-pUl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqD-P2-4pD">
-                                <rect key="frame" x="77.5" y="450" width="220" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="eO3-4M-tm8"/>
-                                    <constraint firstAttribute="width" constant="220" id="yNN-PA-lcw"/>
-                                </constraints>
-                                <state key="normal" title="MyPostsButton" image="BlueCurlyClick"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-Ar-b2v">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-Ar-b2v">
                                 <rect key="frame" x="77.5" y="525" width="220" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="iPe-Cb-acX"/>
@@ -914,13 +906,7 @@
                                 <color key="textColor" red="0.99479166666666663" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY POSTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPq-pt-8BJ">
-                                <rect key="frame" x="130" y="462" width="115" height="31"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="23"/>
-                                <color key="textColor" red="0.99479166666666663" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngy-iy-VmD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngy-iy-VmD">
                                 <rect key="frame" x="135.5" y="537" width="104" height="31"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="23"/>
                                 <color key="textColor" red="0.99479166666666663" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -937,7 +923,6 @@
                             <constraint firstItem="Zh7-94-SUl" firstAttribute="leading" secondItem="PSb-MD-Ku1" secondAttribute="leading" id="7yM-Nx-GFF"/>
                             <constraint firstItem="iEA-YD-Exf" firstAttribute="top" secondItem="1GD-aO-eA8" secondAttribute="bottom" constant="42" id="B6W-up-mPw"/>
                             <constraint firstItem="5bM-Mq-yJK" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="Cey-ri-qLM"/>
-                            <constraint firstItem="AqD-P2-4pD" firstAttribute="top" secondItem="eXr-F2-kJY" secondAttribute="bottom" constant="20" id="DYJ-0r-YgT"/>
                             <constraint firstItem="IL4-IL-vmm" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="G0I-y6-kz7"/>
                             <constraint firstItem="1GD-aO-eA8" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="GF3-P5-y7Y"/>
                             <constraint firstItem="5bM-Mq-yJK" firstAttribute="top" secondItem="c6y-yR-XpZ" secondAttribute="bottom" constant="32" id="NH9-MK-Kfm"/>
@@ -950,15 +935,10 @@
                             <constraint firstItem="eXr-F2-kJY" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="ehF-OD-geF"/>
                             <constraint firstItem="PRV-AR-foE" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="fUv-Nt-Xqs"/>
                             <constraint firstItem="fRd-NM-qBY" firstAttribute="top" secondItem="Zh7-94-SUl" secondAttribute="bottom" constant="385" id="fzC-2d-GiV"/>
-                            <constraint firstItem="ouP-Ar-b2v" firstAttribute="top" secondItem="AqD-P2-4pD" secondAttribute="bottom" constant="20" id="hjx-DQ-WDT"/>
-                            <constraint firstItem="AqD-P2-4pD" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="kMQ-fK-nkF"/>
-                            <constraint firstItem="FPq-pt-8BJ" firstAttribute="top" secondItem="eXr-F2-kJY" secondAttribute="bottom" constant="32" id="kRv-Rr-Eef"/>
                             <constraint firstItem="Ngy-iy-VmD" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="lsJ-L9-Dg5"/>
-                            <constraint firstItem="Ngy-iy-VmD" firstAttribute="top" secondItem="AqD-P2-4pD" secondAttribute="bottom" constant="32" id="ryP-Iw-4HA"/>
                             <constraint firstItem="IL4-IL-vmm" firstAttribute="top" secondItem="KaQ-Ke-aTq" secondAttribute="bottom" constant="10" id="uyk-KL-ag1"/>
                             <constraint firstItem="c6y-yR-XpZ" firstAttribute="top" secondItem="1GD-aO-eA8" secondAttribute="bottom" constant="30" id="wAc-jv-YFD"/>
                             <constraint firstItem="RNr-xq-IKJ" firstAttribute="top" secondItem="PRV-AR-foE" secondAttribute="bottom" constant="24" id="wZU-C8-MMc"/>
-                            <constraint firstItem="FPq-pt-8BJ" firstAttribute="centerX" secondItem="PSb-MD-Ku1" secondAttribute="centerX" id="x73-s8-XWT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_profile_black" id="fZM-pC-DJw">
