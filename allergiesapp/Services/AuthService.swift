@@ -10,7 +10,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
-import SCLAlertView 
+import SCLAlertView
 
 
 struct AuthService {
@@ -181,7 +181,7 @@ struct AuthService {
         break;
         default:
             let generalErrorAlert = UIAlertController(title: "We are having trouble signing you up.", message:
-                "We are having trouble signing you up, please try again soon.", preferredStyle: UIAlertControllerStyle.alert)
+                "Please try again soon.", preferredStyle: UIAlertControllerStyle.alert)
             generalErrorAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
             controller.present(generalErrorAlert, animated: true, completion: nil)
             break;
